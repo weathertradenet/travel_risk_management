@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100">
+  <!-- Generator: Adobe Illustrator 29.8.2, SVG Export Plug-In . SVG Version: 2.1.1 Build 3)  -->
+  <defs>
+    <style>
+      .st0, .st1 {
+        fill: none;
+      }
+
+      .st1 {
+        stroke: #902948;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="egpen52TFxA1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+    <path class="st0" d=""/>
+    <g>
+      <path class="st1" d="M37.9,64.1l-2.6,6"/>
+      <path class="st1" d="M60,77.7l-5.4,12,5.4-12Z"/>
+      <path class="st1" d="M34.4,39.7c-2.8-2.5-6.6-4.1-10.7-4.1-8.8,0-16,7.2-16,16s7.2,16,16,16h5.7"/>
+      <path class="st1" d="M24.6,30.5c4-9.7,13.6-16.5,24.8-16.5s19,5.7,23.6,14c10.8.2,19.5,9,19.5,19.8s-8.9,19.8-19.8,19.8h-7.4"/>
+      <path class="st1" d="M57.3,48.7l-8.8,2.4-2.4,8.8,6.4,6.4,8.8-2.4,2.4-8.8s-6.4-6.4-6.4-6.4Z"/>
+      <path class="st1" d="M47.5,72.3l-5.2,1.4-1.4,5.2,3.8,3.8,5.2-1.4,1.4-5.2s-3.8-3.8-3.8-3.8Z"/>
+    </g>
+    <path class="st0" d=""/>
+  </g>
+</svg>

@@ -1,0 +1,704 @@
+{
+  "Auckland": {
+    "municipality": "Auckland",
+    "place": "Auckland",
+    "lat": -36.8485,
+    "lng": 174.7633,
+    "side": "left",
+    "exposure_pct": 4,
+    "metrics": {
+      "flood": [
+        "3,700",
+        "<1%"
+      ],
+      "hurricane": [
+        "8 km",
+        "3%"
+      ],
+      "rainfall": [
+        "230 km",
+        "2%"
+      ],
+      "heatwave": [
+        "1",
+        "1%"
+      ],
+      "drought": [
+        "21",
+        "4%"
+      ],
+      "wildfire": [
+        "0",
+        "0%"
+      ],
+      "water_stress": [
+        "Med",
+        "42%"
+      ],
+      "water_quality": [
+        "Good",
+        "18%"
+      ],
+      "historical_financial_loss": [
+        "$18M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.2k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.41",
+        "idx"
+      ]
+    }
+  },
+  "Thames-Coromandel": {
+    "municipality": "Thames-Coromandel",
+    "place": "Thames-Coromandel",
+    "lat": -36.85,
+    "lng": 175.7,
+    "side": "right",
+    "exposure_pct": 10,
+    "metrics": {
+      "flood": [
+        "2,800",
+        "10%"
+      ],
+      "hurricane": [
+        "0 km",
+        "0%"
+      ],
+      "rainfall": [
+        "10 km",
+        "5%"
+      ],
+      "heatwave": [
+        "0",
+        "0%"
+      ],
+      "drought": [
+        "8",
+        "36%"
+      ],
+      "wildfire": [
+        "0",
+        "0%"
+      ],
+      "water_stress": [
+        "High",
+        "57%"
+      ],
+      "water_quality": [
+        "Fair",
+        "33%"
+      ],
+      "historical_financial_loss": [
+        "$24M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "860",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.58",
+        "idx"
+      ]
+    }
+  },
+  "Hauraki": {
+    "municipality": "Hauraki",
+    "place": "Hauraki",
+    "lat": -37.1,
+    "lng": 175.5,
+    "side": "right",
+    "exposure_pct": 24,
+    "metrics": {
+      "flood": [
+        "2,000",
+        "21%"
+      ],
+      "hurricane": [
+        "0 km",
+        "0%"
+      ],
+      "rainfall": [
+        "235 km",
+        "24%"
+      ],
+      "heatwave": [
+        "0",
+        "0%"
+      ],
+      "drought": [
+        "7",
+        "30%"
+      ],
+      "wildfire": [
+        "1",
+        "25%"
+      ],
+      "water_stress": [
+        "High",
+        "61%"
+      ],
+      "water_quality": [
+        "Fair",
+        "29%"
+      ],
+      "historical_financial_loss": [
+        "$14M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "520",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.63",
+        "idx"
+      ]
+    }
+  },
+  "Porirua": {
+    "municipality": "Porirua",
+    "place": "Porirua",
+    "lat": -41.1333,
+    "lng": 174.85,
+    "side": "left",
+    "exposure_pct": 3,
+    "metrics": {
+      "flood": [
+        "<100",
+        "<1%"
+      ],
+      "hurricane": [
+        "0 km",
+        "0%"
+      ],
+      "rainfall": [
+        "4 km",
+        "0%"
+      ],
+      "heatwave": [
+        "0",
+        "0%"
+      ],
+      "drought": [
+        "0",
+        "0%"
+      ],
+      "wildfire": [
+        "1",
+        "33%"
+      ],
+      "water_stress": [
+        "Low",
+        "21%"
+      ],
+      "water_quality": [
+        "Good",
+        "12%"
+      ],
+      "historical_financial_loss": [
+        "$6M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "190",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.36",
+        "idx"
+      ]
+    }
+  },
+  "Napier": {
+    "municipality": "Napier",
+    "place": "Napier",
+    "lat": -39.4928,
+    "lng": 176.912,
+    "side": "right",
+    "exposure_pct": 26,
+    "metrics": {
+      "flood": [
+        "5,900",
+        "26%"
+      ],
+      "hurricane": [
+        "<1 km",
+        "1%"
+      ],
+      "rainfall": [
+        "100 km",
+        "23%"
+      ],
+      "heatwave": [
+        "2",
+        "33%"
+      ],
+      "drought": [
+        "9",
+        "26%"
+      ],
+      "wildfire": [
+        "1",
+        "25%"
+      ],
+      "water_stress": [
+        "High",
+        "66%"
+      ],
+      "water_quality": [
+        "Fair",
+        "38%"
+      ],
+      "historical_financial_loss": [
+        "$31M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.4k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.67",
+        "idx"
+      ]
+    }
+  },
+  "Wellington": {
+    "municipality": "Wellington",
+    "place": "Wellington",
+    "lat": -41.2866,
+    "lng": 174.7756,
+    "side": "right",
+    "exposure_pct": 2,
+    "metrics": {
+      "flood": [
+        "<50",
+        "<1%"
+      ],
+      "hurricane": [
+        "<1 km",
+        "1%"
+      ],
+      "rainfall": [
+        "<1 km",
+        "<1%"
+      ],
+      "heatwave": [
+        "0",
+        "0%"
+      ],
+      "drought": [
+        "0",
+        "0%"
+      ],
+      "wildfire": [
+        "0",
+        "0%"
+      ],
+      "water_stress": [
+        "Low",
+        "17%"
+      ],
+      "water_quality": [
+        "Good",
+        "9%"
+      ],
+      "historical_financial_loss": [
+        "$9M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "310",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.29",
+        "idx"
+      ]
+    }
+  },
+  "Christchurch": {
+    "municipality": "Christchurch",
+    "place": "Christchurch",
+    "lat": -43.5321,
+    "lng": 172.6362,
+    "side": "right",
+    "exposure_pct": 8,
+    "metrics": {
+      "flood": [
+        "6,000",
+        "4%"
+      ],
+      "hurricane": [
+        "6 km",
+        "11%"
+      ],
+      "rainfall": [
+        "150 km",
+        "5%"
+      ],
+      "heatwave": [
+        "0",
+        "0%"
+      ],
+      "drought": [
+        "11",
+        "8%"
+      ],
+      "wildfire": [
+        "1",
+        "6%"
+      ],
+      "water_stress": [
+        "Med",
+        "35%"
+      ],
+      "water_quality": [
+        "Good",
+        "16%"
+      ],
+      "historical_financial_loss": [
+        "$21M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "980",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.48",
+        "idx"
+      ]
+    }
+  },
+  "Invercargill": {
+    "municipality": "Invercargill",
+    "place": "Invercargill",
+    "lat": -46.4132,
+    "lng": 168.3538,
+    "side": "right",
+    "exposure_pct": 9,
+    "metrics": {
+      "flood": [
+        "1,200",
+        "5%"
+      ],
+      "hurricane": [
+        "20 km",
+        "40%"
+      ],
+      "rainfall": [
+        "70 km",
+        "9%"
+      ],
+      "heatwave": [
+        "0",
+        "0%"
+      ],
+      "drought": [
+        "0",
+        "0%"
+      ],
+      "wildfire": [
+        "0",
+        "0%"
+      ],
+      "water_stress": [
+        "Low",
+        "24%"
+      ],
+      "water_quality": [
+        "Good",
+        "14%"
+      ],
+      "historical_financial_loss": [
+        "$8M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "260",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.34",
+        "idx"
+      ]
+    }
+  },
+  "Buller": {
+    "municipality": "Victoria",
+    "place": "Melbourne",
+    "lat": -37.8136,
+    "lng": 171.88,
+    "side": "left",
+    "exposure_pct": 18,
+    "metrics": {
+      "flood": [
+        "1,100",
+        "18%"
+      ],
+      "hurricane": [
+        "<1 km",
+        "<1%"
+      ],
+      "rainfall": [
+        "50 km",
+        "4%"
+      ],
+      "heatwave": [
+        "0",
+        "0%"
+      ],
+      "drought": [
+        "5",
+        "56%"
+      ],
+      "wildfire": [
+        "0",
+        "0%"
+      ],
+      "water_stress": [
+        "High",
+        "72%"
+      ],
+      "water_quality": [
+        "Fair",
+        "41%"
+      ],
+      "historical_financial_loss": [
+        "$12M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "430",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.71",
+        "idx"
+      ]
+    }
+  },
+  "Sicily": {
+    "municipality": "Catania",
+    "place": "Catania",
+    "lat": 37.5079,
+    "lng": 15.083,
+    "side": "right",
+    "exposure_pct": 26,
+    "metrics": {
+      "flood": [
+        "2,400",
+        "18%"
+      ],
+      "hurricane": [
+        "3 km",
+        "6%"
+      ],
+      "rainfall": [
+        "84 km",
+        "12%"
+      ],
+      "heatwave": [
+        "6",
+        "52%"
+      ],
+      "drought": [
+        "14",
+        "48%"
+      ],
+      "wildfire": [
+        "3",
+        "37%"
+      ],
+      "water_stress": [
+        "High",
+        "69%"
+      ],
+      "water_quality": [
+        "Fair",
+        "31%"
+      ],
+      "historical_financial_loss": [
+        "$22M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "740",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.64",
+        "idx"
+      ]
+    }
+  },
+  "Rhodes": {
+    "municipality": "Rhodes",
+    "place": "Rhodes Old Town",
+    "lat": 36.443,
+    "lng": 28.2278,
+    "side": "right",
+    "exposure_pct": 18,
+    "metrics": {
+      "flood": [
+        "1,600",
+        "14%"
+      ],
+      "hurricane": [
+        "2 km",
+        "5%"
+      ],
+      "rainfall": [
+        "40 km",
+        "8%"
+      ],
+      "heatwave": [
+        "5",
+        "49%"
+      ],
+      "drought": [
+        "11",
+        "44%"
+      ],
+      "wildfire": [
+        "2",
+        "34%"
+      ],
+      "water_stress": [
+        "High",
+        "63%"
+      ],
+      "water_quality": [
+        "Fair",
+        "28%"
+      ],
+      "historical_financial_loss": [
+        "$15M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "510",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.59",
+        "idx"
+      ]
+    }
+  },
+  "Costa del Sol": {
+    "municipality": "Malaga",
+    "place": "Malaga",
+    "lat": 36.7213,
+    "lng": -4.4214,
+    "side": "right",
+    "exposure_pct": 31,
+    "metrics": {
+      "flood": [
+        "3,100",
+        "16%"
+      ],
+      "hurricane": [
+        "1 km",
+        "3%"
+      ],
+      "rainfall": [
+        "72 km",
+        "10%"
+      ],
+      "heatwave": [
+        "7",
+        "57%"
+      ],
+      "drought": [
+        "16",
+        "53%"
+      ],
+      "wildfire": [
+        "4",
+        "41%"
+      ],
+      "water_stress": [
+        "High",
+        "74%"
+      ],
+      "water_quality": [
+        "Fair",
+        "35%"
+      ],
+      "historical_financial_loss": [
+        "$28M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.1k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.68",
+        "idx"
+      ]
+    }
+  },
+  "Dubai": {
+    "municipality": "Dubai",
+    "place": "Burj Khalifa",
+    "lat": 25.1972,
+    "lng": 55.2744,
+    "side": "right",
+    "exposure_pct": 41,
+    "metrics": {
+      "flood": [
+        "2,900",
+        "11%"
+      ],
+      "hurricane": [
+        "0 km",
+        "0%"
+      ],
+      "rainfall": [
+        "24 km",
+        "4%"
+      ],
+      "heatwave": [
+        "9",
+        "78%"
+      ],
+      "drought": [
+        "20",
+        "71%"
+      ],
+      "wildfire": [
+        "1",
+        "12%"
+      ],
+      "water_stress": [
+        "Very high",
+        "86%"
+      ],
+      "water_quality": [
+        "Fair",
+        "22%"
+      ],
+      "historical_financial_loss": [
+        "$34M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.6k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.73",
+        "idx"
+      ]
+    }
+  }
+}
