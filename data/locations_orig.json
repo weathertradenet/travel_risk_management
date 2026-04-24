@@ -51,11 +51,6 @@
         "0.41",
         "idx"
       ]
-    },
-    "monthly_weather": {
-      "cloudy": [11, 9, 10, 11, 13, 13, 13, 12, 12, 13, 13, 13],
-      "rainy": [6, 5, 6, 7, 9, 10, 11, 11, 9, 9, 7, 7],
-      "windy": [7, 7, 7, 8, 9, 9, 10, 10, 10, 10, 9, 8]
     }
   },
   "Thames-Coromandel": {
@@ -109,50 +104,6 @@
       "vulnerability_index": [
         "0.58",
         "idx"
-      ]
-    },
-    "monthly_weather": {
-      "cloudy": [
-        10,
-        9,
-        8,
-        7,
-        5,
-        3,
-        1,
-        2,
-        4,
-        6,
-        8,
-        10
-      ],
-      "rainy": [
-        6,
-        5,
-        4,
-        4,
-        3,
-        1,
-        0,
-        1,
-        3,
-        5,
-        6,
-        7
-      ],
-      "windy": [
-        7,
-        6,
-        6,
-        5,
-        4,
-        3,
-        3,
-        3,
-        4,
-        5,
-        6,
-        7
       ]
     }
   },
@@ -208,50 +159,6 @@
         "0.63",
         "idx"
       ]
-    },
-    "monthly_weather": {
-      "cloudy": [
-        10,
-        9,
-        8,
-        7,
-        5,
-        3,
-        1,
-        2,
-        4,
-        6,
-        8,
-        10
-      ],
-      "rainy": [
-        6,
-        5,
-        4,
-        4,
-        3,
-        1,
-        0,
-        1,
-        3,
-        5,
-        6,
-        7
-      ],
-      "windy": [
-        7,
-        6,
-        6,
-        5,
-        4,
-        3,
-        3,
-        3,
-        4,
-        5,
-        6,
-        7
-      ]
     }
   },
   "Porirua": {
@@ -306,50 +213,6 @@
         "0.36",
         "idx"
       ]
-    },
-    "monthly_weather": {
-      "cloudy": [
-        10,
-        9,
-        8,
-        7,
-        5,
-        3,
-        1,
-        2,
-        4,
-        6,
-        8,
-        10
-      ],
-      "rainy": [
-        6,
-        5,
-        4,
-        4,
-        3,
-        1,
-        0,
-        1,
-        3,
-        5,
-        6,
-        7
-      ],
-      "windy": [
-        7,
-        6,
-        6,
-        5,
-        4,
-        3,
-        3,
-        3,
-        4,
-        5,
-        6,
-        7
-      ]
     }
   },
   "Napier": {
@@ -360,14 +223,8 @@
     "side": "right",
     "exposure_pct": 26,
     "side_metrics": {
-      "natcat": [
-        "no",
-        "no"
-      ],
-      "days": [
-        "296",
-        "45"
-      ]
+      "natcat": ["no", "no"],
+      "days": ["296", "45"]
     },
     "metrics": {
       "flood": [
@@ -414,50 +271,6 @@
         "0.67",
         "idx"
       ]
-    },
-    "monthly_weather": {
-      "cloudy": [
-        10,
-        9,
-        8,
-        7,
-        5,
-        3,
-        1,
-        2,
-        4,
-        6,
-        8,
-        10
-      ],
-      "rainy": [
-        6,
-        5,
-        4,
-        4,
-        3,
-        1,
-        0,
-        1,
-        3,
-        5,
-        6,
-        7
-      ],
-      "windy": [
-        7,
-        6,
-        6,
-        5,
-        4,
-        3,
-        3,
-        3,
-        4,
-        5,
-        6,
-        7
-      ]
     }
   },
   "Wellington": {
@@ -468,14 +281,8 @@
     "side": "right",
     "exposure_pct": 2,
     "side_metrics": {
-      "natcat": [
-        "no",
-        "no"
-      ],
-      "days": [
-        "296",
-        "45"
-      ]
+      "natcat": ["no", "no"],
+      "days": ["296", "45"]
     },
     "metrics": {
       "flood": [
@@ -522,50 +329,6 @@
         "0.29",
         "idx"
       ]
-    },
-    "monthly_weather": {
-      "cloudy": [
-        10,
-        9,
-        8,
-        7,
-        5,
-        3,
-        1,
-        2,
-        4,
-        6,
-        8,
-        10
-      ],
-      "rainy": [
-        6,
-        5,
-        4,
-        4,
-        3,
-        1,
-        0,
-        1,
-        3,
-        5,
-        6,
-        7
-      ],
-      "windy": [
-        7,
-        6,
-        6,
-        5,
-        4,
-        3,
-        3,
-        3,
-        4,
-        5,
-        6,
-        7
-      ]
     }
   },
   "Christchurch": {
@@ -576,14 +339,8 @@
     "side": "right",
     "exposure_pct": 8,
     "side_metrics": {
-      "natcat": [
-        "no",
-        "no"
-      ],
-      "days": [
-        "296",
-        "45"
-      ]
+      "natcat": ["no", "no"],
+      "days": ["296", "45"]
     },
     "metrics": {
       "flood": [
@@ -630,50 +387,6 @@
         "0.48",
         "idx"
       ]
-    },
-    "monthly_weather": {
-      "cloudy": [
-        10,
-        9,
-        8,
-        7,
-        5,
-        3,
-        1,
-        2,
-        4,
-        6,
-        8,
-        10
-      ],
-      "rainy": [
-        6,
-        5,
-        4,
-        4,
-        3,
-        1,
-        0,
-        1,
-        3,
-        5,
-        6,
-        7
-      ],
-      "windy": [
-        7,
-        6,
-        6,
-        5,
-        4,
-        3,
-        3,
-        3,
-        4,
-        5,
-        6,
-        7
-      ]
     }
   },
   "Invercargill": {
@@ -684,66 +397,15 @@
     "side": "right",
     "exposure_pct": 9,
     "side_metrics": {
-      "natcat": [
-        "no",
-        "no"
-      ],
-      "days": [
-        "296",
-        "45"
-      ],
-      "airquality": [
-        "2/10",
-        "9/10"
-      ],
-      "naturalspaces": [
-        "29",
-        "61"
-      ]
+      "natcat": ["no", "no"],
+      "days": ["296", "45"],
+      "airquality": ["2/10", "9/10"],
+      "naturalspaces": ["29", "61"]
     },
     "monthly_weather": {
-      "cloudy": [
-        10,
-        9,
-        8,
-        7,
-        5,
-        3,
-        1,
-        2,
-        4,
-        6,
-        8,
-        10
-      ],
-      "rainy": [
-        6,
-        5,
-        4,
-        4,
-        3,
-        1,
-        0,
-        1,
-        3,
-        5,
-        6,
-        7
-      ],
-      "windy": [
-        7,
-        6,
-        6,
-        5,
-        4,
-        3,
-        3,
-        3,
-        4,
-        5,
-        6,
-        7
-      ]
+      "cloudy": [10, 9, 8, 7, 5, 3, 1, 2, 4, 6, 8, 10],
+      "rainy": [6, 5, 4, 4, 3, 1, 0, 1, 3, 5, 6, 7],
+      "windy": [7, 6, 6, 5, 4, 3, 3, 3, 4, 5, 6, 7]
     },
     "metrics": {
       "flood": [
@@ -800,22 +462,10 @@
     "side": "left",
     "exposure_pct": 18,
     "side_metrics": {
-      "natcat": [
-        "no",
-        "no"
-      ],
-      "days": [
-        "296",
-        "45"
-      ],
-      "airquality": [
-        "2/10",
-        "9/10"
-      ],
-      "naturalspaces": [
-        "29",
-        "61"
-      ]
+      "natcat": ["no", "no"],
+      "days": ["296", "45"],
+      "airquality": ["2/10", "9/10"],
+      "naturalspaces": ["29", "61"]
     },
     "metrics": {
       "flood": [
@@ -862,50 +512,6 @@
         "0.71",
         "idx"
       ]
-    },
-    "monthly_weather": {
-      "cloudy": [
-        10,
-        9,
-        8,
-        7,
-        5,
-        3,
-        1,
-        2,
-        4,
-        6,
-        8,
-        10
-      ],
-      "rainy": [
-        6,
-        5,
-        4,
-        4,
-        3,
-        1,
-        0,
-        1,
-        3,
-        5,
-        6,
-        7
-      ],
-      "windy": [
-        7,
-        6,
-        6,
-        5,
-        4,
-        3,
-        3,
-        3,
-        4,
-        5,
-        6,
-        7
-      ]
     }
   },
   "Sicily": {
@@ -916,22 +522,10 @@
     "side": "right",
     "exposure_pct": 56,
     "side_metrics": {
-      "natcat": [
-        "no",
-        "no"
-      ],
-      "days": [
-        "296",
-        "45"
-      ],
-      "airquality": [
-        "2/10",
-        "9/10"
-      ],
-      "naturalspaces": [
-        "29",
-        "61"
-      ]
+      "natcat": ["no", "no"],
+      "days": ["296", "45"],
+      "airquality": ["2/10", "9/10"],
+      "naturalspaces": ["29", "61"]
     },
     "metrics": {
       "flood": [
@@ -978,50 +572,6 @@
         "0.64",
         "idx"
       ]
-    },
-    "monthly_weather": {
-      "cloudy": [
-        10,
-        9,
-        8,
-        7,
-        5,
-        3,
-        1,
-        2,
-        4,
-        6,
-        8,
-        10
-      ],
-      "rainy": [
-        6,
-        5,
-        4,
-        4,
-        3,
-        1,
-        0,
-        1,
-        3,
-        5,
-        6,
-        7
-      ],
-      "windy": [
-        7,
-        6,
-        6,
-        5,
-        4,
-        3,
-        3,
-        3,
-        4,
-        5,
-        6,
-        7
-      ]
     }
   },
   "Rhodes": {
@@ -1032,22 +582,10 @@
     "side": "right",
     "exposure_pct": 18,
     "side_metrics": {
-      "natcat": [
-        "no",
-        "no"
-      ],
-      "days": [
-        "296",
-        "45"
-      ],
-      "airquality": [
-        "2/10",
-        "9/10"
-      ],
-      "naturalspaces": [
-        "29",
-        "61"
-      ]
+      "natcat": ["no", "no"],
+      "days": ["296", "45"],
+      "airquality": ["2/10", "9/10"],
+      "naturalspaces": ["29", "61"]
     },
     "metrics": {
       "flood": [
@@ -1094,166 +632,38 @@
         "0.59",
         "idx"
       ]
-    },
-    "monthly_weather": {
-      "cloudy": [
-        10,
-        9,
-        8,
-        7,
-        5,
-        3,
-        1,
-        2,
-        4,
-        6,
-        8,
-        10
-      ],
-      "rainy": [
-        6,
-        5,
-        4,
-        4,
-        3,
-        1,
-        0,
-        1,
-        3,
-        5,
-        6,
-        7
-      ],
-      "windy": [
-        7,
-        6,
-        6,
-        5,
-        4,
-        3,
-        3,
-        3,
-        4,
-        5,
-        6,
-        7
-      ]
     }
   },
   "Sevilla": {
-    "municipality": "Sevilla",
-    "place": "Sevilla",
-    "lat": 37.3891,
-    "lng": -5.9845,
-    "side": "right",
-    "exposure_pct": 20,
-    "side_metrics": {
-      "natcat": [
-        "no",
-        "no"
-      ],
-      "days": [
-        "280",
-        "39"
-      ],
-      "airquality": [
-        "2/10",
-        "9/10"
-      ],
-      "naturalspaces": [
-        "29",
-        "61"
-      ]
+  "municipality": "Sevilla",
+  "place": "Sevilla",
+  "lat": 37.3891,
+  "lng": -5.9845,
+  "side": "right",
+  "exposure_pct": 20,
+  "side_metrics": {
+    "natcat": ["no", "no"],
+    "days": ["280", "39"],
+    "airquality": ["2/10", "9/10"],
+    "naturalspaces": ["29", "61"]
     },
-    "monthly_weather": {
-      "cloudy": [
-        10,
-        9,
-        8,
-        7,
-        5,
-        3,
-        1,
-        2,
-        4,
-        6,
-        8,
-        10
-      ],
-      "rainy": [
-        6,
-        5,
-        4,
-        4,
-        3,
-        1,
-        0,
-        1,
-        3,
-        5,
-        6,
-        7
-      ],
-      "windy": [
-        7,
-        6,
-        6,
-        5,
-        4,
-        3,
-        3,
-        3,
-        4,
-        5,
-        6,
-        7
-      ]
+      "monthly_weather": {
+      "cloudy": [10, 9, 8, 7, 5, 3, 1, 2, 4, 6, 8, 10],
+      "rainy":  [6, 5, 4, 4, 3, 1, 0, 1, 3, 5, 6, 7],
+      "windy":  [7, 6, 6, 5, 4, 3, 3, 3, 4, 5, 6, 7]
     },
     "metrics": {
-      "flood": [
-        "1,200",
-        "8%"
-      ],
-      "hurricane": [
-        "0 km",
-        "0%"
-      ],
-      "rainfall": [
-        "30 km",
-        "6%"
-      ],
-      "heatwave": [
-        "9",
-        "61%"
-      ],
-      "drought": [
-        "18",
-        "59%"
-      ],
-      "wildfire": [
-        "3",
-        "28%"
-      ],
-      "water_stress": [
-        "High",
-        "71%"
-      ],
-      "water_quality": [
-        "Fair",
-        "32%"
-      ],
-      "historical_financial_loss": [
-        "$12M",
-        "10y"
-      ],
-      "insurance_claims": [
-        "620",
-        "yr"
-      ],
-      "vulnerability_index": [
-        "0.61",
-        "idx"
-      ]
+      "flood": ["1,200", "8%"],
+      "hurricane": ["0 km", "0%"],
+      "rainfall": ["30 km", "6%"],
+      "heatwave": ["9", "61%"],
+      "drought": ["18", "59%"],
+      "wildfire": ["3", "28%"],
+      "water_stress": ["High", "71%"],
+      "water_quality": ["Fair", "32%"],
+      "historical_financial_loss": ["$12M", "10y"],
+      "insurance_claims": ["620", "yr"],
+      "vulnerability_index": ["0.61", "idx"]
     }
   },
   "Costa del Sol": {
@@ -1264,27 +674,15 @@
     "side": "right",
     "exposure_pct": 31,
     "side_metrics": {
-      "natcat": [
-        "Flood",
-        "Wildfire"
-      ],
-      "days": [
-        "296",
-        "45"
-      ],
-      "airquality": [
-        "2/10",
-        "9/10"
-      ],
-      "naturalspaces": [
-        "29",
-        "61"
-      ]
+      "natcat": ["Flood", "Wildfire"],
+      "days": ["296", "45"],
+      "airquality": ["2/10", "9/10"],
+      "naturalspaces": ["29", "61"]
     },
     "monthly_weather": {
-      "cloudy": [12, 10, 12, 11, 11, 6, 2, 4, 10, 13, 12, 13],
-      "rainy": [8, 7, 11, 11, 6, 3, 2, 3, 6, 7, 7, 6],
-      "windy": [9, 8, 8, 7, 6, 5, 4, 4, 5, 6, 8, 9]
+      "cloudy": [10, 9, 8, 7, 5, 3, 1, 2, 4, 6, 8, 10],
+      "rainy":  [6, 5, 4, 4, 3, 1, 0, 1, 3, 5, 6, 7],
+      "windy":  [7, 6, 6, 5, 4, 3, 3, 3, 4, 5, 6, 7]
     },
     "metrics": {
       "drought": [
@@ -1341,27 +739,15 @@
     "side": "right",
     "exposure_pct": 39,
     "side_metrics": {
-      "natcat": [
-        "no",
-        "no"
-      ],
-      "days": [
-        "296",
-        "45"
-      ],
-      "airquality": [
-        "2/10",
-        "9/10"
-      ],
-      "naturalspaces": [
-        "29",
-        "61"
-      ]
+      "natcat": ["no", "no"],
+      "days": ["296", "45"],
+      "airquality": ["2/10", "9/10"],
+      "naturalspaces": ["29", "61"]
     },
-    "monthly_weather": {
-     "cloudy": [20, 16, 15, 13, 12, 10, 7, 6, 10, 14, 17, 22],
-     "rainy": [11, 8, 9, 8, 10, 9, 6, 7, 8, 10, 10, 10],
-     "windy": [5, 5, 6, 6, 5, 4, 3, 4, 4, 5, 5, 5]
+      "monthly_weather": {
+      "cloudy": [10, 9, 8, 7, 5, 3, 1, 2, 4, 6, 8, 10],
+      "rainy":  [6, 5, 4, 4, 3, 1, 0, 1, 3, 5, 6, 7],
+      "windy":  [7, 6, 6, 5, 4, 3, 3, 3, 4, 5, 6, 7]
     },
     "metrics": {
       "flood": [
@@ -1418,37 +804,22 @@
     "side": "right",
     "exposure_pct": 41,
     "side_metrics": {
-      "natcat": [
-        "no",
-        "no"
-      ],
-      "days": [
-        "296",
-        "45"
-      ],
-      "airquality": [
-        "2/10",
-        "9/10"
-      ],
-      "naturalspaces": [
-        "29",
-        "61"
-      ]
+      "natcat": ["no", "no"],
+      "days": ["296", "45"],
+      "airquality": ["2/10", "9/10"],
+      "naturalspaces": ["29", "61"]
     },
     "monthly_weather": {
-       "cloudy": [7, 6, 8, 8, 5, 8, 14, 12, 5, 3, 5, 7],
-        "rainy": [3, 3, 5, 4, 1, 0, 1, 1, 0, 1, 2, 3],
-        "windy": [8, 9, 10, 11, 12, 12, 11, 10, 9, 8, 8, 8]
+      "cloudy": [10, 9, 8, 7, 5, 3, 1, 2, 4, 6, 8, 10],
+      "rainy":  [6, 5, 4, 4, 3, 1, 0, 1, 3, 5, 6, 7],
+      "windy":  [7, 6, 6, 5, 4, 3, 3, 3, 4, 5, 6, 7]
     },
     "metrics": {
       "flood": [
         "2,900",
         "11%"
       ],
-      "hurricane": [
-        "0 km",
-        "0%"
-      ],
+      "hurricane": [ "0 km",  "0%" ],
       "rainfall": [
         "24 km",
         "4%"

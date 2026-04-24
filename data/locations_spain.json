@@ -1,0 +1,6111 @@
+{
+  "Melilla": {
+    "municipality": "Melilla",
+    "place": "Melilla",
+    "lat": 35.2923,
+    "lng": -2.9381,
+    "side": "right",
+    "exposure_pct": 49,
+    "side_metrics": {
+      "natcat": [
+        "Flood",
+        "Storm"
+      ],
+      "days": [
+        "266",
+        "62"
+      ],
+      "airquality": [
+        "5/10",
+        "6/10"
+      ],
+      "naturalspaces": [
+        "56",
+        "75"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "3,530",
+        "8%"
+      ],
+      "hurricane": [
+        "0 km",
+        "0%"
+      ],
+      "rainfall": [
+        "14 km",
+        "17%"
+      ],
+      "heatwave": [
+        "6",
+        "41%"
+      ],
+      "drought": [
+        "12",
+        "23%"
+      ],
+      "wildfire": [
+        "5",
+        "23%"
+      ],
+      "water_stress": [
+        "High",
+        "53%"
+      ],
+      "water_quality": [
+        "Poor",
+        "40%"
+      ],
+      "historical_financial_loss": [
+        "$7M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.4k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.34",
+        "idx"
+      ]
+    }
+  },
+  "Málaga": {
+    "municipality": "Málaga",
+    "place": "Málaga",
+    "lat": 36.7213,
+    "lng": -4.4214,
+    "side": "right",
+    "exposure_pct": 48,
+    "side_metrics": {
+      "natcat": [
+        "Heatwave",
+        "no"
+      ],
+      "days": [
+        "230",
+        "46"
+      ],
+      "airquality": [
+        "8/10",
+        "6/10"
+      ],
+      "naturalspaces": [
+        "48",
+        "88"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "4,722",
+        "7%"
+      ],
+      "hurricane": [
+        "3 km",
+        "5%"
+      ],
+      "rainfall": [
+        "156 km",
+        "14%"
+      ],
+      "heatwave": [
+        "9",
+        "53%"
+      ],
+      "drought": [
+        "14",
+        "21%"
+      ],
+      "wildfire": [
+        "3",
+        "44%"
+      ],
+      "water_stress": [
+        "Very high",
+        "33%"
+      ],
+      "water_quality": [
+        "Good",
+        "16%"
+      ],
+      "historical_financial_loss": [
+        "$6M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.4k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.47",
+        "idx"
+      ]
+    }
+  },
+  "Lleida": {
+    "municipality": "Lleida",
+    "place": "Lleida",
+    "lat": 41.6176,
+    "lng": 0.62,
+    "side": "right",
+    "exposure_pct": 20,
+    "side_metrics": {
+      "natcat": [
+        "Flood",
+        "Drought"
+      ],
+      "days": [
+        "223",
+        "50"
+      ],
+      "airquality": [
+        "4/10",
+        "8/10"
+      ],
+      "naturalspaces": [
+        "46",
+        "88"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "3,425",
+        "9%"
+      ],
+      "hurricane": [
+        "<1 km",
+        "7%"
+      ],
+      "rainfall": [
+        "161 km",
+        "17%"
+      ],
+      "heatwave": [
+        "8",
+        "64%"
+      ],
+      "drought": [
+        "17",
+        "44%"
+      ],
+      "wildfire": [
+        "1",
+        "0%"
+      ],
+      "water_stress": [
+        "Low",
+        "30%"
+      ],
+      "water_quality": [
+        "Good",
+        "37%"
+      ],
+      "historical_financial_loss": [
+        "$20M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.3k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.52",
+        "idx"
+      ]
+    }
+  },
+  "Las Palmas": {
+    "municipality": "Las Palmas",
+    "place": "Las Palmas de Gran Canaria",
+    "lat": 28.1235,
+    "lng": -15.4363,
+    "side": "right",
+    "exposure_pct": 11,
+    "side_metrics": {
+      "natcat": [
+        "Wildfire",
+        "no"
+      ],
+      "days": [
+        "288",
+        "46"
+      ],
+      "airquality": [
+        "7/10",
+        "9/10"
+      ],
+      "naturalspaces": [
+        "43",
+        "59"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "3,202",
+        "19%"
+      ],
+      "hurricane": [
+        "1 km",
+        "8%"
+      ],
+      "rainfall": [
+        "160 km",
+        "2%"
+      ],
+      "heatwave": [
+        "6",
+        "63%"
+      ],
+      "drought": [
+        "11",
+        "25%"
+      ],
+      "wildfire": [
+        "2",
+        "26%"
+      ],
+      "water_stress": [
+        "Very high",
+        "84%"
+      ],
+      "water_quality": [
+        "Fair",
+        "25%"
+      ],
+      "historical_financial_loss": [
+        "$28M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.6k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.33",
+        "idx"
+      ]
+    }
+  },
+  "Ciudad Real": {
+    "municipality": "Ciudad Real",
+    "place": "Ciudad Real",
+    "lat": 38.9848,
+    "lng": -3.9274,
+    "side": "right",
+    "exposure_pct": 48,
+    "side_metrics": {
+      "natcat": [
+        "Heatwave",
+        "Storm"
+      ],
+      "days": [
+        "306",
+        "40"
+      ],
+      "airquality": [
+        "5/10",
+        "5/10"
+      ],
+      "naturalspaces": [
+        "62",
+        "35"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "1,222",
+        "7%"
+      ],
+      "hurricane": [
+        "0 km",
+        "0%"
+      ],
+      "rainfall": [
+        "195 km",
+        "15%"
+      ],
+      "heatwave": [
+        "1",
+        "71%"
+      ],
+      "drought": [
+        "6",
+        "21%"
+      ],
+      "wildfire": [
+        "2",
+        "26%"
+      ],
+      "water_stress": [
+        "Low",
+        "73%"
+      ],
+      "water_quality": [
+        "Fair",
+        "42%"
+      ],
+      "historical_financial_loss": [
+        "$31M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "640",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.44",
+        "idx"
+      ]
+    }
+  },
+  "A Coruña": {
+    "municipality": "A Coruña",
+    "place": "A Coruña",
+    "lat": 43.3623,
+    "lng": -8.4115,
+    "side": "right",
+    "exposure_pct": 25,
+    "side_metrics": {
+      "natcat": [
+        "Flood",
+        "Storm"
+      ],
+      "days": [
+        "314",
+        "25"
+      ],
+      "airquality": [
+        "5/10",
+        "9/10"
+      ],
+      "naturalspaces": [
+        "55",
+        "87"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "4,682",
+        "21%"
+      ],
+      "hurricane": [
+        "1 km",
+        "6%"
+      ],
+      "rainfall": [
+        "229 km",
+        "15%"
+      ],
+      "heatwave": [
+        "4",
+        "26%"
+      ],
+      "drought": [
+        "6",
+        "47%"
+      ],
+      "wildfire": [
+        "5",
+        "15%"
+      ],
+      "water_stress": [
+        "Low",
+        "76%"
+      ],
+      "water_quality": [
+        "Good",
+        "32%"
+      ],
+      "historical_financial_loss": [
+        "$39M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "727",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.53",
+        "idx"
+      ]
+    }
+  },
+  "La Rioja": {
+    "municipality": "La Rioja",
+    "place": "Logroño",
+    "lat": 42.4627,
+    "lng": -2.445,
+    "side": "right",
+    "exposure_pct": 14,
+    "side_metrics": {
+      "natcat": [
+        "no",
+        "Storm"
+      ],
+      "days": [
+        "223",
+        "47"
+      ],
+      "airquality": [
+        "2/10",
+        "8/10"
+      ],
+      "naturalspaces": [
+        "54",
+        "46"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "1,596",
+        "21%"
+      ],
+      "hurricane": [
+        "1 km",
+        "2%"
+      ],
+      "rainfall": [
+        "142 km",
+        "7%"
+      ],
+      "heatwave": [
+        "9",
+        "39%"
+      ],
+      "drought": [
+        "11",
+        "65%"
+      ],
+      "wildfire": [
+        "1",
+        "45%"
+      ],
+      "water_stress": [
+        "Low",
+        "34%"
+      ],
+      "water_quality": [
+        "Poor",
+        "17%"
+      ],
+      "historical_financial_loss": [
+        "$9M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.5k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.53",
+        "idx"
+      ]
+    }
+  },
+  "Cádiz": {
+    "municipality": "Cádiz",
+    "place": "Cádiz",
+    "lat": 36.5271,
+    "lng": -6.2886,
+    "side": "right",
+    "exposure_pct": 14,
+    "side_metrics": {
+      "natcat": [
+        "no",
+        "Drought"
+      ],
+      "days": [
+        "215",
+        "63"
+      ],
+      "airquality": [
+        "7/10",
+        "10/10"
+      ],
+      "naturalspaces": [
+        "30",
+        "69"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "6,271",
+        "1%"
+      ],
+      "hurricane": [
+        "2 km",
+        "1%"
+      ],
+      "rainfall": [
+        "181 km",
+        "4%"
+      ],
+      "heatwave": [
+        "6",
+        "39%"
+      ],
+      "drought": [
+        "22",
+        "55%"
+      ],
+      "wildfire": [
+        "5",
+        "0%"
+      ],
+      "water_stress": [
+        "Very high",
+        "19%"
+      ],
+      "water_quality": [
+        "Poor",
+        "31%"
+      ],
+      "historical_financial_loss": [
+        "$13M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "740",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.32",
+        "idx"
+      ]
+    }
+  },
+  "Illes Balears": {
+    "municipality": "Illes Balears",
+    "place": "Palma",
+    "lat": 39.5696,
+    "lng": 2.6502,
+    "side": "right",
+    "exposure_pct": 13,
+    "side_metrics": {
+      "natcat": [
+        "no",
+        "Flood"
+      ],
+      "days": [
+        "220",
+        "60"
+      ],
+      "airquality": [
+        "4/10",
+        "6/10"
+      ],
+      "naturalspaces": [
+        "26",
+        "79"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "4,474",
+        "20%"
+      ],
+      "hurricane": [
+        "3 km",
+        "7%"
+      ],
+      "rainfall": [
+        "19 km",
+        "16%"
+      ],
+      "heatwave": [
+        "7",
+        "51%"
+      ],
+      "drought": [
+        "5",
+        "62%"
+      ],
+      "wildfire": [
+        "0",
+        "42%"
+      ],
+      "water_stress": [
+        "Very high",
+        "63%"
+      ],
+      "water_quality": [
+        "Good",
+        "17%"
+      ],
+      "historical_financial_loss": [
+        "$36M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "953",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.65",
+        "idx"
+      ]
+    }
+  },
+  "Córdoba": {
+    "municipality": "Córdoba",
+    "place": "Córdoba",
+    "lat": 37.8882,
+    "lng": -4.7794,
+    "side": "right",
+    "exposure_pct": 11,
+    "side_metrics": {
+      "natcat": [
+        "Heatwave",
+        "no"
+      ],
+      "days": [
+        "283",
+        "48"
+      ],
+      "airquality": [
+        "8/10",
+        "7/10"
+      ],
+      "naturalspaces": [
+        "58",
+        "80"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "4,432",
+        "16%"
+      ],
+      "hurricane": [
+        "3 km",
+        "5%"
+      ],
+      "rainfall": [
+        "102 km",
+        "3%"
+      ],
+      "heatwave": [
+        "3",
+        "49%"
+      ],
+      "drought": [
+        "13",
+        "48%"
+      ],
+      "wildfire": [
+        "2",
+        "36%"
+      ],
+      "water_stress": [
+        "Med",
+        "76%"
+      ],
+      "water_quality": [
+        "Fair",
+        "29%"
+      ],
+      "historical_financial_loss": [
+        "$15M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "959",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.70",
+        "idx"
+      ]
+    }
+  },
+  "Lugo": {
+    "municipality": "Lugo",
+    "place": "Lugo",
+    "lat": 43.0097,
+    "lng": -7.5568,
+    "side": "right",
+    "exposure_pct": 47,
+    "side_metrics": {
+      "natcat": [
+        "no",
+        "Drought"
+      ],
+      "days": [
+        "211",
+        "53"
+      ],
+      "airquality": [
+        "2/10",
+        "6/10"
+      ],
+      "naturalspaces": [
+        "31",
+        "82"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "1,090",
+        "15%"
+      ],
+      "hurricane": [
+        "3 km",
+        "8%"
+      ],
+      "rainfall": [
+        "43 km",
+        "21%"
+      ],
+      "heatwave": [
+        "1",
+        "30%"
+      ],
+      "drought": [
+        "18",
+        "29%"
+      ],
+      "wildfire": [
+        "0",
+        "21%"
+      ],
+      "water_stress": [
+        "High",
+        "64%"
+      ],
+      "water_quality": [
+        "Poor",
+        "12%"
+      ],
+      "historical_financial_loss": [
+        "$19M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "289",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.50",
+        "idx"
+      ]
+    }
+  },
+  "Ávila": {
+    "municipality": "Ávila",
+    "place": "Ávila",
+    "lat": 40.6565,
+    "lng": -4.6818,
+    "side": "right",
+    "exposure_pct": 51,
+    "side_metrics": {
+      "natcat": [
+        "Heatwave",
+        "no"
+      ],
+      "days": [
+        "230",
+        "70"
+      ],
+      "airquality": [
+        "4/10",
+        "8/10"
+      ],
+      "naturalspaces": [
+        "60",
+        "59"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "5,986",
+        "26%"
+      ],
+      "hurricane": [
+        "2 km",
+        "8%"
+      ],
+      "rainfall": [
+        "39 km",
+        "16%"
+      ],
+      "heatwave": [
+        "1",
+        "70%"
+      ],
+      "drought": [
+        "19",
+        "44%"
+      ],
+      "wildfire": [
+        "0",
+        "43%"
+      ],
+      "water_stress": [
+        "Very high",
+        "20%"
+      ],
+      "water_quality": [
+        "Fair",
+        "39%"
+      ],
+      "historical_financial_loss": [
+        "$34M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "837",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.44",
+        "idx"
+      ]
+    }
+  },
+  "Gipuzkoa": {
+    "municipality": "Gipuzkoa",
+    "place": "Donostia / San Sebastián",
+    "lat": 43.3183,
+    "lng": -1.9812,
+    "side": "right",
+    "exposure_pct": 22,
+    "side_metrics": {
+      "natcat": [
+        "no",
+        "Flood"
+      ],
+      "days": [
+        "268",
+        "49"
+      ],
+      "airquality": [
+        "7/10",
+        "6/10"
+      ],
+      "naturalspaces": [
+        "48",
+        "74"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "875",
+        "24%"
+      ],
+      "hurricane": [
+        "3 km",
+        "8%"
+      ],
+      "rainfall": [
+        "122 km",
+        "17%"
+      ],
+      "heatwave": [
+        "8",
+        "45%"
+      ],
+      "drought": [
+        "3",
+        "28%"
+      ],
+      "wildfire": [
+        "2",
+        "42%"
+      ],
+      "water_stress": [
+        "Med",
+        "65%"
+      ],
+      "water_quality": [
+        "Fair",
+        "19%"
+      ],
+      "historical_financial_loss": [
+        "$14M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.1k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.69",
+        "idx"
+      ]
+    }
+  },
+  "Cáceres": {
+    "municipality": "Cáceres",
+    "place": "Cáceres",
+    "lat": 39.4753,
+    "lng": -6.3724,
+    "side": "right",
+    "exposure_pct": 45,
+    "side_metrics": {
+      "natcat": [
+        "Heatwave",
+        "Drought"
+      ],
+      "days": [
+        "255",
+        "27"
+      ],
+      "airquality": [
+        "8/10",
+        "7/10"
+      ],
+      "naturalspaces": [
+        "50",
+        "61"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "4,764",
+        "6%"
+      ],
+      "hurricane": [
+        "<1 km",
+        "6%"
+      ],
+      "rainfall": [
+        "61 km",
+        "7%"
+      ],
+      "heatwave": [
+        "8",
+        "68%"
+      ],
+      "drought": [
+        "21",
+        "33%"
+      ],
+      "wildfire": [
+        "4",
+        "21%"
+      ],
+      "water_stress": [
+        "Low",
+        "30%"
+      ],
+      "water_quality": [
+        "Good",
+        "19%"
+      ],
+      "historical_financial_loss": [
+        "$36M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "789",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.32",
+        "idx"
+      ]
+    }
+  },
+  "Ceuta": {
+    "municipality": "Ceuta",
+    "place": "Ceuta",
+    "lat": 35.8894,
+    "lng": -5.3213,
+    "side": "right",
+    "exposure_pct": 53,
+    "side_metrics": {
+      "natcat": [
+        "Heatwave",
+        "Storm"
+      ],
+      "days": [
+        "296",
+        "63"
+      ],
+      "airquality": [
+        "8/10",
+        "9/10"
+      ],
+      "naturalspaces": [
+        "58",
+        "67"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "1,732",
+        "4%"
+      ],
+      "hurricane": [
+        "<1 km",
+        "3%"
+      ],
+      "rainfall": [
+        "121 km",
+        "19%"
+      ],
+      "heatwave": [
+        "9",
+        "28%"
+      ],
+      "drought": [
+        "12",
+        "21%"
+      ],
+      "wildfire": [
+        "0",
+        "35%"
+      ],
+      "water_stress": [
+        "High",
+        "48%"
+      ],
+      "water_quality": [
+        "Good",
+        "35%"
+      ],
+      "historical_financial_loss": [
+        "$30M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "883",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.39",
+        "idx"
+      ]
+    }
+  },
+  "Jaén": {
+    "municipality": "Jaén",
+    "place": "Jaén",
+    "lat": 37.7796,
+    "lng": -3.7849,
+    "side": "right",
+    "exposure_pct": 39,
+    "side_metrics": {
+      "natcat": [
+        "Heatwave",
+        "Storm"
+      ],
+      "days": [
+        "223",
+        "33"
+      ],
+      "airquality": [
+        "8/10",
+        "8/10"
+      ],
+      "naturalspaces": [
+        "27",
+        "49"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "6,690",
+        "11%"
+      ],
+      "hurricane": [
+        "1 km",
+        "6%"
+      ],
+      "rainfall": [
+        "64 km",
+        "1%"
+      ],
+      "heatwave": [
+        "5",
+        "71%"
+      ],
+      "drought": [
+        "14",
+        "54%"
+      ],
+      "wildfire": [
+        "4",
+        "9%"
+      ],
+      "water_stress": [
+        "Very high",
+        "54%"
+      ],
+      "water_quality": [
+        "Good",
+        "24%"
+      ],
+      "historical_financial_loss": [
+        "$18M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "369",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.42",
+        "idx"
+      ]
+    }
+  },
+  "Teruel": {
+    "municipality": "Teruel",
+    "place": "Teruel",
+    "lat": 40.344,
+    "lng": -1.1069,
+    "side": "right",
+    "exposure_pct": 36,
+    "side_metrics": {
+      "natcat": [
+        "Flood",
+        "Flood"
+      ],
+      "days": [
+        "269",
+        "44"
+      ],
+      "airquality": [
+        "6/10",
+        "9/10"
+      ],
+      "naturalspaces": [
+        "54",
+        "72"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "448",
+        "24%"
+      ],
+      "hurricane": [
+        "1 km",
+        "2%"
+      ],
+      "rainfall": [
+        "200 km",
+        "23%"
+      ],
+      "heatwave": [
+        "3",
+        "26%"
+      ],
+      "drought": [
+        "18",
+        "40%"
+      ],
+      "wildfire": [
+        "1",
+        "37%"
+      ],
+      "water_stress": [
+        "High",
+        "46%"
+      ],
+      "water_quality": [
+        "Good",
+        "29%"
+      ],
+      "historical_financial_loss": [
+        "$14M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.4k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.59",
+        "idx"
+      ]
+    }
+  },
+  "Pontevedra": {
+    "municipality": "Pontevedra",
+    "place": "Pontevedra",
+    "lat": 42.431,
+    "lng": -8.6444,
+    "side": "right",
+    "exposure_pct": 47,
+    "side_metrics": {
+      "natcat": [
+        "Wildfire",
+        "Storm"
+      ],
+      "days": [
+        "233",
+        "51"
+      ],
+      "airquality": [
+        "6/10",
+        "10/10"
+      ],
+      "naturalspaces": [
+        "53",
+        "79"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "4,638",
+        "15%"
+      ],
+      "hurricane": [
+        "1 km",
+        "4%"
+      ],
+      "rainfall": [
+        "163 km",
+        "15%"
+      ],
+      "heatwave": [
+        "5",
+        "62%"
+      ],
+      "drought": [
+        "14",
+        "39%"
+      ],
+      "wildfire": [
+        "1",
+        "23%"
+      ],
+      "water_stress": [
+        "Very high",
+        "70%"
+      ],
+      "water_quality": [
+        "Fair",
+        "36%"
+      ],
+      "historical_financial_loss": [
+        "$30M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "231",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.29",
+        "idx"
+      ]
+    }
+  },
+  "Navarra": {
+    "municipality": "Navarra",
+    "place": "Pamplona",
+    "lat": 42.8125,
+    "lng": -1.6458,
+    "side": "right",
+    "exposure_pct": 54,
+    "side_metrics": {
+      "natcat": [
+        "Wildfire",
+        "Drought"
+      ],
+      "days": [
+        "251",
+        "29"
+      ],
+      "airquality": [
+        "5/10",
+        "10/10"
+      ],
+      "naturalspaces": [
+        "49",
+        "37"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "3,226",
+        "3%"
+      ],
+      "hurricane": [
+        "<1 km",
+        "8%"
+      ],
+      "rainfall": [
+        "193 km",
+        "9%"
+      ],
+      "heatwave": [
+        "4",
+        "48%"
+      ],
+      "drought": [
+        "9",
+        "66%"
+      ],
+      "wildfire": [
+        "0",
+        "26%"
+      ],
+      "water_stress": [
+        "Med",
+        "42%"
+      ],
+      "water_quality": [
+        "Fair",
+        "23%"
+      ],
+      "historical_financial_loss": [
+        "$27M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.7k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.38",
+        "idx"
+      ]
+    }
+  },
+  "Toledo": {
+    "municipality": "Toledo",
+    "place": "Toledo",
+    "lat": 39.8628,
+    "lng": -4.0273,
+    "side": "right",
+    "exposure_pct": 14,
+    "side_metrics": {
+      "natcat": [
+        "Heatwave",
+        "Flood"
+      ],
+      "days": [
+        "315",
+        "37"
+      ],
+      "airquality": [
+        "5/10",
+        "9/10"
+      ],
+      "naturalspaces": [
+        "59",
+        "46"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "5,782",
+        "21%"
+      ],
+      "hurricane": [
+        "2 km",
+        "3%"
+      ],
+      "rainfall": [
+        "35 km",
+        "5%"
+      ],
+      "heatwave": [
+        "7",
+        "36%"
+      ],
+      "drought": [
+        "15",
+        "64%"
+      ],
+      "wildfire": [
+        "1",
+        "19%"
+      ],
+      "water_stress": [
+        "Low",
+        "31%"
+      ],
+      "water_quality": [
+        "Poor",
+        "24%"
+      ],
+      "historical_financial_loss": [
+        "$22M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.1k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.51",
+        "idx"
+      ]
+    }
+  },
+  "Granada": {
+    "municipality": "Granada",
+    "place": "Granada",
+    "lat": 37.1773,
+    "lng": -3.5986,
+    "side": "right",
+    "exposure_pct": 41,
+    "side_metrics": {
+      "natcat": [
+        "Wildfire",
+        "no"
+      ],
+      "days": [
+        "303",
+        "48"
+      ],
+      "airquality": [
+        "8/10",
+        "5/10"
+      ],
+      "naturalspaces": [
+        "50",
+        "73"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "3,762",
+        "3%"
+      ],
+      "hurricane": [
+        "1 km",
+        "4%"
+      ],
+      "rainfall": [
+        "81 km",
+        "18%"
+      ],
+      "heatwave": [
+        "1",
+        "56%"
+      ],
+      "drought": [
+        "19",
+        "47%"
+      ],
+      "wildfire": [
+        "3",
+        "28%"
+      ],
+      "water_stress": [
+        "Med",
+        "75%"
+      ],
+      "water_quality": [
+        "Good",
+        "42%"
+      ],
+      "historical_financial_loss": [
+        "$14M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "342",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.53",
+        "idx"
+      ]
+    }
+  },
+  "Zamora": {
+    "municipality": "Zamora",
+    "place": "Zamora",
+    "lat": 41.5035,
+    "lng": -5.7446,
+    "side": "right",
+    "exposure_pct": 44,
+    "side_metrics": {
+      "natcat": [
+        "Wildfire",
+        "Storm"
+      ],
+      "days": [
+        "287",
+        "51"
+      ],
+      "airquality": [
+        "4/10",
+        "9/10"
+      ],
+      "naturalspaces": [
+        "22",
+        "66"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "5,311",
+        "18%"
+      ],
+      "hurricane": [
+        "1 km",
+        "6%"
+      ],
+      "rainfall": [
+        "194 km",
+        "19%"
+      ],
+      "heatwave": [
+        "4",
+        "44%"
+      ],
+      "drought": [
+        "5",
+        "48%"
+      ],
+      "wildfire": [
+        "1",
+        "8%"
+      ],
+      "water_stress": [
+        "High",
+        "27%"
+      ],
+      "water_quality": [
+        "Good",
+        "23%"
+      ],
+      "historical_financial_loss": [
+        "$35M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.1k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.35",
+        "idx"
+      ]
+    }
+  },
+  "Huelva": {
+    "municipality": "Huelva",
+    "place": "Huelva",
+    "lat": 37.2614,
+    "lng": -6.9447,
+    "side": "right",
+    "exposure_pct": 36,
+    "side_metrics": {
+      "natcat": [
+        "Heatwave",
+        "Storm"
+      ],
+      "days": [
+        "292",
+        "26"
+      ],
+      "airquality": [
+        "7/10",
+        "5/10"
+      ],
+      "naturalspaces": [
+        "50",
+        "53"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "4,448",
+        "22%"
+      ],
+      "hurricane": [
+        "0 km",
+        "0%"
+      ],
+      "rainfall": [
+        "218 km",
+        "14%"
+      ],
+      "heatwave": [
+        "10",
+        "52%"
+      ],
+      "drought": [
+        "7",
+        "44%"
+      ],
+      "wildfire": [
+        "2",
+        "11%"
+      ],
+      "water_stress": [
+        "High",
+        "33%"
+      ],
+      "water_quality": [
+        "Poor",
+        "41%"
+      ],
+      "historical_financial_loss": [
+        "$35M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.2k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.37",
+        "idx"
+      ]
+    }
+  },
+  "Valladolid": {
+    "municipality": "Valladolid",
+    "place": "Valladolid",
+    "lat": 41.6523,
+    "lng": -4.7245,
+    "side": "right",
+    "exposure_pct": 47,
+    "side_metrics": {
+      "natcat": [
+        "Heatwave",
+        "Storm"
+      ],
+      "days": [
+        "293",
+        "60"
+      ],
+      "airquality": [
+        "2/10",
+        "8/10"
+      ],
+      "naturalspaces": [
+        "34",
+        "58"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "5,156",
+        "17%"
+      ],
+      "hurricane": [
+        "3 km",
+        "3%"
+      ],
+      "rainfall": [
+        "42 km",
+        "18%"
+      ],
+      "heatwave": [
+        "1",
+        "69%"
+      ],
+      "drought": [
+        "17",
+        "50%"
+      ],
+      "wildfire": [
+        "2",
+        "29%"
+      ],
+      "water_stress": [
+        "Med",
+        "38%"
+      ],
+      "water_quality": [
+        "Fair",
+        "27%"
+      ],
+      "historical_financial_loss": [
+        "$11M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.4k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.74",
+        "idx"
+      ]
+    }
+  },
+  "Tarragona": {
+    "municipality": "Tarragona",
+    "place": "Tarragona",
+    "lat": 41.1189,
+    "lng": 1.2445,
+    "side": "right",
+    "exposure_pct": 53,
+    "side_metrics": {
+      "natcat": [
+        "no",
+        "no"
+      ],
+      "days": [
+        "287",
+        "25"
+      ],
+      "airquality": [
+        "6/10",
+        "10/10"
+      ],
+      "naturalspaces": [
+        "35",
+        "38"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "5,688",
+        "10%"
+      ],
+      "hurricane": [
+        "2 km",
+        "3%"
+      ],
+      "rainfall": [
+        "31 km",
+        "12%"
+      ],
+      "heatwave": [
+        "2",
+        "48%"
+      ],
+      "drought": [
+        "16",
+        "25%"
+      ],
+      "wildfire": [
+        "0",
+        "21%"
+      ],
+      "water_stress": [
+        "Med",
+        "41%"
+      ],
+      "water_quality": [
+        "Fair",
+        "37%"
+      ],
+      "historical_financial_loss": [
+        "$35M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "899",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.61",
+        "idx"
+      ]
+    }
+  },
+  "Alacant": {
+    "municipality": "Alacant",
+    "place": "Alicante",
+    "lat": 38.3452,
+    "lng": -0.481,
+    "side": "right",
+    "exposure_pct": 45,
+    "side_metrics": {
+      "natcat": [
+        "Wildfire",
+        "Storm"
+      ],
+      "days": [
+        "285",
+        "46"
+      ],
+      "airquality": [
+        "8/10",
+        "7/10"
+      ],
+      "naturalspaces": [
+        "45",
+        "49"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "6,342",
+        "5%"
+      ],
+      "hurricane": [
+        "0 km",
+        "0%"
+      ],
+      "rainfall": [
+        "68 km",
+        "20%"
+      ],
+      "heatwave": [
+        "5",
+        "38%"
+      ],
+      "drought": [
+        "22",
+        "44%"
+      ],
+      "wildfire": [
+        "0",
+        "23%"
+      ],
+      "water_stress": [
+        "Med",
+        "42%"
+      ],
+      "water_quality": [
+        "Good",
+        "26%"
+      ],
+      "historical_financial_loss": [
+        "$31M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.3k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.57",
+        "idx"
+      ]
+    }
+  },
+  "Territorio no asociado a ninguna provincia": {
+    "municipality": "Territorio no asociado a ninguna provincia",
+    "place": "Territorio no asociado a ninguna provincia",
+    "lat": 35.330938,
+    "lng": -3.227266,
+    "side": "right",
+    "exposure_pct": 30,
+    "side_metrics": {
+      "natcat": [
+        "no",
+        "Flood"
+      ],
+      "days": [
+        "262",
+        "45"
+      ],
+      "airquality": [
+        "5/10",
+        "5/10"
+      ],
+      "naturalspaces": [
+        "50",
+        "68"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "1,897",
+        "15%"
+      ],
+      "hurricane": [
+        "<1 km",
+        "7%"
+      ],
+      "rainfall": [
+        "220 km",
+        "5%"
+      ],
+      "heatwave": [
+        "9",
+        "59%"
+      ],
+      "drought": [
+        "6",
+        "57%"
+      ],
+      "wildfire": [
+        "3",
+        "13%"
+      ],
+      "water_stress": [
+        "Very high",
+        "77%"
+      ],
+      "water_quality": [
+        "Good",
+        "42%"
+      ],
+      "historical_financial_loss": [
+        "$19M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "546",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.53",
+        "idx"
+      ]
+    }
+  },
+  "València": {
+    "municipality": "València",
+    "place": "València",
+    "lat": 39.4699,
+    "lng": -0.3763,
+    "side": "right",
+    "exposure_pct": 56,
+    "side_metrics": {
+      "natcat": [
+        "Flood",
+        "Flood"
+      ],
+      "days": [
+        "244",
+        "57"
+      ],
+      "airquality": [
+        "3/10",
+        "5/10"
+      ],
+      "naturalspaces": [
+        "41",
+        "43"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "6,372",
+        "2%"
+      ],
+      "hurricane": [
+        "<1 km",
+        "1%"
+      ],
+      "rainfall": [
+        "211 km",
+        "11%"
+      ],
+      "heatwave": [
+        "5",
+        "71%"
+      ],
+      "drought": [
+        "10",
+        "54%"
+      ],
+      "wildfire": [
+        "3",
+        "45%"
+      ],
+      "water_stress": [
+        "Low",
+        "46%"
+      ],
+      "water_quality": [
+        "Poor",
+        "39%"
+      ],
+      "historical_financial_loss": [
+        "$36M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "196",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.71",
+        "idx"
+      ]
+    }
+  },
+  "Santa Cruz de Tenerife": {
+    "municipality": "Santa Cruz de Tenerife",
+    "place": "Santa Cruz de Tenerife",
+    "lat": 28.4636,
+    "lng": -16.2518,
+    "side": "right",
+    "exposure_pct": 14,
+    "side_metrics": {
+      "natcat": [
+        "Flood",
+        "Flood"
+      ],
+      "days": [
+        "273",
+        "38"
+      ],
+      "airquality": [
+        "5/10",
+        "6/10"
+      ],
+      "naturalspaces": [
+        "27",
+        "49"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "4,440",
+        "8%"
+      ],
+      "hurricane": [
+        "2 km",
+        "1%"
+      ],
+      "rainfall": [
+        "154 km",
+        "17%"
+      ],
+      "heatwave": [
+        "6",
+        "57%"
+      ],
+      "drought": [
+        "15",
+        "26%"
+      ],
+      "wildfire": [
+        "5",
+        "19%"
+      ],
+      "water_stress": [
+        "Low",
+        "71%"
+      ],
+      "water_quality": [
+        "Good",
+        "25%"
+      ],
+      "historical_financial_loss": [
+        "$16M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.5k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.36",
+        "idx"
+      ]
+    }
+  },
+  "Segovia": {
+    "municipality": "Segovia",
+    "place": "Segovia",
+    "lat": 40.9429,
+    "lng": -4.1088,
+    "side": "right",
+    "exposure_pct": 21,
+    "side_metrics": {
+      "natcat": [
+        "Flood",
+        "Storm"
+      ],
+      "days": [
+        "286",
+        "65"
+      ],
+      "airquality": [
+        "4/10",
+        "5/10"
+      ],
+      "naturalspaces": [
+        "32",
+        "36"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "4,186",
+        "8%"
+      ],
+      "hurricane": [
+        "0 km",
+        "0%"
+      ],
+      "rainfall": [
+        "221 km",
+        "23%"
+      ],
+      "heatwave": [
+        "7",
+        "62%"
+      ],
+      "drought": [
+        "14",
+        "25%"
+      ],
+      "wildfire": [
+        "1",
+        "43%"
+      ],
+      "water_stress": [
+        "High",
+        "52%"
+      ],
+      "water_quality": [
+        "Good",
+        "45%"
+      ],
+      "historical_financial_loss": [
+        "$27M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.3k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.69",
+        "idx"
+      ]
+    }
+  },
+  "Soria": {
+    "municipality": "Soria",
+    "place": "Soria",
+    "lat": 41.7666,
+    "lng": -2.479,
+    "side": "right",
+    "exposure_pct": 26,
+    "side_metrics": {
+      "natcat": [
+        "no",
+        "Flood"
+      ],
+      "days": [
+        "297",
+        "38"
+      ],
+      "airquality": [
+        "4/10",
+        "8/10"
+      ],
+      "naturalspaces": [
+        "34",
+        "75"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "4,093",
+        "23%"
+      ],
+      "hurricane": [
+        "<1 km",
+        "2%"
+      ],
+      "rainfall": [
+        "217 km",
+        "22%"
+      ],
+      "heatwave": [
+        "2",
+        "69%"
+      ],
+      "drought": [
+        "20",
+        "58%"
+      ],
+      "wildfire": [
+        "2",
+        "29%"
+      ],
+      "water_stress": [
+        "High",
+        "18%"
+      ],
+      "water_quality": [
+        "Good",
+        "12%"
+      ],
+      "historical_financial_loss": [
+        "$13M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "261",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.68",
+        "idx"
+      ]
+    }
+  },
+  "Sevilla": {
+    "municipality": "Sevilla",
+    "place": "Sevilla",
+    "lat": 37.3891,
+    "lng": -5.9845,
+    "side": "right",
+    "exposure_pct": 54,
+    "side_metrics": {
+      "natcat": [
+        "Heatwave",
+        "Flood"
+      ],
+      "days": [
+        "276",
+        "43"
+      ],
+      "airquality": [
+        "3/10",
+        "5/10"
+      ],
+      "naturalspaces": [
+        "35",
+        "71"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "3,688",
+        "9%"
+      ],
+      "hurricane": [
+        "0 km",
+        "0%"
+      ],
+      "rainfall": [
+        "162 km",
+        "19%"
+      ],
+      "heatwave": [
+        "10",
+        "41%"
+      ],
+      "drought": [
+        "8",
+        "58%"
+      ],
+      "wildfire": [
+        "4",
+        "33%"
+      ],
+      "water_stress": [
+        "Med",
+        "41%"
+      ],
+      "water_quality": [
+        "Good",
+        "14%"
+      ],
+      "historical_financial_loss": [
+        "$18M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.2k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.42",
+        "idx"
+      ]
+    }
+  },
+  "Almería": {
+    "municipality": "Almería",
+    "place": "Almería",
+    "lat": 36.834,
+    "lng": -2.4637,
+    "side": "right",
+    "exposure_pct": 28,
+    "side_metrics": {
+      "natcat": [
+        "Flood",
+        "Drought"
+      ],
+      "days": [
+        "251",
+        "47"
+      ],
+      "airquality": [
+        "3/10",
+        "5/10"
+      ],
+      "naturalspaces": [
+        "22",
+        "39"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "470",
+        "5%"
+      ],
+      "hurricane": [
+        "0 km",
+        "0%"
+      ],
+      "rainfall": [
+        "153 km",
+        "7%"
+      ],
+      "heatwave": [
+        "9",
+        "60%"
+      ],
+      "drought": [
+        "12",
+        "33%"
+      ],
+      "wildfire": [
+        "2",
+        "36%"
+      ],
+      "water_stress": [
+        "Low",
+        "66%"
+      ],
+      "water_quality": [
+        "Good",
+        "33%"
+      ],
+      "historical_financial_loss": [
+        "$35M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "769",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.48",
+        "idx"
+      ]
+    }
+  },
+  "Castelló": {
+    "municipality": "Castelló",
+    "place": "Castelló de la Plana",
+    "lat": 39.9864,
+    "lng": -0.0513,
+    "side": "right",
+    "exposure_pct": 15,
+    "side_metrics": {
+      "natcat": [
+        "Wildfire",
+        "Storm"
+      ],
+      "days": [
+        "244",
+        "49"
+      ],
+      "airquality": [
+        "5/10",
+        "9/10"
+      ],
+      "naturalspaces": [
+        "23",
+        "68"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "942",
+        "26%"
+      ],
+      "hurricane": [
+        "3 km",
+        "7%"
+      ],
+      "rainfall": [
+        "159 km",
+        "12%"
+      ],
+      "heatwave": [
+        "4",
+        "50%"
+      ],
+      "drought": [
+        "7",
+        "24%"
+      ],
+      "wildfire": [
+        "5",
+        "5%"
+      ],
+      "water_stress": [
+        "Low",
+        "81%"
+      ],
+      "water_quality": [
+        "Good",
+        "15%"
+      ],
+      "historical_financial_loss": [
+        "$20M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "349",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.70",
+        "idx"
+      ]
+    }
+  },
+  "Guadalajara": {
+    "municipality": "Guadalajara",
+    "place": "Guadalajara",
+    "lat": 40.6325,
+    "lng": -3.1602,
+    "side": "right",
+    "exposure_pct": 14,
+    "side_metrics": {
+      "natcat": [
+        "no",
+        "no"
+      ],
+      "days": [
+        "306",
+        "58"
+      ],
+      "airquality": [
+        "7/10",
+        "8/10"
+      ],
+      "naturalspaces": [
+        "28",
+        "70"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "5,903",
+        "9%"
+      ],
+      "hurricane": [
+        "2 km",
+        "3%"
+      ],
+      "rainfall": [
+        "233 km",
+        "5%"
+      ],
+      "heatwave": [
+        "2",
+        "41%"
+      ],
+      "drought": [
+        "16",
+        "61%"
+      ],
+      "wildfire": [
+        "1",
+        "34%"
+      ],
+      "water_stress": [
+        "Very high",
+        "36%"
+      ],
+      "water_quality": [
+        "Fair",
+        "25%"
+      ],
+      "historical_financial_loss": [
+        "$8M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.0k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.58",
+        "idx"
+      ]
+    }
+  },
+  "Burgos": {
+    "municipality": "Burgos",
+    "place": "Burgos",
+    "lat": 42.3439,
+    "lng": -3.6969,
+    "side": "right",
+    "exposure_pct": 48,
+    "side_metrics": {
+      "natcat": [
+        "no",
+        "no"
+      ],
+      "days": [
+        "272",
+        "51"
+      ],
+      "airquality": [
+        "6/10",
+        "8/10"
+      ],
+      "naturalspaces": [
+        "33",
+        "60"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "3,545",
+        "16%"
+      ],
+      "hurricane": [
+        "<1 km",
+        "4%"
+      ],
+      "rainfall": [
+        "102 km",
+        "21%"
+      ],
+      "heatwave": [
+        "3",
+        "25%"
+      ],
+      "drought": [
+        "4",
+        "34%"
+      ],
+      "wildfire": [
+        "1",
+        "8%"
+      ],
+      "water_stress": [
+        "Low",
+        "29%"
+      ],
+      "water_quality": [
+        "Good",
+        "8%"
+      ],
+      "historical_financial_loss": [
+        "$11M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "954",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.42",
+        "idx"
+      ]
+    }
+  },
+  "Araba": {
+    "municipality": "Araba",
+    "place": "Vitoria-Gasteiz",
+    "lat": 42.8467,
+    "lng": -2.6727,
+    "side": "right",
+    "exposure_pct": 14,
+    "side_metrics": {
+      "natcat": [
+        "Heatwave",
+        "Storm"
+      ],
+      "days": [
+        "237",
+        "36"
+      ],
+      "airquality": [
+        "8/10",
+        "10/10"
+      ],
+      "naturalspaces": [
+        "65",
+        "55"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "2,855",
+        "2%"
+      ],
+      "hurricane": [
+        "0 km",
+        "0%"
+      ],
+      "rainfall": [
+        "165 km",
+        "15%"
+      ],
+      "heatwave": [
+        "6",
+        "38%"
+      ],
+      "drought": [
+        "6",
+        "45%"
+      ],
+      "wildfire": [
+        "5",
+        "13%"
+      ],
+      "water_stress": [
+        "Low",
+        "29%"
+      ],
+      "water_quality": [
+        "Poor",
+        "43%"
+      ],
+      "historical_financial_loss": [
+        "$41M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "188",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.52",
+        "idx"
+      ]
+    }
+  },
+  "Zaragoza": {
+    "municipality": "Zaragoza",
+    "place": "Zaragoza",
+    "lat": 41.6488,
+    "lng": -0.8891,
+    "side": "right",
+    "exposure_pct": 46,
+    "side_metrics": {
+      "natcat": [
+        "Wildfire",
+        "Flood"
+      ],
+      "days": [
+        "221",
+        "53"
+      ],
+      "airquality": [
+        "7/10",
+        "5/10"
+      ],
+      "naturalspaces": [
+        "55",
+        "47"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "4,336",
+        "11%"
+      ],
+      "hurricane": [
+        "0 km",
+        "0%"
+      ],
+      "rainfall": [
+        "31 km",
+        "7%"
+      ],
+      "heatwave": [
+        "1",
+        "45%"
+      ],
+      "drought": [
+        "11",
+        "36%"
+      ],
+      "wildfire": [
+        "0",
+        "36%"
+      ],
+      "water_stress": [
+        "High",
+        "83%"
+      ],
+      "water_quality": [
+        "Fair",
+        "12%"
+      ],
+      "historical_financial_loss": [
+        "$28M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "578",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.40",
+        "idx"
+      ]
+    }
+  },
+  "Badajoz": {
+    "municipality": "Badajoz",
+    "place": "Badajoz",
+    "lat": 38.8794,
+    "lng": -6.9707,
+    "side": "right",
+    "exposure_pct": 5,
+    "side_metrics": {
+      "natcat": [
+        "no",
+        "Flood"
+      ],
+      "days": [
+        "291",
+        "60"
+      ],
+      "airquality": [
+        "5/10",
+        "6/10"
+      ],
+      "naturalspaces": [
+        "43",
+        "65"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "3,588",
+        "19%"
+      ],
+      "hurricane": [
+        "1 km",
+        "2%"
+      ],
+      "rainfall": [
+        "58 km",
+        "14%"
+      ],
+      "heatwave": [
+        "6",
+        "25%"
+      ],
+      "drought": [
+        "12",
+        "42%"
+      ],
+      "wildfire": [
+        "0",
+        "41%"
+      ],
+      "water_stress": [
+        "High",
+        "28%"
+      ],
+      "water_quality": [
+        "Fair",
+        "12%"
+      ],
+      "historical_financial_loss": [
+        "$35M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.3k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.51",
+        "idx"
+      ]
+    }
+  },
+  "Murcia": {
+    "municipality": "Murcia",
+    "place": "Murcia",
+    "lat": 37.9922,
+    "lng": -1.1307,
+    "side": "right",
+    "exposure_pct": 10,
+    "side_metrics": {
+      "natcat": [
+        "Flood",
+        "Storm"
+      ],
+      "days": [
+        "237",
+        "67"
+      ],
+      "airquality": [
+        "6/10",
+        "7/10"
+      ],
+      "naturalspaces": [
+        "42",
+        "41"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "1,042",
+        "13%"
+      ],
+      "hurricane": [
+        "2 km",
+        "5%"
+      ],
+      "rainfall": [
+        "219 km",
+        "7%"
+      ],
+      "heatwave": [
+        "9",
+        "40%"
+      ],
+      "drought": [
+        "21",
+        "46%"
+      ],
+      "wildfire": [
+        "0",
+        "7%"
+      ],
+      "water_stress": [
+        "High",
+        "23%"
+      ],
+      "water_quality": [
+        "Poor",
+        "13%"
+      ],
+      "historical_financial_loss": [
+        "$40M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "510",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.51",
+        "idx"
+      ]
+    }
+  },
+  "Ourense": {
+    "municipality": "Ourense",
+    "place": "Ourense",
+    "lat": 42.3358,
+    "lng": -7.8639,
+    "side": "right",
+    "exposure_pct": 5,
+    "side_metrics": {
+      "natcat": [
+        "Heatwave",
+        "no"
+      ],
+      "days": [
+        "259",
+        "56"
+      ],
+      "airquality": [
+        "3/10",
+        "10/10"
+      ],
+      "naturalspaces": [
+        "40",
+        "35"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "3,489",
+        "24%"
+      ],
+      "hurricane": [
+        "1 km",
+        "6%"
+      ],
+      "rainfall": [
+        "80 km",
+        "11%"
+      ],
+      "heatwave": [
+        "4",
+        "69%"
+      ],
+      "drought": [
+        "15",
+        "54%"
+      ],
+      "wildfire": [
+        "3",
+        "40%"
+      ],
+      "water_stress": [
+        "High",
+        "78%"
+      ],
+      "water_quality": [
+        "Good",
+        "28%"
+      ],
+      "historical_financial_loss": [
+        "$39M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "766",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.40",
+        "idx"
+      ]
+    }
+  },
+  "León": {
+    "municipality": "León",
+    "place": "León",
+    "lat": 42.5987,
+    "lng": -5.5671,
+    "side": "right",
+    "exposure_pct": 43,
+    "side_metrics": {
+      "natcat": [
+        "Wildfire",
+        "Drought"
+      ],
+      "days": [
+        "298",
+        "53"
+      ],
+      "airquality": [
+        "6/10",
+        "6/10"
+      ],
+      "naturalspaces": [
+        "38",
+        "57"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "2,346",
+        "22%"
+      ],
+      "hurricane": [
+        "<1 km",
+        "2%"
+      ],
+      "rainfall": [
+        "124 km",
+        "11%"
+      ],
+      "heatwave": [
+        "6",
+        "60%"
+      ],
+      "drought": [
+        "20",
+        "25%"
+      ],
+      "wildfire": [
+        "2",
+        "33%"
+      ],
+      "water_stress": [
+        "Med",
+        "49%"
+      ],
+      "water_quality": [
+        "Good",
+        "16%"
+      ],
+      "historical_financial_loss": [
+        "$16M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.7k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.31",
+        "idx"
+      ]
+    }
+  },
+  "Salamanca": {
+    "municipality": "Salamanca",
+    "place": "Salamanca",
+    "lat": 40.9701,
+    "lng": -5.6635,
+    "side": "right",
+    "exposure_pct": 53,
+    "side_metrics": {
+      "natcat": [
+        "no",
+        "no"
+      ],
+      "days": [
+        "312",
+        "53"
+      ],
+      "airquality": [
+        "8/10",
+        "9/10"
+      ],
+      "naturalspaces": [
+        "31",
+        "60"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "2,807",
+        "16%"
+      ],
+      "hurricane": [
+        "<1 km",
+        "8%"
+      ],
+      "rainfall": [
+        "231 km",
+        "23%"
+      ],
+      "heatwave": [
+        "7",
+        "70%"
+      ],
+      "drought": [
+        "12",
+        "70%"
+      ],
+      "wildfire": [
+        "5",
+        "6%"
+      ],
+      "water_stress": [
+        "Very high",
+        "84%"
+      ],
+      "water_quality": [
+        "Fair",
+        "20%"
+      ],
+      "historical_financial_loss": [
+        "$12M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.7k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.32",
+        "idx"
+      ]
+    }
+  },
+  "Albacete": {
+    "municipality": "Albacete",
+    "place": "Albacete",
+    "lat": 38.9942,
+    "lng": -1.8564,
+    "side": "right",
+    "exposure_pct": 46,
+    "side_metrics": {
+      "natcat": [
+        "no",
+        "Flood"
+      ],
+      "days": [
+        "228",
+        "55"
+      ],
+      "airquality": [
+        "2/10",
+        "9/10"
+      ],
+      "naturalspaces": [
+        "60",
+        "75"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "6,337",
+        "23%"
+      ],
+      "hurricane": [
+        "<1 km",
+        "4%"
+      ],
+      "rainfall": [
+        "115 km",
+        "10%"
+      ],
+      "heatwave": [
+        "4",
+        "68%"
+      ],
+      "drought": [
+        "3",
+        "21%"
+      ],
+      "wildfire": [
+        "0",
+        "43%"
+      ],
+      "water_stress": [
+        "High",
+        "83%"
+      ],
+      "water_quality": [
+        "Poor",
+        "17%"
+      ],
+      "historical_financial_loss": [
+        "$15M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.6k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.55",
+        "idx"
+      ]
+    }
+  },
+  "Cuenca": {
+    "municipality": "Cuenca",
+    "place": "Cuenca",
+    "lat": 40.0704,
+    "lng": -2.1374,
+    "side": "right",
+    "exposure_pct": 49,
+    "side_metrics": {
+      "natcat": [
+        "Wildfire",
+        "Drought"
+      ],
+      "days": [
+        "213",
+        "54"
+      ],
+      "airquality": [
+        "2/10",
+        "8/10"
+      ],
+      "naturalspaces": [
+        "46",
+        "35"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "5,797",
+        "3%"
+      ],
+      "hurricane": [
+        "0 km",
+        "0%"
+      ],
+      "rainfall": [
+        "163 km",
+        "3%"
+      ],
+      "heatwave": [
+        "4",
+        "46%"
+      ],
+      "drought": [
+        "7",
+        "40%"
+      ],
+      "wildfire": [
+        "3",
+        "28%"
+      ],
+      "water_stress": [
+        "Med",
+        "36%"
+      ],
+      "water_quality": [
+        "Poor",
+        "31%"
+      ],
+      "historical_financial_loss": [
+        "$32M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.3k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.37",
+        "idx"
+      ]
+    }
+  },
+  "Girona": {
+    "municipality": "Girona",
+    "place": "Girona",
+    "lat": 41.9794,
+    "lng": 2.8214,
+    "side": "right",
+    "exposure_pct": 43,
+    "side_metrics": {
+      "natcat": [
+        "Heatwave",
+        "Storm"
+      ],
+      "days": [
+        "267",
+        "30"
+      ],
+      "airquality": [
+        "2/10",
+        "9/10"
+      ],
+      "naturalspaces": [
+        "33",
+        "40"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "4,979",
+        "2%"
+      ],
+      "hurricane": [
+        "1 km",
+        "7%"
+      ],
+      "rainfall": [
+        "32 km",
+        "22%"
+      ],
+      "heatwave": [
+        "7",
+        "47%"
+      ],
+      "drought": [
+        "4",
+        "46%"
+      ],
+      "wildfire": [
+        "4",
+        "3%"
+      ],
+      "water_stress": [
+        "Very high",
+        "73%"
+      ],
+      "water_quality": [
+        "Good",
+        "25%"
+      ],
+      "historical_financial_loss": [
+        "$24M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.5k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.49",
+        "idx"
+      ]
+    }
+  },
+  "Huesca": {
+    "municipality": "Huesca",
+    "place": "Huesca",
+    "lat": 42.1401,
+    "lng": -0.4089,
+    "side": "right",
+    "exposure_pct": 54,
+    "side_metrics": {
+      "natcat": [
+        "Heatwave",
+        "Storm"
+      ],
+      "days": [
+        "210",
+        "58"
+      ],
+      "airquality": [
+        "2/10",
+        "6/10"
+      ],
+      "naturalspaces": [
+        "47",
+        "84"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "1,268",
+        "15%"
+      ],
+      "hurricane": [
+        "<1 km",
+        "3%"
+      ],
+      "rainfall": [
+        "189 km",
+        "10%"
+      ],
+      "heatwave": [
+        "9",
+        "37%"
+      ],
+      "drought": [
+        "5",
+        "63%"
+      ],
+      "wildfire": [
+        "0",
+        "4%"
+      ],
+      "water_stress": [
+        "High",
+        "48%"
+      ],
+      "water_quality": [
+        "Poor",
+        "22%"
+      ],
+      "historical_financial_loss": [
+        "$32M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.6k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.34",
+        "idx"
+      ]
+    }
+  },
+  "Asturias": {
+    "municipality": "Asturias",
+    "place": "Oviedo",
+    "lat": 43.3619,
+    "lng": -5.8494,
+    "side": "right",
+    "exposure_pct": 53,
+    "side_metrics": {
+      "natcat": [
+        "Heatwave",
+        "Flood"
+      ],
+      "days": [
+        "289",
+        "25"
+      ],
+      "airquality": [
+        "6/10",
+        "10/10"
+      ],
+      "naturalspaces": [
+        "28",
+        "46"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "5,083",
+        "1%"
+      ],
+      "hurricane": [
+        "<1 km",
+        "6%"
+      ],
+      "rainfall": [
+        "60 km",
+        "3%"
+      ],
+      "heatwave": [
+        "8",
+        "59%"
+      ],
+      "drought": [
+        "13",
+        "40%"
+      ],
+      "wildfire": [
+        "1",
+        "14%"
+      ],
+      "water_stress": [
+        "Very high",
+        "54%"
+      ],
+      "water_quality": [
+        "Poor",
+        "13%"
+      ],
+      "historical_financial_loss": [
+        "$8M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.5k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.68",
+        "idx"
+      ]
+    }
+  },
+  "Madrid": {
+    "municipality": "Madrid",
+    "place": "Madrid",
+    "lat": 40.4168,
+    "lng": -3.7038,
+    "side": "right",
+    "exposure_pct": 30,
+    "side_metrics": {
+      "natcat": [
+        "no",
+        "Drought"
+      ],
+      "days": [
+        "250",
+        "37"
+      ],
+      "airquality": [
+        "6/10",
+        "10/10"
+      ],
+      "naturalspaces": [
+        "61",
+        "41"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "2,802",
+        "24%"
+      ],
+      "hurricane": [
+        "2 km",
+        "8%"
+      ],
+      "rainfall": [
+        "177 km",
+        "5%"
+      ],
+      "heatwave": [
+        "2",
+        "69%"
+      ],
+      "drought": [
+        "18",
+        "49%"
+      ],
+      "wildfire": [
+        "1",
+        "14%"
+      ],
+      "water_stress": [
+        "Very high",
+        "29%"
+      ],
+      "water_quality": [
+        "Good",
+        "20%"
+      ],
+      "historical_financial_loss": [
+        "$39M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "554",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.60",
+        "idx"
+      ]
+    }
+  },
+  "Cantabria": {
+    "municipality": "Cantabria",
+    "place": "Santander",
+    "lat": 43.4623,
+    "lng": -3.8099,
+    "side": "right",
+    "exposure_pct": 28,
+    "side_metrics": {
+      "natcat": [
+        "Wildfire",
+        "Drought"
+      ],
+      "days": [
+        "264",
+        "67"
+      ],
+      "airquality": [
+        "2/10",
+        "9/10"
+      ],
+      "naturalspaces": [
+        "44",
+        "73"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "435",
+        "27%"
+      ],
+      "hurricane": [
+        "2 km",
+        "8%"
+      ],
+      "rainfall": [
+        "225 km",
+        "5%"
+      ],
+      "heatwave": [
+        "4",
+        "56%"
+      ],
+      "drought": [
+        "18",
+        "37%"
+      ],
+      "wildfire": [
+        "1",
+        "22%"
+      ],
+      "water_stress": [
+        "Very high",
+        "22%"
+      ],
+      "water_quality": [
+        "Poor",
+        "10%"
+      ],
+      "historical_financial_loss": [
+        "$6M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "864",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.47",
+        "idx"
+      ]
+    }
+  },
+  "Barcelona": {
+    "municipality": "Barcelona",
+    "place": "Barcelona",
+    "lat": 41.3874,
+    "lng": 2.1686,
+    "side": "right",
+    "exposure_pct": 45,
+    "side_metrics": {
+      "natcat": [
+        "Flood",
+        "Drought"
+      ],
+      "days": [
+        "247",
+        "51"
+      ],
+      "airquality": [
+        "5/10",
+        "8/10"
+      ],
+      "naturalspaces": [
+        "28",
+        "67"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [13, 12, 13, 13, 13, 9, 5, 7, 11, 14, 13, 13],
+      "rainy": [9, 8, 11, 13, 10, 8, 8, 10, 14, 13, 9, 6],
+      "windy": [8, 8, 8, 8, 7, 7, 7, 7, 7, 8, 8, 9]
+    },
+    "metrics": {
+      "flood": [
+        "2,808",
+        "27%"
+      ],
+      "hurricane": [
+        "2 km",
+        "3%"
+      ],
+      "rainfall": [
+        "43 km",
+        "16%"
+      ],
+      "heatwave": [
+        "3",
+        "51%"
+      ],
+      "drought": [
+        "11",
+        "34%"
+      ],
+      "wildfire": [
+        "0",
+        "14%"
+      ],
+      "water_stress": [
+        "Low",
+        "75%"
+      ],
+      "water_quality": [
+        "Poor",
+        "30%"
+      ],
+      "historical_financial_loss": [
+        "$10M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.5k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.28",
+        "idx"
+      ]
+    }
+  },
+  "Palencia": {
+    "municipality": "Palencia",
+    "place": "Palencia",
+    "lat": 42.0097,
+    "lng": -4.528,
+    "side": "right",
+    "exposure_pct": 43,
+    "side_metrics": {
+      "natcat": [
+        "no",
+        "Storm"
+      ],
+      "days": [
+        "293",
+        "60"
+      ],
+      "airquality": [
+        "4/10",
+        "6/10"
+      ],
+      "naturalspaces": [
+        "39",
+        "44"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "5,619",
+        "4%"
+      ],
+      "hurricane": [
+        "1 km",
+        "6%"
+      ],
+      "rainfall": [
+        "46 km",
+        "16%"
+      ],
+      "heatwave": [
+        "1",
+        "29%"
+      ],
+      "drought": [
+        "14",
+        "27%"
+      ],
+      "wildfire": [
+        "4",
+        "29%"
+      ],
+      "water_stress": [
+        "Med",
+        "64%"
+      ],
+      "water_quality": [
+        "Poor",
+        "35%"
+      ],
+      "historical_financial_loss": [
+        "$8M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.4k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.61",
+        "idx"
+      ]
+    }
+  },
+  "Bizkaia": {
+    "municipality": "Bizkaia",
+    "place": "Bilbao",
+    "lat": 43.263,
+    "lng": -2.935,
+    "side": "right",
+    "exposure_pct": 46,
+    "side_metrics": {
+      "natcat": [
+        "Wildfire",
+        "Drought"
+      ],
+      "days": [
+        "269",
+        "46"
+      ],
+      "airquality": [
+        "4/10",
+        "9/10"
+      ],
+      "naturalspaces": [
+        "64",
+        "44"
+      ]
+    },
+    "monthly_weather": {
+      "cloudy": [
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "rainy": [
+        6,
+        5,
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "windy": [
+        7,
+        6,
+        6,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "metrics": {
+      "flood": [
+        "5,311",
+        "18%"
+      ],
+      "hurricane": [
+        "1 km",
+        "4%"
+      ],
+      "rainfall": [
+        "191 km",
+        "13%"
+      ],
+      "heatwave": [
+        "2",
+        "69%"
+      ],
+      "drought": [
+        "14",
+        "21%"
+      ],
+      "wildfire": [
+        "3",
+        "44%"
+      ],
+      "water_stress": [
+        "Very high",
+        "75%"
+      ],
+      "water_quality": [
+        "Fair",
+        "15%"
+      ],
+      "historical_financial_loss": [
+        "$9M",
+        "10y"
+      ],
+      "insurance_claims": [
+        "1.1k",
+        "yr"
+      ],
+      "vulnerability_index": [
+        "0.29",
+        "idx"
+      ]
+    }
+  }
+}

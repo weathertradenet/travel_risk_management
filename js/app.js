@@ -1,4 +1,3 @@
-
 const ICON_KEYS = [
   'flood','hurricane','rainfall','heatwave','drought','wildfire',
   'water_stress','water_quality','historical_financial_loss','insurance_claims','vulnerability_index'
@@ -7,7 +6,7 @@ const ICON_KEYS = [
 const LEGEND_LABELS = {
   flood: 'Flood',
   hurricane: 'Hurricane',
-  rainfall: 'Rainfall',
+  rainfall: 'Extreme Rainfall',
   heatwave: 'Heat Waves',
   drought: 'Drought',
   wildfire: 'Wildfire',
@@ -34,16 +33,37 @@ function exposureColor(pct) {
   return '#183b63';
 }
 
+function normalizeName(str) {
+  return (str || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[’']/g, '')
+    .trim()
+    .toLowerCase();
+}
+
+function deriveFeatureName(feature) {
+  const p = feature.properties || {};
+  return p.place || p.municipality || p.city || p.gemname || p.prov_name || p.name || 'Unknown municipality';
+}
+
+function deriveRegionName(feature) {
+  const p = feature.properties || {};
+  return p.acom_name || p.prov_area_code || p.gde_nr || p.city || p.municipality || p.gemname || '–';
+}
+
 function buildLegend() {
   const grid = document.getElementById('legend-grid');
+  const scale = document.getElementById('scale');
+  if (!grid || !scale) return;
+  grid.innerHTML = '';
+  scale.innerHTML = '';
   ICON_KEYS.forEach(key => {
     const div = document.createElement('div');
     div.className = 'legend-item';
     div.innerHTML = `<span class="legend-icon"><img src="icons/${key}.svg" alt="${LEGEND_LABELS[key]}"></span>${LEGEND_LABELS[key]}`;
     grid.appendChild(div);
   });
-
-  const scale = document.getElementById('scale');
   SCALE_STEPS.forEach(step => {
     const col = document.createElement('div');
     col.innerHTML = `<div class="swatch" style="background:${step.color}"></div><div class="scale-label">${step.label}</div>`;
@@ -56,9 +76,11 @@ function cardHTML(city) {
   const rowsIcons = ICON_KEYS.map(key =>
     `<div class="metric"><span class="icon"><img src="icons/${key}.svg" alt="${LEGEND_LABELS[key]}"></span></div>`
   ).join('');
-  const rowsValues = ICON_KEYS.map(key =>
-    `<div class="metric"><span class="value">${city.metrics[key][0]}</span></div>`
-  ).join('');
+  const rowsValues = ICON_KEYS.map(key => {
+  const raw = city.metrics?.[key];
+  const value = Array.isArray(raw) ? raw[0] : 'N/A';
+  return `<div class="metric"><span class="value">${value}</span></div>`;
+}).join('');
   return `
     <div class="line-card" style="--anchor-x:${anchorX}px;">
       <div class="line-title">${city.place}</div>
@@ -71,76 +93,623 @@ function cardHTML(city) {
   `;
 }
 
+function makeFallbackCard(name, feature) {
+  const p = feature.properties || {};
+  return {
+    municipality: name,
+    place: name,
+    exposure_pct: p.exposure_pct ?? 0,
+    side_metrics: {
+      natcat: ['N/A', 'N/A'],
+      days: ['N/A', 'N/A'],
+      airquality: ['N/A', 'N/A'],
+      naturalspaces: ['N/A', 'N/A']
+    },
+    monthly_weather: {
+      cloudy: [10, 9, 8, 7, 5, 3, 1, 2, 4, 6, 8, 10],
+      rainy: [6, 5, 4, 4, 3, 1, 0, 1, 3, 5, 6, 7],
+      windy: [7, 6, 6, 5, 4, 3, 3, 3, 4, 5, 6, 7]
+    },
+    metrics: {
+      flood: ['N/A', 'N/A'],
+      hurricane: ['N/A', 'N/A'],
+      rainfall: ['N/A', 'N/A'],
+      heatwave: ['N/A', 'N/A'],
+      drought: ['N/A', 'N/A'],
+      wildfire: ['N/A', 'N/A'],
+      water_stress: ['N/A', 'N/A'],
+      water_quality: ['N/A', 'N/A'],
+      historical_financial_loss: ['N/A', 'N/A'],
+      insurance_claims: ['N/A', 'N/A'],
+      vulnerability_index: ['N/A', 'N/A']
+}
+  };
+}
+
+function formatMetric(raw) {
+  if (Array.isArray(raw)) {
+    const clean = raw.filter(v => v !== undefined && v !== null && String(v).trim() !== '');
+    return clean.length ? clean.join(' / ') : 'N/A';
+  }
+  if (raw !== undefined && raw !== null && String(raw).trim() !== '') {
+    return String(raw);
+  }
+
+  return 'N/A';
+}
+
+function getMonthlyWeather(locationData) {
+  if (
+    locationData &&
+    locationData.monthly_weather &&
+    Array.isArray(locationData.monthly_weather.cloudy) &&
+    Array.isArray(locationData.monthly_weather.rainy) &&
+    Array.isArray(locationData.monthly_weather.windy)
+  ) {
+    return locationData.monthly_weather;
+  }
+
+  console.warn('Missing monthly_weather for selected location:', locationData);
+
+  return {
+    cloudy: new Array(12).fill(0),
+    rainy: new Array(12).fill(0),
+    windy: new Array(12).fill(0)
+  };
+}
+
+function updateInfoPanel(name, feature, locationData) {
+  const region = deriveRegionName(feature);
+  const card = locationData || makeFallbackCard(name, feature);
+
+  const sideMetrics = card.side_metrics || {};
+  const metrics = card.metrics || {};
+
+  document.getElementById('selected-name').textContent = name;
+  document.getElementById('selected-region').textContent = String(region);
+  document.getElementById('selected-exposure').textContent = `${card.exposure_pct ?? 0}%`;
+
+  document.getElementById('metric-days').textContent =
+    formatMetric(sideMetrics.days);
+
+  document.getElementById('metric-natcat').textContent =
+    formatMetric(sideMetrics.natcat);
+
+  document.getElementById('metric-airquality').textContent =
+    formatMetric(sideMetrics.airquality || sideMetrics['air-quality']);
+
+  document.getElementById('metric-naturalspaces').textContent =
+    formatMetric(sideMetrics.naturalspaces || sideMetrics['natural-spaces']);
+
+  document.getElementById('metric-vulnerability').textContent =
+    formatMetric(metrics.vulnerability_index);
+
+  document.getElementById('metric-loss').textContent =
+    formatMetric(metrics.historical_financial_loss);
+}
+
+function setSelectedButton(name) {
+  const key = normalizeName(name);
+  document.querySelectorAll('.municipality-button').forEach(btn => {
+    btn.classList.toggle('selected', btn.dataset.key === key);
+  });
+}
+
+function initTimelineAnimation(forceReveal = false) {
+  const events = document.querySelectorAll('.timeline .event');
+  if (!events.length) return;
+
+  const reveal = () => {
+    const trigger = window.innerHeight * 0.9;
+    events.forEach(event => {
+      const rect = event.getBoundingClientRect();
+      if (forceReveal || rect.top < trigger) {
+        event.classList.add('visible');
+      }
+    });
+  };
+
+  reveal();
+  window.removeEventListener('scroll', reveal);
+  window.addEventListener('scroll', reveal, { passive: true });
+}
+
+function initTabs() {
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const target = button.dataset.target;
+      document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      button.classList.add('active');
+      document.getElementById(target).classList.add('active');
+
+      if (target === 'tab-main' && window._leafletMap) {
+        setTimeout(() => window._leafletMap.invalidateSize(), 50);
+      }
+      if (target === 'tab-2') {
+        setTimeout(() => initTimelineAnimation(true), 50);
+      }
+    });
+  });
+}
+
+function initClickableTimelineEvents() {
+  document.querySelectorAll('.clickable-event').forEach(event => {
+    event.addEventListener('click', () => {
+      const locationName = event.dataset.location || event.dataset.place || '–';
+      const time = event.dataset.time || '–';
+      const place = event.dataset.place || locationName;
+      const eventTitle = event.querySelector('h3')?.textContent?.trim() || '–';
+
+      const selectedCityEl = document.getElementById('realtime-selected-city');
+      const selectedTimeEl = document.getElementById('realtime-selected-time');
+      const selectedPlaceEl = document.getElementById('realtime-selected-place');
+      const selectedEventEl = document.getElementById('realtime-selected-event');
+
+      if (selectedCityEl) selectedCityEl.textContent = locationName;
+      if (selectedTimeEl) selectedTimeEl.textContent = time;
+      if (selectedPlaceEl) selectedPlaceEl.textContent = place;
+      if (selectedEventEl) selectedEventEl.textContent = eventTitle;
+
+      document.querySelectorAll('.clickable-event').forEach(item => {
+        item.classList.remove('selected-timeline-event');
+      });
+
+      event.classList.add('selected-timeline-event');
+
+      const key = normalizeName(locationName);
+      const targetButton = document.querySelector(`.municipality-button[data-key="${key}"]`);
+
+      if (targetButton) {
+        targetButton.click();
+      }
+    });
+  });
+}
+
 async function main() {
+  initTabs();
   buildLegend();
 
-  const [locationsRes, municipalitiesRes] = await Promise.all([
+  const [locationsRes, locationsSpainRes, municipalitiesRes, genevaRes, spainRes] = await Promise.all([
     fetch('data/locations.json'),
-    fetch('data/municipalities.geojson')
+    fetch('data/locations_spain.json'),
+    fetch('data/municipalities.geojson'),
+    fetch('data/geneva.json'),
+    fetch('data/spain_provinces.geojson')
   ]);
-  const locations = await locationsRes.json();
+
+  if (
+    !locationsRes.ok ||
+    !locationsSpainRes.ok ||
+    !municipalitiesRes.ok ||
+    !genevaRes.ok ||
+    !spainRes.ok
+  ) {
+    throw new Error('One or more data files could not be loaded.');
+  }
+
+  const baseLocations = await locationsRes.json();
+  const spainLocations = await locationsSpainRes.json();
+
+ const locations = {
+  ...spainLocations,
+  ...baseLocations
+};
+
   const municipalities = await municipalitiesRes.json();
+  const geneva = await genevaRes.json();
+  const spain = await spainRes.json();
+
+  municipalities.features.push({
+    type: 'Feature',
+    geometry: geneva.geometry,
+    properties: {
+      ...geneva.properties,
+      municipality: geneva.properties?.gemname || 'Genève',
+      place: geneva.properties?.gemname || 'Genève',
+      exposure_pct: 0
+    }
+  });
+
+  spain.features.forEach(f => {
+    municipalities.features.push({
+      type: 'Feature',
+      geometry: f.geometry,
+      properties: {
+        ...f.properties,
+        municipality: f.properties?.prov_name || f.properties?.name || 'Unknown province',
+        place: f.properties?.prov_name || f.properties?.name || 'Unknown province',
+        exposure_pct: 0
+      }
+    });
+  });
+
+  const locationsByKey = {};
+    Object.entries(locations).forEach(([key, value]) => {
+      locationsByKey[normalizeName(key)] = value;
+
+      if (value.municipality) {
+        locationsByKey[normalizeName(value.municipality)] = value;
+      }
+
+      if (value.place) {
+        locationsByKey[normalizeName(value.place)] = value;
+      }
+    });
+
+  if (baseLocations['Costa del Sol']) {
+    locationsByKey[normalizeName('Málaga')] = baseLocations['Costa del Sol'];
+    locationsByKey[normalizeName('Malaga')] = baseLocations['Costa del Sol'];
+    locationsByKey[normalizeName('Costa del Sol')] = baseLocations['Costa del Sol'];
+  }
+
+  if (baseLocations['Geneva']) {
+  locationsByKey[normalizeName('Geneva')] = baseLocations['Geneva'];
+  locationsByKey[normalizeName('Genève')] = baseLocations['Geneva'];
+  locationsByKey[normalizeName('Geneve')] = baseLocations['Geneva'];
+}
+
+  const map = L.map('map', {
+    zoomControl: false,
+    scrollWheelZoom: true
+  }).setView([36.7213, -4.4214], 8);
+
+  window._leafletMap = map;
+
+  function focusLocationWithOffset(map, lat, lng, zoom = 8, offsetX = 250, offsetY = 0) {
+  map.setView([lat, lng], zoom);
+
+  setTimeout(() => {
+    map.panBy([offsetX, offsetY], { animate: true });
+  }, 100);
+}
 
   const lightGray = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution:'&copy; OpenStreetMap contributors &copy; CARTO', maxZoom:20
-  });
-  const satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-    attribution:'Tiles &copy; Esri', maxZoom:19
+    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+    maxZoom: 20
+  }).addTo(map);
+
+  const satellite = L.tileLayer(
+    'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    { attribution: 'Tiles &copy; Esri', maxZoom: 19 }
+  );
+
+  L.control.zoom({ position: 'bottomright' }).addTo(map);
+  L.control.layers({ Simplistic: lightGray, Satellite: satellite }, null, {
+    position: 'bottomright',
+    collapsed: true
+  }).addTo(map);
+
+  const municipalityButtons = document.getElementById('municipality-buttons');
+  const buttonTargets = ['Málaga', 'Barcelona', 'Dubai', 'Auckland', 'Geneva','Catania','Rhodes','Melilla'];
+  buttonTargets.forEach(name => {
+    const btn = document.createElement('button');
+    btn.className = 'municipality-button';
+    btn.dataset.key = normalizeName(name);
+    btn.textContent = name;
+    municipalityButtons.appendChild(btn);
   });
 
-  const map = L.map('map', { zoomControl:false, scrollWheelZoom:true, layers:[lightGray] }).setView([0,70], 2);
-  L.control.zoom({ position:'topright' }).addTo(map);
-  L.control.layers({ 'Simplistic':lightGray, 'Satellite':satellite }, null, { position:'bottomright', collapsed:true }).addTo(map);
+  let selectedLayer = null;
+  let featureLayerPairs = [];
 
-  const municipalityLayer = L.geoJSON(municipalities, {
+  let geojsonLayer;
+  function selectFeature(layer, feature, centerMap = false) {
+    const name = deriveFeatureName(feature);
+    const locationData = locationsByKey[normalizeName(name)] || null;
+
+    console.log('Selected:', name);
+    console.log('Matched location:', locationData);
+    console.log('Monthly weather:', locationData?.monthly_weather);
+
+    const overlayKey =
+     normalizeName(locationData?.municipality || locationData?.place || name);
+
+  showSelectedOverlay(overlayKey);
+  if (selectedLayer && geojsonLayer) {
+    geojsonLayer.resetStyle(selectedLayer);
+  }
+
+  selectedLayer = layer;
+
+  layer.setStyle({
+    weight: 2.5,
+    fillOpacity: 0.5
+  });
+
+  if (layer.bringToFront) {
+    layer.bringToFront();
+  }
+
+  setSelectedButton(name);
+  updateInfoPanel(name, feature, locationData);
+
+  renderClimateRadar(
+    'climate-radar',
+    name,
+    getMonthlyWeather(locationData)
+  );
+
+  if (centerMap && layer.getBounds) {
+    map.fitBounds(layer.getBounds().pad(0.35));
+
+    setTimeout(() => {
+      map.panBy([250, 0], { animate: true });
+    }, 100);
+    setTimeout(() => {
+      if (map.getZoom() < 8) {
+        map.setZoom(8);
+      }
+    }, 80);
+  }
+}
+
+  geojsonLayer = L.geoJSON(municipalities, {
     style: feature => {
-      const pct = feature.properties.exposure_pct;
+      const pct = feature.properties?.exposure_pct ?? 0;
       const color = exposureColor(pct);
-      return { color, weight: 1.2, fillColor: color, fillOpacity: 0.32, className:'municipality' };
+      return {
+        color,
+        weight: 1.2,
+        fillColor: color,
+        fillOpacity: 0.32,
+        className: 'municipality'
+      };
+    },
+    onEachFeature: (feature, layer) => {
+      featureLayerPairs.push([feature, layer]);
+      layer.on('click', () => selectFeature(layer, feature, false));
     }
   }).addTo(map);
 
-  const overlays = [];
-  Object.entries(locations).forEach(([name, city]) => {
-    L.circleMarker([city.lat, city.lng], {
-      radius:5, color:'#ffffff', weight:2, fillColor:'#183b63', fillOpacity:1
-    }).addTo(map);
+  const overlaysByKey = {};
+let selectedOverlay = null;
 
-    const anchorX = city.side === 'left' ? 446 : 74;
-    const marker = L.marker([city.lat, city.lng], {
-      interactive:false,
-      icon: L.divIcon({
-        className:'city-overlay',
-        html: cardHTML(city),
-        iconSize:[520,168],
-        iconAnchor:[anchorX,162]
-      })
-    });
-    overlays.push(marker);
+Object.entries(locations).forEach(([name, city]) => {
+  if (typeof city.lat !== 'number' || typeof city.lng !== 'number') return;
+
+  const key = normalizeName(city.municipality || city.place || name);
+
+  const dot = L.circleMarker([city.lat, city.lng], {
+    radius: 5,
+    color: '#ffffff',
+    weight: 2,
+    fillColor: '#183b63',
+    fillOpacity: 1
+  }).addTo(map);
+
+  const anchorX = city.side === 'left' ? 446 : 74;
+
+  const marker = L.marker([city.lat, city.lng], {
+    interactive: false,
+    icon: L.divIcon({
+      className: 'city-overlay',
+      html: cardHTML(city),
+      iconSize: [520, 168],
+      iconAnchor: [anchorX, 162]
+    })
   });
 
-  const allLatLngs = [];
-  municipalityLayer.eachLayer(layer => {
-    const bounds = layer.getBounds();
-    allLatLngs.push(bounds.getSouthWest(), bounds.getNorthEast());
-  });
-  map.fitBounds(L.latLngBounds(allLatLngs).pad(0.12));
+  overlaysByKey[key] = marker;
 
-  function updateCardsVisibility() {
-    const show = map.getZoom() > 6;
-    overlays.forEach(m => {
-      if (show) {
-        if (!map.hasLayer(m)) m.addTo(map);
-      } else {
-        if (map.hasLayer(m)) map.removeLayer(m);
-      }
-    });
+  dot.on('click', () => {
+    const match = featureLayerPairs.find(([feature]) =>
+      normalizeName(deriveFeatureName(feature)) === key
+    );
+
+    if (match) {
+      const [feature, layer] = match;
+      selectFeature(layer, feature, true);
+    } else {
+      const locationData = locationsByKey[key] || city;
+      showSelectedOverlay(key);
+      updateInfoPanel(city.municipality || city.place || name, { properties: {} }, locationData);
+      renderClimateRadar(
+        'climate-radar',
+        city.municipality || city.place || name,
+        getMonthlyWeather(locationData)
+      );
+      focusLocationWithOffset(map, locationData.lat, locationData.lng, 8, 250, 0);
+    }
+  });
+});
+
+function showSelectedOverlay(key) {
+  if (selectedOverlay && map.hasLayer(selectedOverlay)) {
+    map.removeLayer(selectedOverlay);
   }
-  updateCardsVisibility();
-  map.on('zoomend', updateCardsVisibility);
+
+  selectedOverlay = overlaysByKey[key];
+
+  if (selectedOverlay) {
+    selectedOverlay.addTo(map);
+  }
+}
+
+  municipalityButtons.querySelectorAll('.municipality-button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const key = btn.dataset.key;
+
+    const match = featureLayerPairs.find(([feature]) =>
+      normalizeName(deriveFeatureName(feature)) === key
+    );
+
+    const card = locationsByKey[key] || null;
+
+    if (match) {
+      const [feature, layer] = match;
+      selectFeature(layer, feature, true);
+    } else {
+      updateInfoPanel(btn.textContent, { properties: {} }, card);
+
+      renderClimateRadar(
+        'climate-radar',
+        btn.textContent,
+        getMonthlyWeather(card)
+      );
+      showSelectedOverlay(key);
+      setSelectedButton(btn.textContent);
+
+      if (card && typeof card.lat === 'number' && typeof card.lng === 'number') {
+        focusLocationWithOffset(map, card.lat, card.lng, 8, 250, 0);
+      }
+    }
+  });
+});
+
+  const defaultMatch =
+  featureLayerPairs.find(([feature]) => normalizeName(deriveFeatureName(feature)) === normalizeName('Málaga')) ||
+  featureLayerPairs.find(([feature]) => normalizeName(deriveFeatureName(feature)) === normalizeName('Malaga'));
+
+if (defaultMatch) {
+  const [feature, layer] = defaultMatch;
+  selectFeature(layer, feature, false);
+}
+
+focusLocationWithOffset(map, 36.7213, -4.4214, 8, 250, 0);
+
+const malagaCard =
+  locationsByKey[normalizeName('Málaga')] ||
+  locationsByKey[normalizeName('Malaga')] ||
+  locationsByKey[normalizeName('Costa del Sol')];
+
+if (malagaCard) {
+  updateInfoPanel(
+    malagaCard.municipality || malagaCard.place || 'Málaga',
+    { properties: { municipality: malagaCard.municipality || malagaCard.place || 'Málaga' } },
+    malagaCard
+  );
+
+  renderClimateRadar(
+    'climate-radar',
+    malagaCard.municipality || malagaCard.place || 'Málaga',
+    getMonthlyWeather(malagaCard)
+  );
+}
+
+  initTimelineAnimation(false);
+  initClickableTimelineEvents();
+}
+
+function renderClimateRadar(containerId, locationName, data) {
+  const container = document.getElementById(containerId);
+  const titleEl = document.getElementById("climate-radar-title");
+  if (!container || !titleEl) return;
+
+  titleEl.textContent = `${locationName} – monthly weather profile`;
+
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  const series = [
+    { key: "cloudy", label: "Cloudy days", polygonClass: "radar-series-cloudy", pointClass: "radar-point-cloudy", color: "#183b63" },
+    { key: "rainy",  label: "Rainy days",  polygonClass: "radar-series-rainy",  pointClass: "radar-point-rainy",  color: "#006fc9" },
+    { key: "windy",  label: "Windy days",  polygonClass: "radar-series-windy",  pointClass: "radar-point-windy",  color: "#4c8b42" }
+  ];
+
+  const size = 320;
+  const cx = size / 2;
+  const cy = size / 2;
+  const radius = 110;
+  const levels = 5;
+
+  // max expected monthly days; keep fixed for comparability between locations
+  const maxValue = 20;
+
+  function polarToCartesian(angle, r) {
+    return {
+      x: cx + Math.cos(angle) * r,
+      y: cy + Math.sin(angle) * r
+    };
+  }
+
+  function pointString(values) {
+  const safeValues = Array.isArray(values) && values.length === 12
+    ? values
+    : new Array(12).fill(0);
+
+  return safeValues.map((value, i) => {
+    const numeric = Number(value) || 0;
+    const angle = (-Math.PI / 2) + (i * 2 * Math.PI / 12);
+    const r = (Math.max(0, Math.min(numeric, maxValue)) / maxValue) * radius;
+    const p = polarToCartesian(angle, r);
+    return `${p.x},${p.y}`;
+  }).join(" ");
+}
+
+  let svg = `
+    <svg class="climate-radar-svg" viewBox="0 0 ${size} ${size + 10}" xmlns="http://www.w3.org/2000/svg">
+  `;
+
+  // grid polygons
+  for (let level = 1; level <= levels; level++) {
+    const r = (level / levels) * radius;
+    const pts = months.map((_, i) => {
+      const angle = (-Math.PI / 2) + (i * 2 * Math.PI / 12);
+      const p = polarToCartesian(angle, r);
+      return `${p.x},${p.y}`;
+    }).join(" ");
+    svg += `<polygon class="radar-grid" points="${pts}" />`;
+  }
+
+  // axis lines + month labels
+  months.forEach((month, i) => {
+    const angle = (-Math.PI / 2) + (i * 2 * Math.PI / 12);
+    const outer = polarToCartesian(angle, radius);
+    const label = polarToCartesian(angle, radius + 18);
+
+    svg += `<line class="radar-axis" x1="${cx}" y1="${cy}" x2="${outer.x}" y2="${outer.y}" />`;
+    svg += `<text class="radar-label" x="${label.x}" y="${label.y}" text-anchor="middle" dominant-baseline="middle">${month}</text>`;
+  });
+
+    // series polygons
+  series.forEach(s => {
+    const values = Array.isArray(data?.[s.key]) && data[s.key].length === 12
+      ? data[s.key]
+      : new Array(12).fill(0);
+
+    svg += `<polygon class="${s.polygonClass}" points="${pointString(values)}" />`;
+
+    values.forEach((value, i) => {
+      const numeric = Number(value) || 0;
+      const angle = (-Math.PI / 2) + (i * 2 * Math.PI / 12);
+      const r = (Math.max(0, Math.min(numeric, maxValue)) / maxValue) * radius;
+      const p = polarToCartesian(angle, r);
+
+      // Visible dot
+      svg += `<circle class="${s.pointClass}" cx="${p.x}" cy="${p.y}" r="3.2"></circle>`;
+
+      // Larger invisible hover area with tooltip
+      svg += `<circle
+        cx="${p.x}"
+        cy="${p.y}"
+        r="11"
+        fill="transparent"
+        stroke="transparent"
+        style="pointer-events: all;"
+      >
+        <title>${s.label} – ${months[i]}: ${numeric}</title>
+      </circle>`;
+    });
+  });
+
+  svg += `</svg>`;
+
+  const legend = `
+    <div class="radar-legend">
+      ${series.map(s => `
+        <div class="radar-legend-item">
+          <span class="radar-legend-swatch" style="background:${s.color}"></span>
+          <span>${s.label}</span>
+        </div>
+      `).join("")}
+    </div>
+  `;
+  container.innerHTML = svg + legend;
 }
 
 main().catch(err => {
   console.error(err);
-  alert('Unable to load project data. Run this project with a local web server, for example: python -m http.server 8000');
+  alert(err.message);
 });

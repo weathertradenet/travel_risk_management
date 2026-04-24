@@ -9,7 +9,7 @@
 
       .st0, .st1 {
         fill: none;
-        stroke: #1e2f76;
+        stroke: #183b63;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 3px;
