@@ -270,12 +270,12 @@ function selectTimelineEvent(event) {
     eventTitle
   });
 
-  const key = normalizeName(locationName);
-  const targetButton = document.querySelector(`.municipality-button[data-key="${key}"]`);
+//  const key = normalizeName(locationName);
+//  const targetButton = document.querySelector(`.municipality-button[data-key="${key}"]`);
 
-  if (targetButton) {
-    targetButton.click();
-  }
+//  if (targetButton) {
+//    targetButton.click();
+//  }
 }
 
 async function main() {
@@ -752,11 +752,13 @@ if (malagaCard) {
     initTimelineAnimation(false);
     initClickableTimelineEvents();
 
-    const firstTimelineEvent = document.querySelector('.clickable-event');
-    if (firstTimelineEvent) {
-      selectTimelineEvent(firstTimelineEvent);
-    }
+    const defaultTimelineEvent =
+      document.querySelector('.clickable-event[data-location="Málaga"]') ||
+      document.querySelector('.clickable-event[data-location="Malaga"]');
 
+    if (defaultTimelineEvent) {
+      selectTimelineEvent(defaultTimelineEvent);
+    }
 }
 
 function getTravelDataForCity(locationName) {
