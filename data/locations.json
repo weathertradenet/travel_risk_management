@@ -1410,6 +1410,38 @@
       ]
     }
   },
+  "Barcelona": {
+    "municipality": "Barcelona",
+    "place": "Barcelona",
+    "lat": 41.3874,
+    "lng": 2.1686,
+    "side": "left",
+    "exposure_pct": 28,
+    "side_metrics": {
+      "natcat": ["Flood", "Heatwave"],
+      "days": ["285", "42"],
+      "airquality": ["4/10", "7/10"],
+      "naturalspaces": ["34", "58"]
+    },
+    "monthly_weather": {
+      "cloudy": [13, 12, 13, 13, 13, 9, 5, 7, 11, 14, 13, 13],
+      "rainy": [9, 8, 11, 13, 10, 8, 8, 10, 14, 13, 9, 6],
+      "windy": [8, 8, 8, 8, 7, 7, 7, 7, 7, 8, 8, 9]
+    },
+    "metrics": {
+      "flood": ["2,600", "14%"],
+      "hurricane": ["0 km", "0%"],
+      "rainfall": ["65 km", "11%"],
+      "heatwave": ["8", "62%"],
+      "drought": ["14", "48%"],
+      "wildfire": ["2", "27%"],
+      "water_stress": ["High", "68%"],
+      "water_quality": ["Fair", "33%"],
+      "historical_financial_loss": ["$24M", "10y"],
+      "insurance_claims": ["980", "yr"],
+      "vulnerability_index": ["0.63", "idx"]
+    }
+  },
   "Dubai": {
     "municipality": "Dubai",
     "place": "Burj Khalifa",

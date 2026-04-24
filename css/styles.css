@@ -53,10 +53,10 @@ html, body {
   background: transparent;
   color: #7297d6 !important;
   border-color: transparent;
-  border-bottom: 3px solid #d1e3bc;
+  border-bottom: 3px solid #efcf9b;
   box-shadow:0 -1px 0 #ffffff, 0 0 0 1px rgba(0, 0, 0, 0.03);
 }
-.tab-button:hover { color: 	#eca9a9 !important; }
+.tab-button:hover { color: 	#efcf9b !important; }
 .tab-button:hover:not(.active) { background:#ebebeb; }
 .tab-content {
   display:none;
