@@ -310,34 +310,101 @@ async function main() {
   ...baseLocations
 };
 
-  const municipalities = await municipalitiesRes.json();
-  const geneva = await genevaRes.json();
-  const spain = await spainRes.json();
-  travelDataStore = await travelDataRes.json();
+  let municipalities = await municipalitiesRes.json();
+    const geneva = await genevaRes.json();
+    const spain = await spainRes.json();
+    travelDataStore = await travelDataRes.json();
 
-  municipalities.features.push({
-    type: 'Feature',
-    geometry: geneva.geometry,
-    properties: {
-      ...geneva.properties,
-      municipality: geneva.properties?.gemname || 'Genève',
-      place: geneva.properties?.gemname || 'Genève',
-      exposure_pct: 0
+    /* Build list of real Spain province names from spain_provinces.geojson */
+    const realSpainProvinceKeys = new Set(
+      spain.features.map(f =>
+        normalizeName(f.properties?.prov_name || f.properties?.name || '')
+      )
+    );
+
+    function isGenevaFeature(feature) {
+      const p = feature.properties || {};
+
+      const names = [
+        p.place,
+        p.municipality,
+        p.city,
+        p.gemname,
+        p.name
+      ].map(normalizeName);
+
+      return names.includes(normalizeName('Geneva')) ||
+             names.includes(normalizeName('Genève')) ||
+             names.includes(normalizeName('Geneve'));
     }
-  });
 
-  spain.features.forEach(f => {
+    function isSpainFakeFeature(feature) {
+      const p = feature.properties || {};
+
+      const names = [
+        p.place,
+        p.municipality,
+        p.city,
+        p.gemname,
+        p.prov_name,
+        p.name
+      ].map(normalizeName);
+
+      return names.some(name => realSpainProvinceKeys.has(name));
+    }
+
+    /* Remove fake/simple Geneva and Spain polygons from municipalities.geojson */
+    municipalities.features = municipalities.features.filter(feature => {
+      return !isGenevaFeature(feature) && !isSpainFakeFeature(feature);
+    });
+
+    /* Add the real Geneva polygon from geneva.json */
     municipalities.features.push({
       type: 'Feature',
-      geometry: f.geometry,
+      geometry: geneva.geometry,
       properties: {
-        ...f.properties,
-        municipality: f.properties?.prov_name || f.properties?.name || 'Unknown province',
-        place: f.properties?.prov_name || f.properties?.name || 'Unknown province',
-        exposure_pct: 0
+        ...geneva.properties,
+        municipality: geneva.properties?.gemname || 'Genève',
+        place: geneva.properties?.gemname || 'Genève',
+        exposure_pct: baseLocations['Geneva']?.exposure_pct ?? 0
       }
     });
-  });
+
+    /* Add the real Spain province polygons from spain_provinces.geojson */
+    spain.features.forEach(f => {
+      const provinceName = f.properties?.prov_name || f.properties?.name || 'Unknown province';
+      const provinceKey = normalizeName(provinceName);
+
+      const malagaData = baseLocations['Costa del Sol'];
+
+      municipalities.features.push({
+        type: 'Feature',
+        geometry: f.geometry,
+        properties: {
+          ...f.properties,
+          municipality: provinceName,
+          place: provinceName,
+          exposure_pct:
+            provinceKey === normalizeName('Málaga') || provinceKey === normalizeName('Malaga')
+              ? malagaData?.exposure_pct ?? 0
+              : 0
+        }
+      });
+    });
+
+  function isMalagaProvinceFeature(feature) {
+  const p = feature.properties || {};
+
+  const names = [
+    p.prov_name,
+    p.name,
+    p.municipality,
+    p.place
+  ].map(normalizeName);
+
+  return names.includes(normalizeName('Málaga')) ||
+         names.includes(normalizeName('Malaga'));
+}
 
   const locationsByKey = {};
     Object.entries(locations).forEach(([key, value]) => {
@@ -508,9 +575,12 @@ Object.entries(locations).forEach(([name, city]) => {
   overlaysByKey[key] = marker;
 
   dot.on('click', () => {
-    const match = featureLayerPairs.find(([feature]) =>
-      normalizeName(deriveFeatureName(feature)) === key
-    );
+    const match =
+      key === normalizeName('Malaga') || key === normalizeName('Málaga')
+        ? featureLayerPairs.find(([feature]) => isMalagaProvinceFeature(feature))
+        : featureLayerPairs.find(([feature]) =>
+            normalizeName(deriveFeatureName(feature)) === key
+          );
 
     if (match) {
       const [feature, layer] = match;
@@ -572,9 +642,9 @@ function showSelectedOverlay(key) {
   });
 });
 
-  const defaultMatch =
-  featureLayerPairs.find(([feature]) => normalizeName(deriveFeatureName(feature)) === normalizeName('Málaga')) ||
-  featureLayerPairs.find(([feature]) => normalizeName(deriveFeatureName(feature)) === normalizeName('Malaga'));
+  const defaultMatch = featureLayerPairs.find(([feature]) =>
+      isMalagaProvinceFeature(feature)
+    );
 
 if (defaultMatch) {
   const [feature, layer] = defaultMatch;
