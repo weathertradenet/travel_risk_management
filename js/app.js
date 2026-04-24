@@ -278,9 +278,47 @@ function selectTimelineEvent(event) {
 //  }
 }
 
+
+/* ADD THE NEW FUNCTION HERE */
+function initRadarCardMobileToggle() {
+  const card = document.getElementById('climate-radar-card');
+  if (!card) return;
+
+  const isMobile = () => window.matchMedia('(max-width: 760px)').matches;
+
+  function applyInitialState() {
+    if (isMobile()) {
+      card.classList.add('radar-collapsed');
+      card.classList.remove('radar-expanded');
+    } else {
+      card.classList.remove('radar-collapsed');
+      card.classList.remove('radar-expanded');
+    }
+  }
+
+  card.addEventListener('click', event => {
+    if (!isMobile()) return;
+
+    event.stopPropagation();
+
+    if (card.classList.contains('radar-collapsed')) {
+      card.classList.remove('radar-collapsed');
+      card.classList.add('radar-expanded');
+    } else {
+      card.classList.add('radar-collapsed');
+      card.classList.remove('radar-expanded');
+    }
+  });
+
+  window.addEventListener('resize', applyInitialState);
+
+  applyInitialState();
+}
+
 async function main() {
   initTabs();
   buildLegend();
+  initRadarCardMobileToggle();
 
   const [locationsRes, locationsSpainRes, municipalitiesRes, genevaRes, spainRes, travelDataRes] = await Promise.all([
       fetch('data/locations.json'),
