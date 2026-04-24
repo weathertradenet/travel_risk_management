@@ -4,19 +4,19 @@ import re
 base = Path(__file__).parent
 
 index_html = (base / "index.html").read_text(encoding="utf-8")
-styles_css = (base / "css/styles.css").read_text(encoding="utf-8")
-app_js = (base / "js/app.js").read_text(encoding="utf-8")
+styles_css = (base / "css" / "styles.css").read_text(encoding="utf-8")
+app_js = (base / "js" / "app.js").read_text(encoding="utf-8")
 
-# Inline CSS
+# Inline local CSS: css/styles.css
 index_html = re.sub(
-    r'<link[^>]+href=["\']styles\.css["\'][^>]*>',
+    r'<link[^>]+href=["\']css/styles\.css["\'][^>]*>',
     f"<style>\n{styles_css}\n</style>",
     index_html
 )
 
-# Inline JS
+# Inline local JS: js/app.js
 index_html = re.sub(
-    r'<script[^>]+src=["\']app\.js["\'][^>]*></script>',
+    r'<script[^>]+src=["\']js/app\.js["\'][^>]*></script>',
     f"<script>\n{app_js}\n</script>",
     index_html
 )

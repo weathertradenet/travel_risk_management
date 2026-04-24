@@ -616,7 +616,7 @@ html, body {
   align-items: center;
   gap: 14px;
   flex-wrap: wrap;
-  margin-top: 8px;
+  margin-top: 3px;
   padding-bottom: 8px;
   font-size: 15px;
   color: #31445b;
@@ -625,14 +625,23 @@ html, body {
 .radar-legend-item {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
 }
 
-.radar-legend-swatch {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+.radar-legend-icon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  object-fit: contain;
 }
+
+.radar-legend-icon-mask {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  flex: 0 0 20px;
+}
+
 .leaflet-bottom.leaflet-right {
   margin-bottom: 18px;
   margin-right: 18px;
@@ -769,4 +778,191 @@ html, body {
 .info-card-spacer {
   height: 122px;
   flex: 0 0 122px;
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE FIXES
+   Add this at the very end of styles.css
+   ========================================================= */
+
+@media (max-width: 760px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .top-bar {
+    padding: 0.65rem 0.8rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+
+  .tabs {
+    gap: 0.35rem;
+    padding: 0.4rem 0.6rem 0;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .tab-button {
+    font-size: 0.95rem;
+    padding: 0.45rem 0.75rem;
+    flex: 0 0 auto;
+  }
+
+  .tab-content {
+    padding: 0.65rem;
+  }
+
+  .layout {
+    flex-direction: column-reverse;
+    gap: 0.75rem;
+    min-height: 0;
+  }
+
+  .info-panel {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    padding: 0.75rem;
+  }
+
+  .municipality-buttons {
+    gap: 0.45rem;
+  }
+
+  .municipality-button {
+    font-size: 0.85rem;
+    padding: 0.32rem 0.7rem;
+  }
+
+  .info-card-spacer {
+    height: 20px;
+    flex: 0 0 20px;
+  }
+
+  .text-block {
+    padding: 0.65rem;
+    font-size: 0.85rem;
+  }
+
+  .forecast-row {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .label {
+    font-size: 0.8rem;
+  }
+
+  .value {
+    font-size: 0.9rem;
+  }
+
+  .map-container {
+    min-height: 560px;
+  }
+
+  #map {
+    min-height: 560px;
+  }
+
+  .climate-radar-card {
+    top: 8px;
+    right: 8px;
+    width: 230px;
+    padding: 8px 4px 4px;
+    border-radius: 12px;
+  }
+
+  .climate-radar-title {
+    font-size: 11px;
+  }
+
+  .radar-label {
+    font-size: 10px;
+  }
+
+  .radar-legend {
+    gap: 6px;
+    font-size: 10px;
+    padding-bottom: 4px;
+    margin-top: 0;
+  }
+
+  .radar-legend-item {
+    gap: 3px;
+  }
+
+  .radar-legend-icon-mask,
+  .radar-legend-icon {
+    width: 14px;
+    height: 14px;
+    flex: 0 0 14px;
+  }
+
+  .legend {
+    left: 8px;
+    bottom: 8px;
+    width: calc(100% - 16px);
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .legend-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .legend-item {
+    font-size: 10px;
+  }
+
+  .legend-icon {
+    min-height: 22px;
+    margin-bottom: 4px;
+  }
+
+  .legend-icon img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .legend-scale-title {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+
+  .legend-scale {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 3px;
+  }
+
+  .swatch {
+    height: 8px;
+  }
+
+  .scale-label {
+    font-size: 9px;
+  }
+
+  .leaflet-bottom.leaflet-right {
+    margin-bottom: 6px;
+    margin-right: 6px;
+  }
+
+  .leaflet-control-zoom a {
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+  }
+
+  .leaflet-control-layers-toggle {
+    width: 32px !important;
+    height: 32px !important;
+  }
 }

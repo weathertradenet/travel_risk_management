@@ -552,18 +552,27 @@ function isProvinceFeature(feature, targetName) {
     getMonthlyWeather(locationData)
   );
 
-  if (centerMap && layer.getBounds) {
-    map.fitBounds(layer.getBounds().pad(0.35));
+  if (centerMap) {
+      if (
+        locationData &&
+        typeof locationData.lat === 'number' &&
+        typeof locationData.lng === 'number'
+      ) {
+        focusLocationWithOffset(map, locationData.lat, locationData.lng, 8, 250, 0);
+      } else if (layer.getBounds) {
+        map.fitBounds(layer.getBounds().pad(0.35));
 
-    setTimeout(() => {
-      map.panBy([250, 0], { animate: true });
-    }, 100);
-    setTimeout(() => {
-      if (map.getZoom() < 8) {
-        map.setZoom(8);
+        setTimeout(() => {
+          map.panBy([250, 0], { animate: true });
+        }, 100);
+
+        setTimeout(() => {
+          if (map.getZoom() < 8) {
+            map.setZoom(8);
+          }
+        }, 80);
       }
-    }, 80);
-  }
+      }
 }
 
   geojsonLayer = L.geoJSON(municipalities, {
@@ -580,7 +589,7 @@ function isProvinceFeature(feature, targetName) {
     },
     onEachFeature: (feature, layer) => {
       featureLayerPairs.push([feature, layer]);
-      layer.on('click', () => selectFeature(layer, feature, false));
+      layer.on('click', () => selectFeature(layer, feature, true));
     }
   }).addTo(map);
 
@@ -1130,10 +1139,31 @@ function renderClimateRadar(containerId, locationName, data) {
                   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
   const series = [
-    { key: "cloudy", label: "Cloudy days", polygonClass: "radar-series-cloudy", pointClass: "radar-point-cloudy", color: "#e53935" },
-    { key: "rainy",  label: "Rainy days",  polygonClass: "radar-series-rainy",  pointClass: "radar-point-rainy",  color: "#1e88e5" },
-    { key: "windy",  label: "Windy days",  polygonClass: "radar-series-windy",  pointClass: "radar-point-windy",  color: "#f5a201" }
-  ];
+      {
+        key: "cloudy",
+        label: "Cloudy days",
+        polygonClass: "radar-series-cloudy",
+        pointClass: "radar-point-cloudy",
+        color: "#e53935",
+        icon: "icons/cloud.svg"
+      },
+      {
+        key: "rainy",
+        label: "Rainy days",
+        polygonClass: "radar-series-rainy",
+        pointClass: "radar-point-rainy",
+        color: "#1e88e5",
+        icon: "icons/rainfall.svg"
+      },
+      {
+        key: "windy",
+        label: "Windy days",
+        polygonClass: "radar-series-windy",
+        pointClass: "radar-point-windy",
+        color: "#f5a201",
+        icon: "icons/hurricane.svg"
+      }
+    ];
 
   const size = 320;
   const cx = size / 2;
@@ -1224,16 +1254,24 @@ function renderClimateRadar(containerId, locationName, data) {
   svg += `</svg>`;
 
   const legend = `
-    <div class="radar-legend">
-      ${series.map(s => `
-        <div class="radar-legend-item">
-          <span class="radar-legend-swatch" style="background:${s.color}"></span>
-          <span>${s.label}</span>
-        </div>
-      `).join("")}
-    </div>
-  `;
-  container.innerHTML = svg + legend;
+      <div class="radar-legend">
+        ${series.map(s => `
+          <div class="radar-legend-item">
+            <span
+              class="radar-legend-icon-mask"
+              style="
+                background-color: ${s.color};
+                -webkit-mask: url('${s.icon}') center / contain no-repeat;
+                mask: url('${s.icon}') center / contain no-repeat;
+              "
+              aria-hidden="true"
+            ></span>
+            <span>${s.label}</span>
+          </div>
+        `).join("")}
+      </div>
+    `;
+    container.innerHTML = svg + legend;
 }
 
 main().catch(err => {
