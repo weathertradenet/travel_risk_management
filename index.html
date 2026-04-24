@@ -30,63 +30,112 @@
       <div class="layout">
         <aside class="info-panel">
           <div class="municipality-buttons" id="municipality-buttons"></div>
-          <div class="info-card-spacer" aria-hidden="true"></div>
 
-          <div class="text-block">
-            <div class="text-block-inner">
-              <div class="forecast-title">Weather</div>
-              <div class="forecast-row">
-                <span class="label">Optimal conditions [days]:</span>
-                <span class="value" id="metric-days">–</span>
+          <!-- DESKTOP VERSION: original left-side cards -->
+          <div class="desktop-info-cards">
+            <div class="text-block">
+              <div class="text-block-inner">
+                <div class="forecast-title">Weather</div>
+                <div class="forecast-row">
+                  <span class="label">Optimal conditions [days]:</span>
+                  <span class="value" id="metric-days">–</span>
+                </div>
+                <div class="forecast-row">
+                  <span class="label">Natural disasters:</span>
+                  <span class="value" id="metric-natcat">–</span>
+                </div>
               </div>
-              <div class="forecast-row">
-                <span class="label">Natural disasters:</span>
-                <span class="value" id="metric-natcat">–</span>
+            </div>
+
+            <div class="text-block">
+              <div class="text-block-inner">
+                <div class="forecast-title">Pollution</div>
+                <div class="forecast-row">
+                  <span class="label">Air quality:</span>
+                  <span class="value" id="metric-airquality">–</span>
+                </div>
+                <div class="forecast-row">
+                  <span class="label">Natural spaces:</span>
+                  <span class="value" id="metric-naturalspaces">–</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-block">
+              <div class="text-block-inner">
+                <div class="forecast-title">Vulnerability index</div>
+                <div class="forecast-row">
+                  <span class="label">Vulnerability index:</span>
+                  <span class="value" id="metric-vulnerability">–</span>
+                </div>
+                <div class="forecast-row">
+                  <span class="label">Insured loss:</span>
+                  <span class="value" id="metric-loss">–</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="text-block">
-            <div class="text-block-inner">
-              <div class="forecast-title">Pollution</div>
-              <div class="forecast-row">
-                <span class="label">Air quality:</span>
-                <span class="value" id="metric-airquality">–</span>
-              </div>
-              <div class="forecast-row">
-                <span class="label">Natural spaces:</span>
-                <span class="value" id="metric-naturalspaces">–</span>
-              </div>
+          <!-- MOBILE VERSION: compact cards -->
+          <div class="mobile-summary-grid">
+            <div class="mobile-summary-card">
+              <div class="mobile-summary-label">Optimal conditions</div>
+              <div class="mobile-summary-value" id="metric-days-mobile">–</div>
             </div>
-          </div>
 
-          <div class="text-block">
-            <div class="text-block-inner">
-              <div class="forecast-title">Vulnerability index</div>
-              <div class="forecast-row">
-                <span class="label">Vulnerability index:</span>
-                <span class="value" id="metric-vulnerability">–</span>
-              </div>
-              <div class="forecast-row">
-                <span class="label">Insured loss:</span>
-                <span class="value" id="metric-loss">–</span>
-              </div>
+            <div class="mobile-summary-card">
+              <div class="mobile-summary-label">Natural disasters</div>
+              <div class="mobile-summary-value" id="metric-natcat-mobile">–</div>
+            </div>
+
+            <div class="mobile-summary-card">
+              <div class="mobile-summary-label">Air quality</div>
+              <div class="mobile-summary-value" id="metric-airquality-mobile">–</div>
+            </div>
+
+            <div class="mobile-summary-card">
+              <div class="mobile-summary-label">Natural spaces</div>
+              <div class="mobile-summary-value" id="metric-naturalspaces-mobile">–</div>
+            </div>
+
+            <div class="mobile-summary-card">
+              <div class="mobile-summary-label">Vulnerability</div>
+              <div class="mobile-summary-value" id="metric-vulnerability-mobile">–</div>
+            </div>
+
+            <div class="mobile-summary-card">
+              <div class="mobile-summary-label">Insured loss</div>
+              <div class="mobile-summary-value" id="metric-loss-mobile">–</div>
             </div>
           </div>
         </aside>
 
         <div class="map-container">
           <div id="map"></div>
-          <div class="legend">
-            <div class="legend-grid" id="legend-grid"></div>
-            <div class="legend-scale-title">Percentage exposed to environmental hazards</div>
-            <div class="legend-scale" id="scale"></div>
-          </div>
+
           <div class="climate-radar-card" id="climate-radar-card">
             <div class="climate-radar-title" id="climate-radar-title">Month-by-month weather profile</div>
             <div id="climate-radar"></div>
           </div>
+
+          <div class="legend mobile-collapsible-legend" id="map-legend">
+            <button class="mobile-legend-toggle" id="mobile-legend-toggle" type="button">
+              Map legend
+            </button>
+
+            <div class="mobile-legend-content" id="mobile-legend-content">
+              <div class="legend-grid" id="legend-grid"></div>
+              <div class="legend-scale-title">Percentage exposed to environmental hazards</div>
+              <div class="legend-scale" id="scale"></div>
+            </div>
+          </div>
         </div>
+
+        <div class="mobile-selected-details" id="mobile-selected-details">
+          <div class="mobile-selected-title" id="mobile-selected-title">Selected location</div>
+          <div class="mobile-selected-grid" id="mobile-selected-grid"></div>
+        </div>
+
       </div>
     </section>
 

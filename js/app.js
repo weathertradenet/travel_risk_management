@@ -171,27 +171,55 @@ function updateInfoPanel(name, feature, locationData) {
     if (selectedRegionEl) selectedRegionEl.textContent = String(region);
     if (selectedExposureEl) selectedExposureEl.textContent = `${card.exposure_pct ?? 0}%`;
 
-  document.getElementById('metric-days').textContent =
-    formatMetric(sideMetrics.days);
+  function setText(id, value) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = value;
+  }
 
-  document.getElementById('metric-natcat').textContent =
-    formatMetric(sideMetrics.natcat);
+  const daysValue = formatMetric(sideMetrics.days);
+  const natcatValue = formatMetric(sideMetrics.natcat);
+  const airqualityValue = formatMetric(sideMetrics.airquality || sideMetrics['air-quality']);
+  const naturalspacesValue = formatMetric(sideMetrics.naturalspaces || sideMetrics['natural-spaces']);
+  const vulnerabilityValue = formatMetric(metrics.vulnerability_index);
+  const lossValue = formatMetric(metrics.historical_financial_loss);
 
-  document.getElementById('metric-airquality').textContent =
-    formatMetric(sideMetrics.airquality || sideMetrics['air-quality']);
+  // Desktop cards
+  setText('metric-days', daysValue);
+  setText('metric-natcat', natcatValue);
+  setText('metric-airquality', airqualityValue);
+  setText('metric-naturalspaces', naturalspacesValue);
+  setText('metric-vulnerability', vulnerabilityValue);
+  setText('metric-loss', lossValue);
 
-  document.getElementById('metric-naturalspaces').textContent =
-    formatMetric(sideMetrics.naturalspaces || sideMetrics['natural-spaces']);
-
-  document.getElementById('metric-vulnerability').textContent =
-    formatMetric(metrics.vulnerability_index);
-
-  document.getElementById('metric-loss').textContent =
-    formatMetric(metrics.historical_financial_loss);
+  // Mobile compact cards
+  setText('metric-days-mobile', daysValue);
+  setText('metric-natcat-mobile', natcatValue);
+  setText('metric-airquality-mobile', airqualityValue);
+  setText('metric-naturalspaces-mobile', naturalspacesValue);
+  setText('metric-vulnerability-mobile', vulnerabilityValue);
+  setText('metric-loss-mobile', lossValue);
 }
 
 function setSelectedButton(name) {
-  const key = normalizeName(name);
+  let key = normalizeName(name);
+
+  // Geneva aliases
+  if (
+    key === normalizeName('Genève') ||
+    key === normalizeName('Geneve')
+  ) {
+    key = normalizeName('Geneva');
+  }
+
+  // Malaga aliases
+  if (
+    key === normalizeName('Málaga') ||
+    key === normalizeName('Malaga') ||
+    key === normalizeName('Costa del Sol')
+  ) {
+    key = normalizeName('Málaga');
+  }
+
   document.querySelectorAll('.municipality-button').forEach(btn => {
     btn.classList.toggle('selected', btn.dataset.key === key);
   });
@@ -278,8 +306,6 @@ function selectTimelineEvent(event) {
 //  }
 }
 
-
-/* ADD THE NEW FUNCTION HERE */
 function initRadarCardMobileToggle() {
   const card = document.getElementById('climate-radar-card');
   if (!card) return;
@@ -311,14 +337,56 @@ function initRadarCardMobileToggle() {
   });
 
   window.addEventListener('resize', applyInitialState);
-
   applyInitialState();
+}
+
+function initMobileLegendToggle() {
+  const legend = document.getElementById('map-legend');
+  const toggle = document.getElementById('mobile-legend-toggle');
+
+  if (!legend || !toggle) return;
+
+  toggle.addEventListener('click', event => {
+    event.stopPropagation();
+    legend.classList.toggle('legend-open');
+  });
+}
+
+function updateMobileSelectedDetails(name, locationData) {
+  const titleEl = document.getElementById('mobile-selected-title');
+  const gridEl = document.getElementById('mobile-selected-grid');
+
+  if (!titleEl || !gridEl) return;
+
+  const metrics = locationData?.metrics || {};
+
+  titleEl.textContent = name || 'Selected location';
+
+  const items = [
+    ['Flood', metrics.flood],
+    ['Rainfall', metrics.rainfall],
+    ['Heatwave', metrics.heatwave],
+    ['Drought', metrics.drought],
+    ['Water stress', metrics.water_stress],
+    ['Water quality', metrics.water_quality],
+    ['Insurance claims', metrics.insurance_claims],
+    ['Historical loss', metrics.historical_financial_loss],
+    ['Vulnerability', metrics.vulnerability_index]
+  ];
+
+  gridEl.innerHTML = items.map(([label, value]) => `
+    <div class="mobile-selected-item">
+      <div class="mobile-selected-label">${label}</div>
+      <div class="mobile-selected-value">${formatMetric(value)}</div>
+    </div>
+  `).join('');
 }
 
 async function main() {
   initTabs();
   buildLegend();
   initRadarCardMobileToggle();
+  initMobileLegendToggle();
 
   const [locationsRes, locationsSpainRes, municipalitiesRes, genevaRes, spainRes, travelDataRes] = await Promise.all([
       fetch('data/locations.json'),
@@ -468,18 +536,6 @@ function isProvinceFeature(feature, targetName) {
   return names.includes(normalizeName(targetName));
 }
 
-  function isProvinceFeature(feature, targetName) {
-      const p = feature.properties || {};
-
-      const names = [
-        p.prov_name,
-        p.name,
-        p.municipality,
-        p.place
-      ].map(normalizeName);
-
-      return names.includes(normalizeName(targetName));
-    }
 
   const locationsByKey = {};
     Object.entries(locations).forEach(([key, value]) => {
@@ -583,6 +639,7 @@ function isProvinceFeature(feature, targetName) {
 
   setSelectedButton(name);
   updateInfoPanel(name, feature, locationData);
+  updateMobileSelectedDetails(name, locationData);
 
   renderClimateRadar(
     'climate-radar',
@@ -693,6 +750,7 @@ Object.entries(locations).forEach(([name, city]) => {
       const locationData = locationsByKey[key] || city;
       showSelectedOverlay(key);
       updateInfoPanel(city.municipality || city.place || name, { properties: {} }, locationData);
+      updateMobileSelectedDetails(city.municipality || city.place || name, locationData);
       renderClimateRadar(
         'climate-radar',
         city.municipality || city.place || name,
@@ -750,6 +808,7 @@ function showSelectedOverlay(key) {
       selectFeature(layer, feature, true);
     } else {
       updateInfoPanel(btn.textContent, { properties: {} }, card);
+      updateMobileSelectedDetails(btn.textContent, card);
 
       renderClimateRadar(
         'climate-radar',
@@ -786,6 +845,10 @@ if (malagaCard) {
   updateInfoPanel(
     malagaCard.municipality || malagaCard.place || 'Málaga',
     { properties: { municipality: malagaCard.municipality || malagaCard.place || 'Málaga' } },
+    malagaCard
+  );
+  updateMobileSelectedDetails(
+    malagaCard.municipality || malagaCard.place || 'Málaga',
     malagaCard
   );
 
@@ -1177,31 +1240,31 @@ function renderClimateRadar(containerId, locationName, data) {
                   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
   const series = [
-      {
-        key: "cloudy",
-        label: "Cloudy days",
-        polygonClass: "radar-series-cloudy",
-        pointClass: "radar-point-cloudy",
-        color: "#e53935",
-        icon: "icons/cloud.svg"
-      },
-      {
-        key: "rainy",
-        label: "Rainy days",
-        polygonClass: "radar-series-rainy",
-        pointClass: "radar-point-rainy",
-        color: "#1e88e5",
-        icon: "icons/rainfall.svg"
-      },
-      {
-        key: "windy",
-        label: "Windy days",
-        polygonClass: "radar-series-windy",
-        pointClass: "radar-point-windy",
-        color: "#f5a201",
-        icon: "icons/hurricane.svg"
-      }
-    ];
+    {
+      key: "cloudy",
+      label: "Cloudy days",
+      polygonClass: "radar-series-cloudy",
+      pointClass: "radar-point-cloudy",
+      color: "#e53935",
+      icon: "icons/cloud.svg"
+    },
+    {
+      key: "rainy",
+      label: "Rainy days",
+      polygonClass: "radar-series-rainy",
+      pointClass: "radar-point-rainy",
+      color: "#1dd3b0",
+      icon: "icons/rainfall.svg"
+    },
+    {
+      key: "windy",
+      label: "Windy days",
+      polygonClass: "radar-series-windy",
+      pointClass: "radar-point-windy",
+      color: "#f5a201",
+      icon: "icons/hurricane.svg"
+    }
+  ];
 
   const size = 320;
   const cx = size / 2;
@@ -1292,24 +1355,20 @@ function renderClimateRadar(containerId, locationName, data) {
   svg += `</svg>`;
 
   const legend = `
-      <div class="radar-legend">
-        ${series.map(s => `
-          <div class="radar-legend-item">
-            <span
-              class="radar-legend-icon-mask"
-              style="
-                background-color: ${s.color};
-                -webkit-mask: url('${s.icon}') center / contain no-repeat;
-                mask: url('${s.icon}') center / contain no-repeat;
-              "
-              aria-hidden="true"
-            ></span>
-            <span>${s.label}</span>
-          </div>
-        `).join("")}
+  <div class="radar-legend">
+    ${series.map(s => `
+      <div class="radar-legend-item">
+        <span
+          class="radar-legend-icon-mask radar-legend-icon-${s.key}"
+          aria-hidden="true"
+        ></span>
+        <span>${s.label}</span>
       </div>
-    `;
-    container.innerHTML = svg + legend;
+    `).join("")}
+  </div>
+`;
+
+container.innerHTML = svg + legend;
 }
 
 main().catch(err => {

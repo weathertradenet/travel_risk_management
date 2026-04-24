@@ -13,6 +13,7 @@ html, body {
   height:100%;
 }
 .app {
+  height: 100vh;
   min-height:100vh;
   display:flex;
   flex-direction:column;
@@ -39,39 +40,42 @@ html, body {
   background:#fafafa;
 }
 .tab-button {
-  padding:0.45rem 1.15rem;
+  padding:0.5rem 1.2rem;
   border-radius:12px 12px 0 0;
   border:1px solid #d4d4d4;
   border-bottom:none;
   background:#f5f5f5;
   cursor:pointer;
-  font-size:1.5rem;
-  color: #00537a !important;
+  font-size:1.3rem;
+  color: #086375 !important;
   transition: background 0.15s, color 0.15s, box-shadow 0.15s, transform 0.15s;
 }
 .tab-button.active {
   background: transparent;
-  color: #7297d6 !important;
-  border-color: transparent;
-  border-bottom: 3px solid #efcf9b;
-  box-shadow:0 -1px 0 #ffffff, 0 0 0 1px rgba(0, 0, 0, 0.03);
+  color: #1dd3b0 !important;
+  border-color: #9197ae;
+  border-bottom: 3px solid #1dd3b0;
+  box-shadow: 0 0 0 2px rgba(199, 244, 236, 1);
 }
-.tab-button:hover { color: 	#efcf9b !important; }
+.tab-button:hover { color: 	#ff785a !important; }
 .tab-button:hover:not(.active) { background:#ebebeb; }
 .tab-content {
   display:none;
   padding:1rem 1.25rem 1.5rem;
+  flex: 1;
 }
 .tab-content.active { display:block; }
 .layout {
   display:flex;
   gap:1rem;
   flex:1 1 auto;
-  min-height:720px;
+  height: calc(100vh - 155px);
+  min-height: 0;
   align-items:stretch;
 }
 .info-panel {
   flex:1;
+  height: 100%;
   border-radius:12px;
   border:1px solid #e0e0e0;
   background:#fafafa;
@@ -85,6 +89,7 @@ html, body {
 .map-container {
   position:relative;
   flex:3;
+  height: 100%;
   min-width:0;
   border-radius:12px;
   border:1px solid #e0e0e0;
@@ -95,7 +100,7 @@ html, body {
 #map {
   width:100%;
   height:100%;
-  min-height:680px;
+  min-height:0;
   background:#dce4ec;
 }
 .panel-title {
@@ -112,7 +117,7 @@ html, body {
   display:flex;
   flex-wrap:wrap;
   gap:0.6rem;
-  margin-bottom:0.15rem;
+  margin-bottom:0.2rem;
 }
 .municipality-button {
   border-radius:999px;
@@ -124,8 +129,8 @@ html, body {
   transition:background 0.15s, border-color 0.15s, box-shadow 0.15s;
 }
 .municipality-button.selected {
-  border-color: #7297d6;
-  background:	#7297d6;
+  border-color: #1dd3b0;
+  background: #c7f4ec;
   box-shadow:0 0 0 1px rgba(198,40,40,0.25);
 }
 .text-block {
@@ -146,7 +151,7 @@ html, body {
 }
 .forecast-row {
   display:grid;
-  grid-template-columns:130px 1fr;
+  grid-template-columns:210px 1fr;
   align-items:center;
   row-gap:0.5rem;
   margin-bottom:0.35rem;
@@ -154,9 +159,9 @@ html, body {
 .label { font-weight:600; margin-right:0.3rem; }
 .value { font-weight:normal; }
 .forecast-title {
-  font-weight:600;
+  font-weight:800;
   margin-bottom:0.45rem;
-  color:var(--accent);
+  color: #1dd3b0;
 }
 .leaflet-container { font:inherit; }
 .leaflet-control-zoom,.leaflet-control-layers {
@@ -588,7 +593,7 @@ html, body {
 
 .radar-series-rainy {
   fill: rgba(30, 136, 229, 0.12);
-  stroke: #1e88e5;
+  stroke: #1dd3b0;
   stroke-width: 2;
 }
 
@@ -603,7 +608,7 @@ html, body {
 }
 
 .radar-point-rainy {
-  fill: #1e88e5;
+  fill: #1dd3b0;
 }
 
 .radar-point-windy {
@@ -625,23 +630,48 @@ html, body {
 .radar-legend-item {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
-
-.radar-legend-icon {
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  object-fit: contain;
-}
-
 .radar-legend-icon-mask {
-  width: 30px;
-  height: 30px;
+  width: 22px;
+  height: 22px;
   display: inline-block;
-  flex: 0 0 20px;
+  flex: 0 0 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: currentColor;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }
 
+.radar-legend-icon-cloudy {
+  color: #e53935;
+  -webkit-mask-image: url("../icons/cloud.svg");
+  mask-image: url("../icons/cloud.svg");
+}
+
+.radar-legend-icon-rainy {
+  color: #1dd3b0;
+  -webkit-mask-image: url("../icons/rainfall.svg");
+  mask-image: url("../icons/rainfall.svg");
+}
+
+.radar-legend-icon-windy {
+  color: #f5a201;
+  -webkit-mask-image: url("../icons/hurricane.svg");
+  mask-image: url("../icons/hurricane.svg");
+}
+.radar-legend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
 .leaflet-bottom.leaflet-right {
   margin-bottom: 18px;
   margin-right: 18px;
@@ -780,189 +810,81 @@ html, body {
   flex: 0 0 122px;
 }
 
+
 /* =========================================================
-   MOBILE RESPONSIVE FIXES
-   Add this at the very end of styles.css
+   FINAL DESKTOP + MOBILE LAYOUT OVERRIDES
+   Desktop keeps original left-side cards.
+   Mobile uses compact cards and hides desktop cards.
    ========================================================= */
 
+.desktop-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mobile-summary-grid,
+.mobile-selected-details {
+  display: none;
+}
+
+.mobile-legend-toggle {
+  display: none;
+}
+
+@media (min-width: 761px) {
+  .desktop-info-cards {
+    display: flex !important;
+  }
+
+  .mobile-summary-grid,
+  .mobile-selected-details {
+    display: none !important;
+  }
+
+  .mobile-legend-toggle {
+    display: none !important;
+  }
+
+  .mobile-legend-content {
+    display: block !important;
+  }
+}
+
 @media (max-width: 760px) {
-  body {
-    overflow-x: hidden;
+  .desktop-info-cards {
+    display: none !important;
   }
 
-  .top-bar {
-    padding: 0.65rem 0.8rem;
+  .mobile-summary-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
   }
 
-  .title {
-    font-size: 1.25rem;
-    line-height: 1.25;
-  }
-
-  .tabs {
-    gap: 0.35rem;
-    padding: 0.4rem 0.6rem 0;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .tab-button {
-    font-size: 0.95rem;
-    padding: 0.45rem 0.75rem;
-    flex: 0 0 auto;
-  }
-
-  .tab-content {
-    padding: 0.65rem;
-  }
-
-  .layout {
-    flex-direction: column-reverse;
-    gap: 0.75rem;
-    min-height: 0;
+  .mobile-selected-details {
+    display: block !important;
+    order: 3;
   }
 
   .info-panel {
-    width: 100%;
-    max-width: none;
-    min-width: 0;
-    padding: 0.75rem;
-  }
-
-  .municipality-buttons {
-    gap: 0.45rem;
-  }
-
-  .municipality-button {
-    font-size: 0.85rem;
-    padding: 0.32rem 0.7rem;
-  }
-
-  .info-card-spacer {
-    height: 20px;
-    flex: 0 0 20px;
-  }
-
-  .text-block {
-    padding: 0.65rem;
-    font-size: 0.85rem;
-  }
-
-  .forecast-row {
-    grid-template-columns: 1fr;
-    gap: 0.15rem;
-    margin-bottom: 0.45rem;
-  }
-
-  .label {
-    font-size: 0.8rem;
-  }
-
-  .value {
-    font-size: 0.9rem;
+    order: 1;
   }
 
   .map-container {
-    min-height: 560px;
+    order: 2;
+  }
+}
+
+@media (min-width: 981px) {
+  #tab-main.tab-content.active {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
   }
 
-  #map {
-    min-height: 560px;
-  }
-
-  .climate-radar-card {
-    top: 8px;
-    right: 8px;
-    width: 230px;
-    padding: 8px 4px 4px;
-    border-radius: 12px;
-  }
-
-  .climate-radar-title {
-    font-size: 11px;
-  }
-
-  .radar-label {
-    font-size: 10px;
-  }
-
-  .radar-legend {
-    gap: 6px;
-    font-size: 10px;
-    padding-bottom: 4px;
-    margin-top: 0;
-  }
-
-  .radar-legend-item {
-    gap: 3px;
-  }
-
-  .radar-legend-icon-mask,
-  .radar-legend-icon {
-    width: 14px;
-    height: 14px;
-    flex: 0 0 14px;
-  }
-
-  .legend {
-    left: 8px;
-    bottom: 8px;
-    width: calc(100% - 16px);
-    padding: 10px;
-    border-radius: 12px;
-  }
-
-  .legend-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
-    margin-bottom: 10px;
-  }
-
-  .legend-item {
-    font-size: 10px;
-  }
-
-  .legend-icon {
-    min-height: 22px;
-    margin-bottom: 4px;
-  }
-
-  .legend-icon img {
-    width: 18px;
-    height: 18px;
-  }
-
-  .legend-scale-title {
-    font-size: 10px;
-    margin-bottom: 6px;
-  }
-
-  .legend-scale {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 3px;
-  }
-
-  .swatch {
-    height: 8px;
-  }
-
-  .scale-label {
-    font-size: 9px;
-  }
-
-  .leaflet-bottom.leaflet-right {
-    margin-bottom: 6px;
-    margin-right: 6px;
-  }
-
-  .leaflet-control-zoom a {
-    width: 30px !important;
-    height: 30px !important;
-    line-height: 30px !important;
-  }
-
-  .leaflet-control-layers-toggle {
-    width: 32px !important;
-    height: 32px !important;
+  #tab-main .layout {
+    flex: 1;
+    min-height: 0;
   }
 }
