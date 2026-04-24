@@ -92,7 +92,6 @@
 
         <div class="map-container">
           <div id="map"></div>
-          <div class="map-brand"><div class="brand-main">Location-specific stats</div></div>
           <div class="legend">
             <div class="legend-grid" id="legend-grid"></div>
             <div class="legend-scale-title">Average percentage infrastructure exposed to environmental hazards</div>
@@ -160,32 +159,30 @@
     <aside class="realtime-card">
       <div class="realtime-card-title" id="realtime-selected-city">Select a city</div>
 
-      <div class="realtime-card-section">
-        <div class="realtime-label">Event time</div>
-        <div class="realtime-value" id="realtime-selected-time">–</div>
+      <div class="travel-summary-row">
+        <div>
+          <div class="realtime-label">Event time</div>
+          <div class="realtime-value" id="realtime-selected-time">–</div>
+        </div>
+        <div>
+          <div class="realtime-label">Event type</div>
+          <div class="realtime-value" id="realtime-selected-event">–</div>
+        </div>
       </div>
 
-      <div class="realtime-card-section">
-        <div class="realtime-label">Location</div>
-        <div class="realtime-value" id="realtime-selected-place">–</div>
+      <div id="travel-network-graph" class="travel-network-graph">
+        <div class="travel-network-empty">Loading travel rescheduling network...</div>
       </div>
 
-      <div class="realtime-card-section">
-        <div class="realtime-label">Event type</div>
-        <div class="realtime-value" id="realtime-selected-event">–</div>
-      </div>
+      <div id="travel-network-tooltip" class="travel-network-tooltip"></div>
     </aside>
 
   </div>
 </section>
 
   </div>
-
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""
-  ></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

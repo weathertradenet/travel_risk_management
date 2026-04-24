@@ -22,6 +22,8 @@ const SCALE_STEPS = [
   {label:'<20%',color:'#8ba8c2'},{label:'<30%',color:'#6789aa'},{label:'<40%',color:'#456987'},{label:'>40%',color:'#183b63'}
 ];
 
+let travelDataStore = {};
+
 function exposureColor(pct) {
   if (pct <= 0) return '#eef2f6';
   if (pct < 1) return '#dbe5ef';
@@ -234,60 +236,71 @@ function initTabs() {
 }
 
 function initClickableTimelineEvents() {
-  document.querySelectorAll('.clickable-event').forEach(event => {
+  const events = document.querySelectorAll('.clickable-event');
+  if (!events.length) return;
+
+  events.forEach(event => {
     event.addEventListener('click', () => {
-      const locationName = event.dataset.location || event.dataset.place || '–';
-      const time = event.dataset.time || '–';
-      const place = event.dataset.place || locationName;
-      const eventTitle = event.querySelector('h3')?.textContent?.trim() || '–';
-
-      const selectedCityEl = document.getElementById('realtime-selected-city');
-      const selectedTimeEl = document.getElementById('realtime-selected-time');
-      const selectedPlaceEl = document.getElementById('realtime-selected-place');
-      const selectedEventEl = document.getElementById('realtime-selected-event');
-
-      if (selectedCityEl) selectedCityEl.textContent = locationName;
-      if (selectedTimeEl) selectedTimeEl.textContent = time;
-      if (selectedPlaceEl) selectedPlaceEl.textContent = place;
-      if (selectedEventEl) selectedEventEl.textContent = eventTitle;
-
-      document.querySelectorAll('.clickable-event').forEach(item => {
-        item.classList.remove('selected-timeline-event');
-      });
-
-      event.classList.add('selected-timeline-event');
-
-      const key = normalizeName(locationName);
-      const targetButton = document.querySelector(`.municipality-button[data-key="${key}"]`);
-
-      if (targetButton) {
-        targetButton.click();
-      }
+      selectTimelineEvent(event);
     });
   });
+}
+
+function selectTimelineEvent(event) {
+  const locationName = event.dataset.location || event.dataset.place || '–';
+  const time = event.dataset.time || '–';
+  const eventTitle = event.querySelector('h3')?.textContent?.trim() || '–';
+
+  document.querySelectorAll('.clickable-event').forEach(item => {
+    item.classList.remove('selected-timeline-event');
+  });
+
+  event.classList.add('selected-timeline-event');
+
+  const selectedCityEl = document.getElementById('realtime-selected-city');
+  const selectedTimeEl = document.getElementById('realtime-selected-time');
+  const selectedEventEl = document.getElementById('realtime-selected-event');
+
+  if (selectedCityEl) selectedCityEl.textContent = locationName;
+  if (selectedTimeEl) selectedTimeEl.textContent = time;
+  if (selectedEventEl) selectedEventEl.textContent = eventTitle;
+
+  renderTravelNetworkD3(locationName, {
+    time,
+    eventTitle
+  });
+
+  const key = normalizeName(locationName);
+  const targetButton = document.querySelector(`.municipality-button[data-key="${key}"]`);
+
+  if (targetButton) {
+    targetButton.click();
+  }
 }
 
 async function main() {
   initTabs();
   buildLegend();
 
-  const [locationsRes, locationsSpainRes, municipalitiesRes, genevaRes, spainRes] = await Promise.all([
-    fetch('data/locations.json'),
-    fetch('data/locations_spain.json'),
-    fetch('data/municipalities.geojson'),
-    fetch('data/geneva.json'),
-    fetch('data/spain_provinces.geojson')
-  ]);
+  const [locationsRes, locationsSpainRes, municipalitiesRes, genevaRes, spainRes, travelDataRes] = await Promise.all([
+      fetch('data/locations.json'),
+      fetch('data/locations_spain.json'),
+      fetch('data/municipalities.geojson'),
+      fetch('data/geneva.json'),
+      fetch('data/spain_provinces.geojson'),
+      fetch('data/travel_data.json')
+    ]);
 
   if (
-    !locationsRes.ok ||
-    !locationsSpainRes.ok ||
-    !municipalitiesRes.ok ||
-    !genevaRes.ok ||
-    !spainRes.ok
-  ) {
-    throw new Error('One or more data files could not be loaded.');
-  }
+      !locationsRes.ok ||
+      !locationsSpainRes.ok ||
+      !municipalitiesRes.ok ||
+      !genevaRes.ok ||
+      !spainRes.ok ||
+      !travelDataRes.ok
+    ) {
+      throw new Error('One or more data files could not be loaded.');
+    }
 
   const baseLocations = await locationsRes.json();
   const spainLocations = await locationsSpainRes.json();
@@ -300,6 +313,7 @@ async function main() {
   const municipalities = await municipalitiesRes.json();
   const geneva = await genevaRes.json();
   const spain = await spainRes.json();
+  travelDataStore = await travelDataRes.json();
 
   municipalities.features.push({
     type: 'Feature',
@@ -588,8 +602,372 @@ if (malagaCard) {
   );
 }
 
-  initTimelineAnimation(false);
-  initClickableTimelineEvents();
+    initTimelineAnimation(false);
+    initClickableTimelineEvents();
+
+    const firstTimelineEvent = document.querySelector('.clickable-event');
+    if (firstTimelineEvent) {
+      selectTimelineEvent(firstTimelineEvent);
+    }
+
+}
+
+function getTravelDataForCity(locationName) {
+  const key = normalizeName(locationName);
+
+  const match = Object.entries(travelDataStore).find(([name]) =>
+    normalizeName(name) === key
+  );
+
+  return match ? match[1] : null;
+}
+
+function buildTravelNetworkData(cityData, eventContext = {}) {
+  const city = cityData.selected_city || 'Selected city';
+  const airport = cityData.airport || 'Airport';
+  const iata = cityData.iata_code || '–';
+  const disruption = cityData.disruption_type || eventContext.eventTitle || '–';
+  const flights3h = Number(cityData.flights_departing_next_3h) || 0;
+
+  const cancelled = cityData.cancelled_flight || {};
+  const flight1 = cityData.next_two_flights?.[0] || {};
+  const flight2 = cityData.next_two_flights?.[1] || {};
+  const realloc = cityData.flight_reallocation || {};
+  const hotel = cityData.hotel_availability_12_24h || {};
+
+  const cancelledTravelers = Number(cancelled.travelers_in_window) || 0;
+  const flight1Booked = Number(flight1.booked_pct) || 0;
+  const flight2Booked = Number(flight2.booked_pct) || 0;
+  const hotelBooked = Number(hotel.currently_booked_pct) || 0;
+  const roomsAvailable = Number(hotel.rooms_available) || 0;
+  const combinedSeats = Number(realloc.combined_available_seats) || 0;
+
+  const nodes = [
+    {
+      id: 'city',
+      label: city,
+      subtitle: 'Selected city',
+      group: 'city',
+      value: Math.max(cancelledTravelers, 120),
+      fixedRadius: 58,
+      tooltip: `Selected city: ${city}`
+    },
+    {
+      id: 'airport',
+      label: 'Airport',
+      subtitle: airport,
+      group: 'airport',
+      value: 90,
+      tooltip: `Airport: ${airport}`
+    },
+    {
+      id: 'iata',
+      label: iata,
+      subtitle: 'IATA code',
+      group: 'airport',
+      value: 45,
+      tooltip: `IATA code: ${iata}`
+    },
+    {
+      id: 'disruption',
+      label: disruption,
+      subtitle: 'Disruption type',
+      group: 'risk',
+      value: 85,
+      tooltip: `Disruption type: ${disruption}`
+    },
+    {
+      id: 'flights3h',
+      label: String(flights3h),
+      subtitle: 'Flights next 3h',
+      group: 'flights',
+      value: flights3h,
+      tooltip: `${flights3h} flights departing in the next 3 hours`
+    },
+    {
+      id: 'cancelled',
+      label: cancelled.flight_code || 'Cancelled flight',
+      subtitle: `${cancelledTravelers} travelers`,
+      group: 'flights',
+      value: cancelledTravelers,
+      tooltip: `${cancelled.flight_code || 'Cancelled flight'}: ${cancelledTravelers} travelers affected`
+    },
+    {
+      id: 'nextFlights',
+      label: 'Next 2 flights',
+      subtitle: 'Availability',
+      group: 'availability',
+      value: combinedSeats,
+      tooltip: realloc.message || 'Next two same-destination flights availability'
+    },
+    {
+      id: 'flight1',
+      label: flight1.label || 'Flight +1',
+      subtitle: `${flight1Booked}% booked`,
+      group: 'availability',
+      value: Math.max(100 - flight1Booked, 5),
+      tooltip: `${flight1.flight_code || 'Flight +1'}: ${flight1Booked}% booked, ${flight1.available_seats ?? '–'} seats available`
+    },
+    {
+      id: 'flight2',
+      label: flight2.label || 'Flight +2',
+      subtitle: `${flight2Booked}% booked`,
+      group: 'availability',
+      value: Math.max(100 - flight2Booked, 5),
+      tooltip: `${flight2.flight_code || 'Flight +2'}: ${flight2Booked}% booked, ${flight2.available_seats ?? '–'} seats available`
+    },
+    {
+      id: 'hotel',
+      label: 'Hotel',
+      subtitle: '12–24h availability',
+      group: 'hotel',
+      value: roomsAvailable,
+      tooltip: hotel.message || 'Hotel availability for the next 12–24 hours'
+    },
+    {
+      id: 'hotelBooked',
+      label: `${hotelBooked}%`,
+      subtitle: 'Already booked',
+      group: 'hotel',
+      value: hotelBooked,
+      tooltip: `Hotel currently booked: ${hotelBooked}%`
+    },
+    {
+      id: 'hotelExtension',
+      label: hotel.same_hotel_extension_possible ? 'Yes' : 'No',
+      subtitle: 'Same-hotel extension',
+      group: 'hotel',
+      value: hotel.same_hotel_extension_possible ? 80 : 35,
+      tooltip: hotel.same_hotel_extension_possible
+        ? 'Same-hotel extension is possible'
+        : 'Same-hotel extension is not sufficient'
+    },
+    {
+      id: 'flightDecision',
+      label: realloc.can_absorb_cancelled_travelers ? 'Enough capacity' : 'Capacity gap',
+      subtitle: `${combinedSeats} seats`,
+      group: realloc.can_absorb_cancelled_travelers ? 'success' : 'warning',
+      value: combinedSeats,
+      tooltip: realloc.message || 'Capacity decision'
+    },
+    {
+      id: 'hotelDecision',
+      label: hotel.can_absorb_cancelled_travelers ? 'Hotel OK' : 'Hotel gap',
+      subtitle: `${roomsAvailable} rooms`,
+      group: hotel.can_absorb_cancelled_travelers ? 'success' : 'warning',
+      value: roomsAvailable,
+      tooltip: hotel.message || 'Hotel decision'
+    }
+  ];
+
+  const links = [
+    { source: 'city', target: 'airport' },
+    { source: 'airport', target: 'iata' },
+    { source: 'city', target: 'disruption' },
+    { source: 'city', target: 'flights3h' },
+    { source: 'flights3h', target: 'cancelled' },
+    { source: 'city', target: 'nextFlights' },
+    { source: 'nextFlights', target: 'flight1' },
+    { source: 'nextFlights', target: 'flight2' },
+    { source: 'nextFlights', target: 'flightDecision' },
+    { source: 'city', target: 'hotel' },
+    { source: 'hotel', target: 'hotelBooked' },
+    { source: 'hotel', target: 'hotelExtension' },
+    { source: 'hotel', target: 'hotelDecision' },
+    { source: 'disruption', target: 'flights3h' },
+    { source: 'disruption', target: 'hotel' }
+  ];
+
+  return { nodes, links };
+}
+
+function renderTravelNetworkD3(locationName, eventContext = {}) {
+  const container = document.getElementById('travel-network-graph');
+  const tooltip = document.getElementById('travel-network-tooltip');
+
+  if (!container) return;
+
+  if (typeof d3 === 'undefined') {
+    container.innerHTML = '<div class="travel-network-empty">D3 library is not loaded.</div>';
+    return;
+  }
+
+  const cityData = getTravelDataForCity(locationName);
+
+  if (!cityData) {
+    container.innerHTML = `<div class="travel-network-empty">No travel_data.json entry found for ${locationName}.</div>`;
+    return;
+  }
+
+  container.innerHTML = '';
+
+  const { nodes, links } = buildTravelNetworkData(cityData, eventContext);
+
+  const width = container.clientWidth || 900;
+  const height = 640;
+
+  const colorByGroup = {
+    city: '#5b78ec',
+    airport: '#dfeeff',
+    risk: '#fff0f2',
+    flights: '#eaf3ff',
+    availability: '#e8fbfb',
+    hotel: '#fff8e6',
+    success: '#ecfff4',
+    warning: '#fff6e8'
+  };
+
+  const strokeByGroup = {
+    city: '#5b78ec',
+    airport: '#7da8f7',
+    risk: '#e88998',
+    flights: '#7da8f7',
+    availability: '#32aeb3',
+    hotel: '#e3b83d',
+    success: '#4dbb77',
+    warning: '#e0a536'
+  };
+
+  const textByGroup = {
+    city: '#ffffff',
+    airport: '#17314f',
+    risk: '#9d3041',
+    flights: '#17314f',
+    availability: '#078c93',
+    hotel: '#8a6810',
+    success: '#167a45',
+    warning: '#9a6514'
+  };
+
+  const radiusScale = d3.scaleSqrt()
+    .domain([0, d3.max(nodes, d => Number(d.value) || 1)])
+    .range([22, 58]);
+
+  nodes.forEach(d => {
+    d.radius = d.fixedRadius || radiusScale(Number(d.value) || 1);
+  });
+
+  const svg = d3.select(container)
+    .append('svg')
+    .attr('class', 'travel-network-svg')
+    .attr('viewBox', `0 0 ${width} ${height}`)
+    .attr('preserveAspectRatio', 'xMidYMid meet');
+
+  const graphLayer = svg.append('g');
+
+  const zoom = d3.zoom()
+    .scaleExtent([0.65, 2.2])
+    .on('zoom', event => {
+      graphLayer.attr('transform', event.transform);
+    });
+
+  svg.call(zoom);
+
+  const link = graphLayer.append('g')
+    .attr('class', 'travel-network-links')
+    .selectAll('line')
+    .data(links)
+    .join('line')
+    .attr('class', 'travel-network-link');
+
+  const node = graphLayer.append('g')
+    .attr('class', 'travel-network-nodes')
+    .selectAll('g')
+    .data(nodes)
+    .join('g')
+    .attr('class', 'travel-network-node')
+    .call(dragSimulation());
+
+  node.append('circle')
+    .attr('r', d => d.radius)
+    .attr('fill', d => colorByGroup[d.group] || '#ffffff')
+    .attr('stroke', d => strokeByGroup[d.group] || '#9ab')
+    .attr('stroke-width', d => d.group === 'city' ? 0 : 1.6);
+
+  node.append('text')
+    .attr('class', 'travel-network-node-label')
+    .attr('text-anchor', 'middle')
+    .attr('dy', d => d.subtitle ? '-0.15em' : '0.35em')
+    .attr('fill', d => textByGroup[d.group] || '#17314f')
+    .style('font-size', d => d.group === 'city' ? '22px' : '13px')
+    .style('font-weight', '800')
+    .text(d => d.label);
+
+  node.append('text')
+    .attr('class', 'travel-network-node-subtitle')
+    .attr('text-anchor', 'middle')
+    .attr('dy', '1.35em')
+    .attr('fill', d => d.group === 'city' ? '#ffffff' : '#43556e')
+    .style('font-size', '10.5px')
+    .text(d => d.subtitle || '');
+
+  node.on('mouseenter', (event, d) => {
+      if (!tooltip) return;
+      tooltip.textContent = d.tooltip || d.label;
+      tooltip.classList.add('visible');
+    })
+    .on('mousemove', event => {
+      if (!tooltip) return;
+      const rect = container.getBoundingClientRect();
+      tooltip.style.left = `${event.clientX - rect.left + 14}px`;
+      tooltip.style.top = `${event.clientY - rect.top + 14}px`;
+    })
+    .on('mouseleave', () => {
+      if (!tooltip) return;
+      tooltip.classList.remove('visible');
+    });
+
+  const simulation = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(links).id(d => d.id).distance(d => {
+      if (d.source.id === 'city' || d.target.id === 'city') return 175;
+      return 105;
+    }))
+    .force('charge', d3.forceManyBody().strength(-760))
+    .force('center', d3.forceCenter(width / 2, height / 2))
+    .force('collision', d3.forceCollide().radius(d => d.radius + 16))
+    .force('x', d3.forceX(d => {
+      if (['airport', 'iata', 'disruption'].includes(d.id)) return width * 0.25;
+      if (['flights3h', 'cancelled'].includes(d.id)) return width * 0.75;
+      if (['nextFlights', 'flight1', 'flight2', 'flightDecision'].includes(d.id)) return width * 0.78;
+      if (['hotel', 'hotelBooked', 'hotelExtension', 'hotelDecision'].includes(d.id)) return width * 0.35;
+      return width * 0.5;
+    }).strength(0.08))
+    .force('y', d3.forceY(d => {
+      if (['airport', 'iata'].includes(d.id)) return height * 0.22;
+      if (['disruption'].includes(d.id)) return height * 0.42;
+      if (['flights3h', 'cancelled'].includes(d.id)) return height * 0.22;
+      if (['nextFlights', 'flight1', 'flight2', 'flightDecision'].includes(d.id)) return height * 0.62;
+      if (['hotel', 'hotelBooked', 'hotelExtension', 'hotelDecision'].includes(d.id)) return height * 0.72;
+      return height * 0.5;
+    }).strength(0.08));
+
+  simulation.on('tick', () => {
+    link
+      .attr('x1', d => d.source.x)
+      .attr('y1', d => d.source.y)
+      .attr('x2', d => d.target.x)
+      .attr('y2', d => d.target.y);
+
+    node.attr('transform', d => `translate(${d.x},${d.y})`);
+  });
+
+  function dragSimulation() {
+    return d3.drag()
+      .on('start', (event, d) => {
+        if (!event.active) simulation.alphaTarget(0.25).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+      })
+      .on('drag', (event, d) => {
+        d.fx = event.x;
+        d.fy = event.y;
+      })
+      .on('end', (event, d) => {
+        if (!event.active) simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
+      });
+  }
 }
 
 function renderClimateRadar(containerId, locationName, data) {
@@ -603,9 +981,9 @@ function renderClimateRadar(containerId, locationName, data) {
                   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
   const series = [
-    { key: "cloudy", label: "Cloudy days", polygonClass: "radar-series-cloudy", pointClass: "radar-point-cloudy", color: "#183b63" },
-    { key: "rainy",  label: "Rainy days",  polygonClass: "radar-series-rainy",  pointClass: "radar-point-rainy",  color: "#006fc9" },
-    { key: "windy",  label: "Windy days",  polygonClass: "radar-series-windy",  pointClass: "radar-point-windy",  color: "#4c8b42" }
+    { key: "cloudy", label: "Cloudy days", polygonClass: "radar-series-cloudy", pointClass: "radar-point-cloudy", color: "#e53935" },
+    { key: "rainy",  label: "Rainy days",  polygonClass: "radar-series-rainy",  pointClass: "radar-point-rainy",  color: "#1e88e5" },
+    { key: "windy",  label: "Windy days",  polygonClass: "radar-series-windy",  pointClass: "radar-point-windy",  color: "#f5a201" }
   ];
 
   const size = 320;
@@ -639,7 +1017,7 @@ function renderClimateRadar(containerId, locationName, data) {
 }
 
   let svg = `
-    <svg class="climate-radar-svg" viewBox="0 0 ${size} ${size + 10}" xmlns="http://www.w3.org/2000/svg">
+    <svg class="climate-radar-svg" viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg">
   `;
 
   // grid polygons
