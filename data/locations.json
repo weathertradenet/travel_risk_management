@@ -792,7 +792,7 @@
       ]
     }
   },
-  "Buller": {
+  "Melbourne": {
     "municipality": "Victoria",
     "place": "Melbourne",
     "lat": -37.8136,
@@ -1062,6 +1062,38 @@
       "windy": [9, 9, 9, 8, 8, 8, 9, 9, 8, 8, 8, 9]
     }
   },
+  "Springfield": {
+  "municipality": "Springfield",
+  "place": "Springfield",
+  "lat": 39.7817,
+  "lng": -89.6501,
+  "side": "left",
+  "exposure_pct": 37,
+  "side_metrics": {
+    "natcat": ["Tornado", "Storm"],
+    "days": ["230", "65"],
+    "airquality": ["5/10", "6/10"],
+    "naturalspaces": ["24", "52"]
+  },
+  "monthly_weather": {
+    "cloudy": [18, 16, 16, 16, 16, 13, 11, 10, 10, 13, 15, 18],
+    "rainy": [7, 6, 12, 17, 18, 18, 19, 17, 15, 14, 11, 9],
+    "windy": [14, 14, 13, 12, 11, 9, 9, 9, 11, 12, 14, 14]
+  },
+  "metrics": {
+    "flood": ["4,200", "18%"],
+    "hurricane": ["0 km", "0%"],
+    "rainfall": ["95 km", "12%"],
+    "heatwave": ["5", "38%"],
+    "drought": ["9", "24%"],
+    "wildfire": ["0", "0%"],
+    "water_stress": ["Med", "44%"],
+    "water_quality": ["Fair", "37%"],
+    "historical_financial_loss": ["$46M", "10y"],
+    "insurance_claims": ["2.4k", "yr"],
+    "vulnerability_index": ["0.58", "idx"]
+  }
+},
   "Sevilla": {
     "municipality": "Sevilla",
     "place": "Sevilla",

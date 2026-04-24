@@ -503,7 +503,7 @@ function isProvinceFeature(feature, targetName) {
   }).addTo(map);
 
   const municipalityButtons = document.getElementById('municipality-buttons');
-  const buttonTargets = ['Málaga', 'Barcelona', 'Dubai', 'Auckland', 'Geneva','Catania','Rhodes','Melilla'];
+  const buttonTargets = ['Málaga', 'Barcelona', 'Dubai', 'Auckland', 'Geneva','Catania','Rhodes','Melilla','Springfield'];
   buttonTargets.forEach(name => {
     const btn = document.createElement('button');
     btn.className = 'municipality-button';

@@ -300,8 +300,8 @@
     }
   },
 
-  "Illinois": {
-    "selected_city": "Illinois",
+  "Springfield": {
+    "selected_city": "Springfield",
     "airport": "Chicago O'Hare International Airport",
     "iata_code": "ORD",
     "disruption_type": "Tornado",
