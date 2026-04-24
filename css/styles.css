@@ -766,3 +766,7 @@ html, body {
     height: 520px;
   }
 }
+.info-card-spacer {
+  height: 122px;
+  flex: 0 0 122px;
+}

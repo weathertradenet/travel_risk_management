@@ -163,9 +163,13 @@ function updateInfoPanel(name, feature, locationData) {
   const sideMetrics = card.side_metrics || {};
   const metrics = card.metrics || {};
 
-  document.getElementById('selected-name').textContent = name;
-  document.getElementById('selected-region').textContent = String(region);
-  document.getElementById('selected-exposure').textContent = `${card.exposure_pct ?? 0}%`;
+    const selectedNameEl = document.getElementById('selected-name');
+    const selectedRegionEl = document.getElementById('selected-region');
+    const selectedExposureEl = document.getElementById('selected-exposure');
+
+    if (selectedNameEl) selectedNameEl.textContent = name;
+    if (selectedRegionEl) selectedRegionEl.textContent = String(region);
+    if (selectedExposureEl) selectedExposureEl.textContent = `${card.exposure_pct ?? 0}%`;
 
   document.getElementById('metric-days').textContent =
     formatMetric(sideMetrics.days);
