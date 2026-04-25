@@ -32,18 +32,23 @@ python make_single_file.py
 
 ##  decision logic Tab-2
 
-[Selected city] <br>
+Selected city <br>
         ↓ <br>
-[N travelers affected] <br>
+Nb of travelers affected <br>
         ↓ <br>
-[X disrupted flights] <br>
+X disrupted flights <br>
         ↓ <br>
-[Flight cards by destination] <br>
+N travelers per flight (destination) <br>
         ↓ <br>
-[Next 2 same-destination flights] <br>
+Check availability on the following 2-5 flights with the same-destination<br>
         ↓ <br>
-[Seat capacity ] <br>
+Seat capacity on the next flights -vs- Nb of travellers <br>
         ↓ <br>
-[Hotel priority split] <br>
+Hotel priority split : who can stay longer, & who can't stay at the same hotel any longer<br>
          ↓ <br>
-[Final decision: enough rooms or room gap]
+Decision: Flight priority split : who should be on the next flight, and who can stay longer and take another flight later
+         ↓ <br>
+Decision: Relocation between hotels
+         ↓ <br>
+Minimum compensations for the travel agency and the airline company
+Minimum stress for travellers
