@@ -30,7 +30,7 @@ python make_single_file.py
 
 ![Hot potato - last minute - travel risk management - demo](page-2.png)
 
-##  decision logic Tab-2
+##  Decision logic, see Tab-2 : Disruption Control in Real-Time
 
 Selected city <br>
         ↓ <br>
@@ -50,5 +50,5 @@ Decision: Flight priority split : who should be on the next flight, and who can 
          ↓ <br>
 Decision: Relocation between hotels
          ↓ <br>
-Minimum compensations for the travel agency and the airline company
+Minimum compensations for the travel agency and the airline company  <br>
 Minimum stress for travellers
