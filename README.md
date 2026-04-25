@@ -33,18 +33,19 @@ Author : Elena Maksimovich @emaksimo
 
 ##  decision logic Tab-2
 
-[Selected city]
-      ↓
-[N travelers affected]
-      ↓
-[X disrupted flights]
-      ↓
-[Flight cards by destination]
-      ↓
-[Next 2 same-destination flights]
-      ↓
-[Seat capacity test]
-      ↓
-[Hotel priority split]
-      ↓
+
+[Selected city] <br>
+      ↓ <br>
+[N travelers affected] <br>
+      ↓ <br>
+[X disrupted flights] <br>
+      ↓ <br>
+[Flight cards by destination] <br>
+      ↓ <br>
+[Next 2 same-destination flights] <br>
+      ↓ <br>
+[Seat capacity ] <br>
+      ↓ <br>
+[Hotel priority split] <br>
+      ↓ <br>
 [Final decision: enough rooms or room gap]
