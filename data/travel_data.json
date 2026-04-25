@@ -1,345 +1,120 @@
 {
-  "Malaga": {
-    "selected_city": "Malaga",
-    "airport": "Malaga-Costa del Sol Airport",
-    "iata_code": "AGP",
-    "disruption_type": "Storm",
-    "flights_departing_next_3h": 18,
-    "cancelled_flight": {
-      "flight_code": "FR4721",
-      "travelers_in_window": 162,
-      "destination": "London"
-    },
-    "next_two_flights": [
-      {
-        "label": "Flight +1",
-        "flight_code": "IB8803",
-        "same_destination": true,
-        "booked_pct": 84,
-        "available_capacity_pct": 16,
-        "available_seats": 52
-      },
-      {
-        "label": "Flight +2",
-        "flight_code": "U24019",
-        "same_destination": true,
-        "booked_pct": 61,
-        "available_capacity_pct": 39,
-        "available_seats": 126
-      }
-    ],
-    "flight_reallocation": {
-      "combined_available_seats": 178,
-      "can_absorb_cancelled_travelers": true,
-      "message": "Combined remaining capacity can absorb affected travelers"
-    },
-    "hotel_availability_12_24h": {
-      "currently_booked_pct": 73,
-      "rooms_available": 87,
-      "same_hotel_extension_possible": true,
-      "can_absorb_cancelled_travelers": true,
-      "message": "Same-hotel extension possible for delayed travelers"
+  "Springfield": {
+    "city": "Springfield",
+    "disruption_type": "Tornado",
+    "time_window": "30 min",
+    "travelers_affected_next": 1400,
+    "disrupted_flights_count": 8,
+    "summary": {
+      "total_next_two_flights_available_seats": 682,
+      "total_people_not_accommodated_on_next_flights": 718,
+      "total_people_in_hotels_with_no_rooms": 665,
+      "total_people_in_hotels_with_rooms_available": 735,
+      "total_people_needing_another_hotel": 365,
+      "rooms_available_next_24h_total": 315,
+      "enough_rooms_for_people_who_cannot_leave": false
     }
   },
 
-  "Barcelona": {
-    "selected_city": "Barcelona",
-    "airport": "Barcelona-El Prat Airport",
-    "iata_code": "BCN",
-    "disruption_type": "Heavy rain",
-    "flights_departing_next_3h": 24,
-    "cancelled_flight": {
-      "flight_code": "VY2114",
-      "travelers_in_window": 138,
-      "destination": "Paris"
-    },
-    "next_two_flights": [
-      {
-        "label": "Flight +1",
-        "flight_code": "VY8246",
-        "same_destination": true,
-        "booked_pct": 79,
-        "available_capacity_pct": 21,
-        "available_seats": 63
-      },
-      {
-        "label": "Flight +2",
-        "flight_code": "AF1549",
-        "same_destination": true,
-        "booked_pct": 68,
-        "available_capacity_pct": 32,
-        "available_seats": 96
-      }
-    ],
-    "flight_reallocation": {
-      "combined_available_seats": 159,
-      "can_absorb_cancelled_travelers": true,
-      "message": "Two following flights can absorb affected travelers"
-    },
-    "hotel_availability_12_24h": {
-      "currently_booked_pct": 81,
-      "rooms_available": 54,
-      "same_hotel_extension_possible": true,
-      "can_absorb_cancelled_travelers": false,
-      "message": "Partial same-hotel extension possible; overflow hotel needed"
+  "Malaga": {
+    "city": "Malaga",
+    "disruption_type": "Hail",
+    "time_window": "1h",
+    "travelers_affected": 420,
+    "disrupted_flights_count": 3,
+    "summary": {
+      "total_next_two_flights_available_seats": 310,
+      "total_people_not_accommodated_on_next_two_flights": 110,
+      "total_people_in_hotels_with_no_rooms_next_24h": 95,
+      "total_people_in_hotels_with_rooms_available_next_24h": 325,
+      "total_people_needing_another_hotel_next_24h": 42,
+      "rooms_available_next_24h_total": 78,
+      "enough_rooms_for_people_who_cannot_leave": true
     }
   },
 
   "Geneva": {
-    "selected_city": "Geneva",
-    "airport": "Geneva Airport",
-    "iata_code": "GVA",
+    "city": "Geneva",
     "disruption_type": "Wind storm",
-    "flights_departing_next_3h": 14,
-    "cancelled_flight": {
-      "flight_code": "LX2811",
-      "travelers_in_window": 121,
-      "destination": "Zurich"
-    },
-    "next_two_flights": [
-      {
-        "label": "Flight +1",
-        "flight_code": "LX2813",
-        "same_destination": true,
-        "booked_pct": 91,
-        "available_capacity_pct": 9,
-        "available_seats": 24
-      },
-      {
-        "label": "Flight +2",
-        "flight_code": "LX2815",
-        "same_destination": true,
-        "booked_pct": 76,
-        "available_capacity_pct": 24,
-        "available_seats": 68
-      }
-    ],
-    "flight_reallocation": {
-      "combined_available_seats": 92,
-      "can_absorb_cancelled_travelers": false,
-      "message": "Not enough same-destination flight capacity"
-    },
-    "hotel_availability_12_24h": {
-      "currently_booked_pct": 88,
-      "rooms_available": 38,
-      "same_hotel_extension_possible": false,
-      "can_absorb_cancelled_travelers": false,
-      "message": "Same-hotel extension unlikely; relocation needed"
+    "time_window": "3-6h",
+    "travelers_affected": 980,
+    "disrupted_flights_count": 6,
+    "summary": {
+      "total_next_two_flights_available_seats": 520,
+      "total_people_not_accommodated_on_next_flights": 460,
+      "total_people_in_hotels_with_no_rooms": 210,
+      "total_people_in_hotels_with_rooms_available": 770,
+      "total_people_needing_another_hotel": 185,
+      "rooms_available_next_24h_total": 140,
+      "enough_rooms_for_people_who_cannot_leave": false
     }
   },
 
-  "Dubai": {
-    "selected_city": "Dubai",
-    "airport": "Dubai International Airport",
-    "iata_code": "DXB",
-    "disruption_type": "Sandstorm",
-    "flights_departing_next_3h": 42,
-    "cancelled_flight": {
-      "flight_code": "EK073",
-      "travelers_in_window": 284,
-      "destination": "Paris"
-    },
-    "next_two_flights": [
-      {
-        "label": "Flight +1",
-        "flight_code": "EK075",
-        "same_destination": true,
-        "booked_pct": 96,
-        "available_capacity_pct": 4,
-        "available_seats": 18
-      },
-      {
-        "label": "Flight +2",
-        "flight_code": "EK077",
-        "same_destination": true,
-        "booked_pct": 89,
-        "available_capacity_pct": 11,
-        "available_seats": 48
-      }
-    ],
-    "flight_reallocation": {
-      "combined_available_seats": 66,
-      "can_absorb_cancelled_travelers": false,
-      "message": "Insufficient same-destination flight capacity"
-    },
-    "hotel_availability_12_24h": {
-      "currently_booked_pct": 69,
-      "rooms_available": 240,
-      "same_hotel_extension_possible": true,
-      "can_absorb_cancelled_travelers": true,
-      "message": "Hotel extension can absorb affected travelers"
-    }
-  },
-
-  "Auckland": {
-    "selected_city": "Auckland",
-    "airport": "Auckland Airport",
-    "iata_code": "AKL",
-    "disruption_type": "Flood",
-    "flights_departing_next_3h": 12,
-    "cancelled_flight": {
-      "flight_code": "NZ101",
-      "travelers_in_window": 198,
-      "destination": "Sydney"
-    },
-    "next_two_flights": [
-      {
-        "label": "Flight +1",
-        "flight_code": "NZ103",
-        "same_destination": true,
-        "booked_pct": 87,
-        "available_capacity_pct": 13,
-        "available_seats": 34
-      },
-      {
-        "label": "Flight +2",
-        "flight_code": "QF146",
-        "same_destination": true,
-        "booked_pct": 72,
-        "available_capacity_pct": 28,
-        "available_seats": 81
-      }
-    ],
-    "flight_reallocation": {
-      "combined_available_seats": 115,
-      "can_absorb_cancelled_travelers": false,
-      "message": "Partial rebooking possible; additional routing needed"
-    },
-    "hotel_availability_12_24h": {
-      "currently_booked_pct": 78,
-      "rooms_available": 102,
-      "same_hotel_extension_possible": true,
-      "can_absorb_cancelled_travelers": false,
-      "message": "Some travelers can stay; overflow accommodation required"
+  "Barcelona": {
+    "city": "Barcelona",
+    "disruption_type": "Heavy rain",
+    "time_window": "6-12h",
+    "travelers_affected": 2600,
+    "disrupted_flights_count": 14,
+    "summary": {
+      "total_next_two_flights_available_seats": 1540,
+      "total_people_not_accommodated_on_next_flights": 1060,
+      "total_people_in_hotels_with_no_rooms_": 480,
+      "total_people_in_hotels_with_rooms_available": 2120,
+      "total_people_needing_another_hotel": 390,
+      "rooms_available_next_24h_total": 510,
+      "enough_rooms_for_people_who_cannot_leave": true
     }
   },
 
   "Catania": {
-    "selected_city": "Catania",
-    "airport": "Catania-Fontanarossa Airport",
-    "iata_code": "CTA",
+    "city": "Catania",
     "disruption_type": "Heatwave",
-    "flights_departing_next_3h": 9,
-    "cancelled_flight": {
-      "flight_code": "AZ1724",
-      "travelers_in_window": 146,
-      "destination": "Rome"
-    },
-    "next_two_flights": [
-      {
-        "label": "Flight +1",
-        "flight_code": "AZ1726",
-        "same_destination": true,
-        "booked_pct": 82,
-        "available_capacity_pct": 18,
-        "available_seats": 41
-      },
-      {
-        "label": "Flight +2",
-        "flight_code": "FR4892",
-        "same_destination": true,
-        "booked_pct": 67,
-        "available_capacity_pct": 33,
-        "available_seats": 88
-      }
-    ],
-    "flight_reallocation": {
-      "combined_available_seats": 129,
-      "can_absorb_cancelled_travelers": false,
-      "message": "Nearly enough capacity; priority rebooking needed"
-    },
-    "hotel_availability_12_24h": {
-      "currently_booked_pct": 74,
-      "rooms_available": 68,
-      "same_hotel_extension_possible": true,
-      "can_absorb_cancelled_travelers": true,
-      "message": "Same-hotel extension possible for delayed travelers"
+    "time_window": "24-36",
+    "travelers_affected": 760,
+    "disrupted_flights_count": 5,
+    "summary": {
+      "total_next_two_flights_available_seats": 430,
+      "total_people_not_accommodated_on_next_flights": 330,
+      "total_people_in_hotels_with_no_rooms": 155,
+      "total_people_in_hotels_with_rooms_available": 605,
+      "total_people_needing_another_hotel_next_24h": 120,
+      "rooms_available_next_24h_total": 210,
+      "enough_rooms_for_people_who_cannot_leave": true
+    }
+  },
+
+  "Auckland": {
+    "city": "Auckland",
+    "disruption_type": "Flood",
+    "time_window": "36-48",
+    "travelers_affected": 1250,
+    "disrupted_flights_count": 7,
+    "summary": {
+      "total_next_two_flights_available_seats": 640,
+      "total_people_not_accommodated_on_next_flights": 610,
+      "total_people_in_hotels_with_no_rooms": 290,
+      "total_people_in_hotels_with_rooms_available": 960,
+      "total_people_needing_another_hotel": 275,
+      "rooms_available_next_24h_total": 198,
+      "enough_rooms_for_people_who_cannot_leave": false
     }
   },
 
   "Melbourne": {
-    "selected_city": "Melbourne",
-    "airport": "Melbourne Airport",
-    "iata_code": "MEL",
-    "disruption_type": "Severe storm",
-    "flights_departing_next_3h": 21,
-    "cancelled_flight": {
-      "flight_code": "QF430",
-      "travelers_in_window": 174,
-      "destination": "Sydney"
-    },
-    "next_two_flights": [
-      {
-        "label": "Flight +1",
-        "flight_code": "QF432",
-        "same_destination": true,
-        "booked_pct": 93,
-        "available_capacity_pct": 7,
-        "available_seats": 22
-      },
-      {
-        "label": "Flight +2",
-        "flight_code": "VA841",
-        "same_destination": true,
-        "booked_pct": 70,
-        "available_capacity_pct": 30,
-        "available_seats": 94
-      }
-    ],
-    "flight_reallocation": {
-      "combined_available_seats": 116,
-      "can_absorb_cancelled_travelers": false,
-      "message": "Not enough capacity on next two same-destination flights"
-    },
-    "hotel_availability_12_24h": {
-      "currently_booked_pct": 83,
-      "rooms_available": 61,
-      "same_hotel_extension_possible": false,
-      "can_absorb_cancelled_travelers": false,
-      "message": "Airport hotel capacity constrained"
-    }
-  },
-
-  "Springfield": {
-    "selected_city": "Springfield",
-    "airport": "Chicago O'Hare International Airport",
-    "iata_code": "ORD",
-    "disruption_type": "Tornado",
-    "flights_departing_next_3h": 37,
-    "cancelled_flight": {
-      "flight_code": "UA2471",
-      "travelers_in_window": 250,
-      "destination": "New York"
-    },
-    "next_two_flights": [
-      {
-        "label": "Flight +1",
-        "flight_code": "UA2485",
-        "same_destination": true,
-        "booked_pct": 95,
-        "available_capacity_pct": 5,
-        "available_seats": 18
-      },
-      {
-        "label": "Flight +2",
-        "flight_code": "AA3321",
-        "same_destination": true,
-        "booked_pct": 88,
-        "available_capacity_pct": 12,
-        "available_seats": 42
-      }
-    ],
-    "flight_reallocation": {
-      "combined_available_seats": 60,
-      "can_absorb_cancelled_travelers": false,
-      "message": "Major rebooking gap; hotel hold required"
-    },
-    "hotel_availability_12_24h": {
-      "currently_booked_pct": 92,
-      "rooms_available": 44,
-      "same_hotel_extension_possible": false,
-      "can_absorb_cancelled_travelers": false,
-      "message": "Same-hotel extension insufficient for all travelers"
+    "city": "Melbourne",
+    "disruption_type": "Hurricane",
+    "time_window": "48-72",
+    "travelers_affected": 1850,
+    "disrupted_flights_count": 10,
+    "summary": {
+      "total_next_two_flights_available_seats": 920,
+      "total_people_not_accommodated_on_next_flights": 930,
+      "total_people_in_hotels_with_no_rooms": 410,
+      "total_people_in_hotels_with_rooms_available": 1440,
+      "total_people_needing_another_hotel": 520,
+      "rooms_available_next_24h_total": 360,
+      "enough_rooms_for_people_who_cannot_leave": false
     }
   }
 }

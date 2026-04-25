@@ -140,85 +140,19 @@
     </section>
 
     <section id="tab-2" class="tab-content">
-    <div class="realtime-layout">
-
-      <div id="timeline-content">
-        <h2>Priority timeline</h2>
-        <br>
-        <p>Select [ City and Event ] </p>
-
-        <ul class="timeline">
-          <li class="event clickable-event" data-time="next 30 min" data-place="Springfield" data-location="Springfield">
-            <h3>Tornado</h3>
-            <p>250 people traveling, 1 flight</p>
-            <p>2000 people on site, 2 hotels</p>
-            <p>16 outdoor events</p>
-          </li>
-
-          <li class="event clickable-event" data-time=" next 1h" data-place="Malaga" data-location="Malaga">
-            <h3>Hail</h3>
-            <p>50 people traveling, 2 flights</p>
-            <p>1000 people on site, 6 hotels</p>
-            <p>2 outdoor events</p>
-          </li>
-
-          <li class="event clickable-event" data-time="2-6h" data-place="Geneva" data-location="Geneva">
-            <h3>Wind storm</h3>
-            <p>480 people traveling, 7 flights</p>
-            <p>1200 people on site, 9 hotels</p>
-            <p>6 outdoor events</p>
-          </li>
-
-          <li class="event clickable-event" data-time="6-12h" data-place="Barcelona" data-location="Barcelona">
-            <h3>Heavy rain</h3>
-            <p>4800 people traveling, 11 flights</p>
-            <p>1200 people on site, 9 hotels</p>
-          </li>
-
-          <li class="event clickable-event" data-time="24-36h" data-place="Catania" data-location="Catania">
-            <h3>Heatwave</h3>
-            <p>...</p>
-          </li>
-
-          <li class="event clickable-event" data-time="36-48h" data-place="Auckland" data-location="Auckland">
-            <h3>Flood</h3>
-            <p>...</p>
-          </li>
-
-          <li class="event clickable-event" data-time="48-72h" data-place="Melbourne" data-location="Melbourne">
-            <h3>Hurricane</h3>
-            <p>...</p>
-          </li>
-        </ul>
-    </div>
-
-    <aside class="realtime-card">
-      <div class="realtime-card-title" id="realtime-selected-city">Select a city</div>
-
-      <div class="travel-summary-row">
-        <div>
-          <div class="realtime-label">Event time</div>
-          <div class="realtime-value" id="realtime-selected-time">–</div>
+      <div class="heatmap-page">
+        <div class="heatmap-page-header">
+          <div>
+            <h3>Select one incident row to inspect the operational situation.</h3>
+          </div>
         </div>
-        <div>
-          <div class="realtime-label">Event type</div>
-          <div class="realtime-value" id="realtime-selected-event">–</div>
-        </div>
+
+        <div class="incident-heatmap" id="incident-heatmap"></div>
       </div>
-
-      <div id="travel-network-graph" class="travel-network-graph">
-        <div class="travel-network-empty">Loading travel rescheduling network...</div>
-      </div>
-
-      <div id="travel-network-tooltip" class="travel-network-tooltip"></div>
-    </aside>
-
-  </div>
-</section>
+    </section>
 
   </div>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
